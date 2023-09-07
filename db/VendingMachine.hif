@@ -236,42 +236,6 @@ DisplayModule:display
 
 # end
 # entity
-VendingMachine
-# storage
-db|VendingMachine.(0).cnf
-db|VendingMachine.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-vendingmachine.v
-d18d20acf65cf3c5bf760c1ad1475cc
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 clk_1hz
 # storage
 db|VendingMachine.(7).cnf
@@ -300,9 +264,6 @@ VERILOG_CONSTANT_LOOP_LIMIT
 5000
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
-}
-# hierarchies {
-clk_1hz:clk1
 }
 # macro_sequence
 
@@ -337,9 +298,6 @@ VERILOG_CONSTANT_LOOP_LIMIT
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
-# hierarchies {
-clk_1hz:clk1|divide_by_50:d6
-}
 # macro_sequence
 
 # end
@@ -373,13 +331,41 @@ VERILOG_CONSTANT_LOOP_LIMIT
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
+# macro_sequence
+
+# end
+# entity
+VendingMachine
+# storage
+db|VendingMachine.(0).cnf
+db|VendingMachine.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+vendingmachine.v
+773934fcb8da91d83f5a859e3ad446b
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
 # hierarchies {
-clk_1hz:clk1|divide_by_10:d5
-clk_1hz:clk1|divide_by_10:d4
-clk_1hz:clk1|divide_by_10:d3
-clk_1hz:clk1|divide_by_10:d2
-clk_1hz:clk1|divide_by_10:d1
-clk_1hz:clk1|divide_by_10:d0
+|
 }
 # macro_sequence
 

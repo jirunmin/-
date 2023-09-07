@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for VendingMachine
-Thu Sep 07 12:06:02 2023
+Thu Sep 07 12:23:49 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -39,18 +39,18 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                                                                                ;
-+------------------------------+-------+---------------+----------------------------------+---------------------------------------------------+---------------------------------------------------+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                              ; To                                                ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+----------------------------------+---------------------------------------------------+---------------------------------------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A   ; None          ; 6.698 ns                         ; confirm_button                                    ; VendingMachineController:controller|change[3]     ; --         ; clk      ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 10.219 ns                        ; VendingMachineController:controller|change[3]     ; change_amount[3]                                  ; clk        ; --       ; 0            ;
-; Worst-case tpd               ; N/A   ; None          ; 13.282 ns                        ; product_code[2]                                   ; display_segments[3]                               ; --         ; --       ; 0            ;
-; Worst-case th                ; N/A   ; None          ; -3.581 ns                        ; coin_code[1]                                      ; VendingMachineController:controller|coin_total[1] ; --         ; clk      ; 0            ;
-; Clock Setup: 'clk'           ; N/A   ; None          ; 344.35 MHz ( period = 2.904 ns ) ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|change[3]     ; clk        ; clk      ; 0            ;
-; Total number of failed paths ;       ;               ;                                  ;                                                   ;                                                   ;            ;          ; 0            ;
-+------------------------------+-------+---------------+----------------------------------+---------------------------------------------------+---------------------------------------------------+------------+----------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                       ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------+-----------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                         ; To                                            ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------+-----------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 7.305 ns                         ; product_code[2]                              ; VendingMachineController:controller|change[3] ; --         ; clk      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 7.685 ns                         ; VendingMachineController:controller|alarm    ; alarm                                         ; clk        ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 12.673 ns                        ; product_code[2]                              ; display_segments[0]                           ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -4.630 ns                        ; confirm_button                               ; VendingMachineController:controller|state.01  ; --         ; clk      ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 356.89 MHz ( period = 2.802 ns ) ; VendingMachineController:controller|state.01 ; VendingMachineController:controller|change[3] ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                              ;                                               ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------------------+-----------------------------------------------+------------+----------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -112,71 +112,71 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+------------------------------------------------+---------------------------------------------------+---------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 ; Slack ; Actual fmax (period)                           ; From                                              ; To                                                ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
 +-------+------------------------------------------------+---------------------------------------------------+---------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; 344.35 MHz ( period = 2.904 ns )               ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|change[0]     ; clk        ; clk      ; None                        ; None                      ; 2.690 ns                ;
-; N/A   ; 344.35 MHz ( period = 2.904 ns )               ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|change[1]     ; clk        ; clk      ; None                        ; None                      ; 2.690 ns                ;
-; N/A   ; 344.35 MHz ( period = 2.904 ns )               ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|change[2]     ; clk        ; clk      ; None                        ; None                      ; 2.690 ns                ;
-; N/A   ; 344.35 MHz ( period = 2.904 ns )               ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|change[3]     ; clk        ; clk      ; None                        ; None                      ; 2.690 ns                ;
-; N/A   ; 356.38 MHz ( period = 2.806 ns )               ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|change[0]     ; clk        ; clk      ; None                        ; None                      ; 2.592 ns                ;
-; N/A   ; 356.38 MHz ( period = 2.806 ns )               ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|change[1]     ; clk        ; clk      ; None                        ; None                      ; 2.592 ns                ;
-; N/A   ; 356.38 MHz ( period = 2.806 ns )               ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|change[2]     ; clk        ; clk      ; None                        ; None                      ; 2.592 ns                ;
-; N/A   ; 356.38 MHz ( period = 2.806 ns )               ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|change[3]     ; clk        ; clk      ; None                        ; None                      ; 2.592 ns                ;
-; N/A   ; 370.37 MHz ( period = 2.700 ns )               ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 2.487 ns                ;
-; N/A   ; 378.79 MHz ( period = 2.640 ns )               ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 2.427 ns                ;
-; N/A   ; 380.08 MHz ( period = 2.631 ns )               ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|change[0]     ; clk        ; clk      ; None                        ; None                      ; 2.417 ns                ;
-; N/A   ; 380.08 MHz ( period = 2.631 ns )               ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|change[1]     ; clk        ; clk      ; None                        ; None                      ; 2.417 ns                ;
-; N/A   ; 380.08 MHz ( period = 2.631 ns )               ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|change[2]     ; clk        ; clk      ; None                        ; None                      ; 2.417 ns                ;
-; N/A   ; 380.08 MHz ( period = 2.631 ns )               ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|change[3]     ; clk        ; clk      ; None                        ; None                      ; 2.417 ns                ;
-; N/A   ; 380.66 MHz ( period = 2.627 ns )               ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|change[0]     ; clk        ; clk      ; None                        ; None                      ; 2.413 ns                ;
-; N/A   ; 380.66 MHz ( period = 2.627 ns )               ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|change[1]     ; clk        ; clk      ; None                        ; None                      ; 2.413 ns                ;
-; N/A   ; 380.66 MHz ( period = 2.627 ns )               ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|change[2]     ; clk        ; clk      ; None                        ; None                      ; 2.413 ns                ;
-; N/A   ; 380.66 MHz ( period = 2.627 ns )               ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|change[3]     ; clk        ; clk      ; None                        ; None                      ; 2.413 ns                ;
-; N/A   ; 393.39 MHz ( period = 2.542 ns )               ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 2.329 ns                ;
-; N/A   ; 394.48 MHz ( period = 2.535 ns )               ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 2.322 ns                ;
-; N/A   ; 403.88 MHz ( period = 2.476 ns )               ; VendingMachineController:controller|state.10      ; VendingMachineController:controller|coin_total[0] ; clk        ; clk      ; None                        ; None                      ; 2.261 ns                ;
-; N/A   ; 403.88 MHz ( period = 2.476 ns )               ; VendingMachineController:controller|state.10      ; VendingMachineController:controller|coin_total[1] ; clk        ; clk      ; None                        ; None                      ; 2.261 ns                ;
-; N/A   ; 403.88 MHz ( period = 2.476 ns )               ; VendingMachineController:controller|state.10      ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 2.261 ns                ;
-; N/A   ; 403.88 MHz ( period = 2.476 ns )               ; VendingMachineController:controller|state.10      ; VendingMachineController:controller|coin_total[2] ; clk        ; clk      ; None                        ; None                      ; 2.261 ns                ;
-; N/A   ; 405.52 MHz ( period = 2.466 ns )               ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|change[0]     ; clk        ; clk      ; None                        ; None                      ; 2.251 ns                ;
-; N/A   ; 405.52 MHz ( period = 2.466 ns )               ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|change[1]     ; clk        ; clk      ; None                        ; None                      ; 2.251 ns                ;
-; N/A   ; 405.52 MHz ( period = 2.466 ns )               ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|change[2]     ; clk        ; clk      ; None                        ; None                      ; 2.251 ns                ;
-; N/A   ; 405.52 MHz ( period = 2.466 ns )               ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|change[3]     ; clk        ; clk      ; None                        ; None                      ; 2.251 ns                ;
-; N/A   ; 412.03 MHz ( period = 2.427 ns )               ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 2.214 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 2.154 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 2.150 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.11      ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 2.061 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.11      ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 2.061 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|state.00      ; clk        ; clk      ; None                        ; None                      ; 2.059 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 2.008 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 1.988 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|coin_total[0] ; clk        ; clk      ; None                        ; None                      ; 1.967 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|coin_total[1] ; clk        ; clk      ; None                        ; None                      ; 1.967 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 1.967 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|coin_total[2] ; clk        ; clk      ; None                        ; None                      ; 1.967 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|coin_total[0] ; clk        ; clk      ; None                        ; None                      ; 1.938 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|coin_total[1] ; clk        ; clk      ; None                        ; None                      ; 1.938 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 1.938 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|coin_total[2] ; clk        ; clk      ; None                        ; None                      ; 1.938 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 1.929 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 1.905 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.11      ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 1.791 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.11      ; VendingMachineController:controller|state.00      ; clk        ; clk      ; None                        ; None                      ; 1.763 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 1.740 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 1.664 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 1.632 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 1.602 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 1.602 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 1.549 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|coin_total[2] ; clk        ; clk      ; None                        ; None                      ; 1.478 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 1.470 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.10      ; VendingMachineController:controller|state.00      ; clk        ; clk      ; None                        ; None                      ; 1.450 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 1.426 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|coin_total[2] ; clk        ; clk      ; None                        ; None                      ; 1.399 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 1.386 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|coin_total[1] ; clk        ; clk      ; None                        ; None                      ; 1.240 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|state.01      ; clk        ; clk      ; None                        ; None                      ; 1.039 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|coin_total[2] ; clk        ; clk      ; None                        ; None                      ; 1.003 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|coin_total[1] ; clk        ; clk      ; None                        ; None                      ; 1.002 ns                ;
-; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|coin_total[0] ; clk        ; clk      ; None                        ; None                      ; 0.853 ns                ;
+; N/A   ; 356.89 MHz ( period = 2.802 ns )               ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|change[0]     ; clk        ; clk      ; None                        ; None                      ; 2.589 ns                ;
+; N/A   ; 356.89 MHz ( period = 2.802 ns )               ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|change[1]     ; clk        ; clk      ; None                        ; None                      ; 2.589 ns                ;
+; N/A   ; 356.89 MHz ( period = 2.802 ns )               ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|change[2]     ; clk        ; clk      ; None                        ; None                      ; 2.589 ns                ;
+; N/A   ; 356.89 MHz ( period = 2.802 ns )               ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|change[3]     ; clk        ; clk      ; None                        ; None                      ; 2.589 ns                ;
+; N/A   ; 360.36 MHz ( period = 2.775 ns )               ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|change[0]     ; clk        ; clk      ; None                        ; None                      ; 2.561 ns                ;
+; N/A   ; 360.36 MHz ( period = 2.775 ns )               ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|change[1]     ; clk        ; clk      ; None                        ; None                      ; 2.561 ns                ;
+; N/A   ; 360.36 MHz ( period = 2.775 ns )               ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|change[2]     ; clk        ; clk      ; None                        ; None                      ; 2.561 ns                ;
+; N/A   ; 360.36 MHz ( period = 2.775 ns )               ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|change[3]     ; clk        ; clk      ; None                        ; None                      ; 2.561 ns                ;
+; N/A   ; 372.16 MHz ( period = 2.687 ns )               ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|change[0]     ; clk        ; clk      ; None                        ; None                      ; 2.473 ns                ;
+; N/A   ; 372.16 MHz ( period = 2.687 ns )               ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|change[1]     ; clk        ; clk      ; None                        ; None                      ; 2.473 ns                ;
+; N/A   ; 372.16 MHz ( period = 2.687 ns )               ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|change[2]     ; clk        ; clk      ; None                        ; None                      ; 2.473 ns                ;
+; N/A   ; 372.16 MHz ( period = 2.687 ns )               ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|change[3]     ; clk        ; clk      ; None                        ; None                      ; 2.473 ns                ;
+; N/A   ; 374.67 MHz ( period = 2.669 ns )               ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|change[0]     ; clk        ; clk      ; None                        ; None                      ; 2.455 ns                ;
+; N/A   ; 374.67 MHz ( period = 2.669 ns )               ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|change[1]     ; clk        ; clk      ; None                        ; None                      ; 2.455 ns                ;
+; N/A   ; 374.67 MHz ( period = 2.669 ns )               ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|change[2]     ; clk        ; clk      ; None                        ; None                      ; 2.455 ns                ;
+; N/A   ; 374.67 MHz ( period = 2.669 ns )               ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|change[3]     ; clk        ; clk      ; None                        ; None                      ; 2.455 ns                ;
+; N/A   ; 381.97 MHz ( period = 2.618 ns )               ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|change[0]     ; clk        ; clk      ; None                        ; None                      ; 2.404 ns                ;
+; N/A   ; 381.97 MHz ( period = 2.618 ns )               ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|change[1]     ; clk        ; clk      ; None                        ; None                      ; 2.404 ns                ;
+; N/A   ; 381.97 MHz ( period = 2.618 ns )               ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|change[2]     ; clk        ; clk      ; None                        ; None                      ; 2.404 ns                ;
+; N/A   ; 381.97 MHz ( period = 2.618 ns )               ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|change[3]     ; clk        ; clk      ; None                        ; None                      ; 2.404 ns                ;
+; N/A   ; 394.94 MHz ( period = 2.532 ns )               ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 2.318 ns                ;
+; N/A   ; 399.20 MHz ( period = 2.505 ns )               ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 2.290 ns                ;
+; N/A   ; 411.86 MHz ( period = 2.428 ns )               ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|coin_total[0] ; clk        ; clk      ; None                        ; None                      ; 2.215 ns                ;
+; N/A   ; 411.86 MHz ( period = 2.428 ns )               ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|coin_total[2] ; clk        ; clk      ; None                        ; None                      ; 2.215 ns                ;
+; N/A   ; 411.86 MHz ( period = 2.428 ns )               ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 2.215 ns                ;
+; N/A   ; 411.86 MHz ( period = 2.428 ns )               ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|coin_total[1] ; clk        ; clk      ; None                        ; None                      ; 2.215 ns                ;
+; N/A   ; 413.74 MHz ( period = 2.417 ns )               ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 2.202 ns                ;
+; N/A   ; 416.84 MHz ( period = 2.399 ns )               ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 2.184 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 2.148 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 2.133 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.11      ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 2.080 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.11      ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 2.080 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.10      ; VendingMachineController:controller|coin_total[0] ; clk        ; clk      ; None                        ; None                      ; 2.061 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.10      ; VendingMachineController:controller|coin_total[2] ; clk        ; clk      ; None                        ; None                      ; 2.061 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.10      ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 2.061 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.10      ; VendingMachineController:controller|coin_total[1] ; clk        ; clk      ; None                        ; None                      ; 2.061 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 2.042 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 1.909 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 1.888 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 1.864 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 1.819 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 1.733 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|state.00      ; clk        ; clk      ; None                        ; None                      ; 1.682 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|state.10      ; clk        ; clk      ; None                        ; None                      ; 1.653 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 1.653 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 1.651 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 1.627 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|coin_total[2] ; clk        ; clk      ; None                        ; None                      ; 1.580 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|coin_total[0] ; clk        ; clk      ; None                        ; None                      ; 1.541 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|coin_total[2] ; clk        ; clk      ; None                        ; None                      ; 1.541 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 1.541 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|coin_total[1] ; clk        ; clk      ; None                        ; None                      ; 1.541 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 1.473 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|coin_total[1] ; clk        ; clk      ; None                        ; None                      ; 1.421 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|state.11      ; clk        ; clk      ; None                        ; None                      ; 1.404 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 1.382 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 1.367 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|coin_total[2] ; clk        ; clk      ; None                        ; None                      ; 1.296 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.11      ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 1.285 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.10      ; VendingMachineController:controller|state.00      ; clk        ; clk      ; None                        ; None                      ; 1.250 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[0] ; VendingMachineController:controller|coin_total[0] ; clk        ; clk      ; None                        ; None                      ; 1.038 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[2] ; VendingMachineController:controller|coin_total[2] ; clk        ; clk      ; None                        ; None                      ; 0.999 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.11      ; VendingMachineController:controller|state.00      ; clk        ; clk      ; None                        ; None                      ; 0.980 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.00      ; VendingMachineController:controller|state.01      ; clk        ; clk      ; None                        ; None                      ; 0.870 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[1] ; VendingMachineController:controller|coin_total[1] ; clk        ; clk      ; None                        ; None                      ; 0.817 ns                ;
 ; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|coin_total[3] ; VendingMachineController:controller|coin_total[3] ; clk        ; clk      ; None                        ; None                      ; 0.545 ns                ;
 ; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|state.01      ; VendingMachineController:controller|state.01      ; clk        ; clk      ; None                        ; None                      ; 0.407 ns                ;
 ; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; VendingMachineController:controller|alarm         ; VendingMachineController:controller|alarm         ; clk        ; clk      ; None                        ; None                      ; 0.407 ns                ;
@@ -188,65 +188,65 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+--------------------+---------------------------------------------------+----------+
 ; Slack ; Required tsu ; Actual tsu ; From               ; To                                                ; To Clock ;
 +-------+--------------+------------+--------------------+---------------------------------------------------+----------+
-; N/A   ; None         ; 6.698 ns   ; confirm_button     ; VendingMachineController:controller|change[0]     ; clk      ;
-; N/A   ; None         ; 6.698 ns   ; confirm_button     ; VendingMachineController:controller|change[1]     ; clk      ;
-; N/A   ; None         ; 6.698 ns   ; confirm_button     ; VendingMachineController:controller|change[2]     ; clk      ;
-; N/A   ; None         ; 6.698 ns   ; confirm_button     ; VendingMachineController:controller|change[3]     ; clk      ;
-; N/A   ; None         ; 6.446 ns   ; confirm_button     ; VendingMachineController:controller|coin_total[0] ; clk      ;
-; N/A   ; None         ; 6.446 ns   ; confirm_button     ; VendingMachineController:controller|coin_total[1] ; clk      ;
-; N/A   ; None         ; 6.446 ns   ; confirm_button     ; VendingMachineController:controller|coin_total[3] ; clk      ;
-; N/A   ; None         ; 6.446 ns   ; confirm_button     ; VendingMachineController:controller|coin_total[2] ; clk      ;
-; N/A   ; None         ; 6.434 ns   ; confirm_button     ; VendingMachineController:controller|state.10      ; clk      ;
-; N/A   ; None         ; 6.403 ns   ; confirm_button     ; VendingMachineController:controller|state.11      ; clk      ;
-; N/A   ; None         ; 6.374 ns   ; coin_insert_button ; VendingMachineController:controller|coin_total[0] ; clk      ;
-; N/A   ; None         ; 6.374 ns   ; coin_insert_button ; VendingMachineController:controller|coin_total[1] ; clk      ;
-; N/A   ; None         ; 6.374 ns   ; coin_insert_button ; VendingMachineController:controller|coin_total[3] ; clk      ;
-; N/A   ; None         ; 6.374 ns   ; coin_insert_button ; VendingMachineController:controller|coin_total[2] ; clk      ;
-; N/A   ; None         ; 6.298 ns   ; product_code[3]    ; VendingMachineController:controller|change[0]     ; clk      ;
-; N/A   ; None         ; 6.298 ns   ; product_code[3]    ; VendingMachineController:controller|change[1]     ; clk      ;
-; N/A   ; None         ; 6.298 ns   ; product_code[3]    ; VendingMachineController:controller|change[2]     ; clk      ;
-; N/A   ; None         ; 6.298 ns   ; product_code[3]    ; VendingMachineController:controller|change[3]     ; clk      ;
-; N/A   ; None         ; 6.162 ns   ; product_code[1]    ; VendingMachineController:controller|change[0]     ; clk      ;
-; N/A   ; None         ; 6.162 ns   ; product_code[1]    ; VendingMachineController:controller|change[1]     ; clk      ;
-; N/A   ; None         ; 6.162 ns   ; product_code[1]    ; VendingMachineController:controller|change[2]     ; clk      ;
-; N/A   ; None         ; 6.162 ns   ; product_code[1]    ; VendingMachineController:controller|change[3]     ; clk      ;
-; N/A   ; None         ; 6.110 ns   ; confirm_button     ; VendingMachineController:controller|alarm         ; clk      ;
-; N/A   ; None         ; 6.063 ns   ; product_code[0]    ; VendingMachineController:controller|change[0]     ; clk      ;
-; N/A   ; None         ; 6.063 ns   ; product_code[0]    ; VendingMachineController:controller|change[1]     ; clk      ;
-; N/A   ; None         ; 6.063 ns   ; product_code[0]    ; VendingMachineController:controller|change[2]     ; clk      ;
-; N/A   ; None         ; 6.063 ns   ; product_code[0]    ; VendingMachineController:controller|change[3]     ; clk      ;
-; N/A   ; None         ; 6.034 ns   ; product_code[3]    ; VendingMachineController:controller|state.10      ; clk      ;
-; N/A   ; None         ; 6.027 ns   ; product_code[3]    ; VendingMachineController:controller|alarm         ; clk      ;
-; N/A   ; None         ; 5.959 ns   ; coin_insert_button ; VendingMachineController:controller|state.00      ; clk      ;
-; N/A   ; None         ; 5.958 ns   ; product_code[1]    ; VendingMachineController:controller|alarm         ; clk      ;
-; N/A   ; None         ; 5.898 ns   ; product_code[1]    ; VendingMachineController:controller|state.10      ; clk      ;
-; N/A   ; None         ; 5.859 ns   ; product_code[0]    ; VendingMachineController:controller|alarm         ; clk      ;
-; N/A   ; None         ; 5.815 ns   ; product_code[2]    ; VendingMachineController:controller|change[0]     ; clk      ;
-; N/A   ; None         ; 5.815 ns   ; product_code[2]    ; VendingMachineController:controller|change[1]     ; clk      ;
-; N/A   ; None         ; 5.815 ns   ; product_code[2]    ; VendingMachineController:controller|change[2]     ; clk      ;
-; N/A   ; None         ; 5.815 ns   ; product_code[2]    ; VendingMachineController:controller|change[3]     ; clk      ;
-; N/A   ; None         ; 5.806 ns   ; confirm_button     ; VendingMachineController:controller|state.00      ; clk      ;
-; N/A   ; None         ; 5.799 ns   ; product_code[0]    ; VendingMachineController:controller|state.10      ; clk      ;
-; N/A   ; None         ; 5.792 ns   ; coin_insert_button ; VendingMachineController:controller|state.10      ; clk      ;
-; N/A   ; None         ; 5.792 ns   ; coin_insert_button ; VendingMachineController:controller|state.11      ; clk      ;
-; N/A   ; None         ; 5.551 ns   ; product_code[2]    ; VendingMachineController:controller|state.10      ; clk      ;
-; N/A   ; None         ; 5.544 ns   ; product_code[2]    ; VendingMachineController:controller|alarm         ; clk      ;
-; N/A   ; None         ; 5.445 ns   ; product_code[3]    ; VendingMachineController:controller|state.11      ; clk      ;
-; N/A   ; None         ; 5.376 ns   ; product_code[1]    ; VendingMachineController:controller|state.11      ; clk      ;
-; N/A   ; None         ; 5.277 ns   ; product_code[0]    ; VendingMachineController:controller|state.11      ; clk      ;
-; N/A   ; None         ; 4.962 ns   ; product_code[2]    ; VendingMachineController:controller|state.11      ; clk      ;
-; N/A   ; None         ; 4.942 ns   ; coin_insert_button ; VendingMachineController:controller|state.01      ; clk      ;
-; N/A   ; None         ; 4.845 ns   ; coin_code[0]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
-; N/A   ; None         ; 4.774 ns   ; coin_code[0]       ; VendingMachineController:controller|coin_total[2] ; clk      ;
-; N/A   ; None         ; 4.759 ns   ; confirm_button     ; VendingMachineController:controller|state.01      ; clk      ;
-; N/A   ; None         ; 4.615 ns   ; coin_code[0]       ; VendingMachineController:controller|coin_total[1] ; clk      ;
-; N/A   ; None         ; 4.492 ns   ; coin_code[1]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
-; N/A   ; None         ; 4.439 ns   ; coin_code[3]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
-; N/A   ; None         ; 4.421 ns   ; coin_code[1]       ; VendingMachineController:controller|coin_total[2] ; clk      ;
-; N/A   ; None         ; 4.371 ns   ; coin_code[2]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
-; N/A   ; None         ; 4.232 ns   ; coin_code[0]       ; VendingMachineController:controller|coin_total[0] ; clk      ;
-; N/A   ; None         ; 3.985 ns   ; coin_code[2]       ; VendingMachineController:controller|coin_total[2] ; clk      ;
-; N/A   ; None         ; 3.942 ns   ; coin_code[1]       ; VendingMachineController:controller|coin_total[1] ; clk      ;
+; N/A   ; None         ; 7.305 ns   ; product_code[2]    ; VendingMachineController:controller|change[0]     ; clk      ;
+; N/A   ; None         ; 7.305 ns   ; product_code[2]    ; VendingMachineController:controller|change[1]     ; clk      ;
+; N/A   ; None         ; 7.305 ns   ; product_code[2]    ; VendingMachineController:controller|change[2]     ; clk      ;
+; N/A   ; None         ; 7.305 ns   ; product_code[2]    ; VendingMachineController:controller|change[3]     ; clk      ;
+; N/A   ; None         ; 7.136 ns   ; product_code[0]    ; VendingMachineController:controller|change[0]     ; clk      ;
+; N/A   ; None         ; 7.136 ns   ; product_code[0]    ; VendingMachineController:controller|change[1]     ; clk      ;
+; N/A   ; None         ; 7.136 ns   ; product_code[0]    ; VendingMachineController:controller|change[2]     ; clk      ;
+; N/A   ; None         ; 7.136 ns   ; product_code[0]    ; VendingMachineController:controller|change[3]     ; clk      ;
+; N/A   ; None         ; 7.091 ns   ; product_code[3]    ; VendingMachineController:controller|change[0]     ; clk      ;
+; N/A   ; None         ; 7.091 ns   ; product_code[3]    ; VendingMachineController:controller|change[1]     ; clk      ;
+; N/A   ; None         ; 7.091 ns   ; product_code[3]    ; VendingMachineController:controller|change[2]     ; clk      ;
+; N/A   ; None         ; 7.091 ns   ; product_code[3]    ; VendingMachineController:controller|change[3]     ; clk      ;
+; N/A   ; None         ; 7.035 ns   ; product_code[2]    ; VendingMachineController:controller|state.10      ; clk      ;
+; N/A   ; None         ; 6.893 ns   ; product_code[2]    ; VendingMachineController:controller|alarm         ; clk      ;
+; N/A   ; None         ; 6.866 ns   ; product_code[0]    ; VendingMachineController:controller|state.10      ; clk      ;
+; N/A   ; None         ; 6.849 ns   ; confirm_button     ; VendingMachineController:controller|change[0]     ; clk      ;
+; N/A   ; None         ; 6.849 ns   ; confirm_button     ; VendingMachineController:controller|change[1]     ; clk      ;
+; N/A   ; None         ; 6.849 ns   ; confirm_button     ; VendingMachineController:controller|change[2]     ; clk      ;
+; N/A   ; None         ; 6.849 ns   ; confirm_button     ; VendingMachineController:controller|change[3]     ; clk      ;
+; N/A   ; None         ; 6.821 ns   ; product_code[3]    ; VendingMachineController:controller|state.10      ; clk      ;
+; N/A   ; None         ; 6.679 ns   ; product_code[3]    ; VendingMachineController:controller|alarm         ; clk      ;
+; N/A   ; None         ; 6.639 ns   ; product_code[1]    ; VendingMachineController:controller|change[0]     ; clk      ;
+; N/A   ; None         ; 6.639 ns   ; product_code[1]    ; VendingMachineController:controller|change[1]     ; clk      ;
+; N/A   ; None         ; 6.639 ns   ; product_code[1]    ; VendingMachineController:controller|change[2]     ; clk      ;
+; N/A   ; None         ; 6.639 ns   ; product_code[1]    ; VendingMachineController:controller|change[3]     ; clk      ;
+; N/A   ; None         ; 6.620 ns   ; confirm_button     ; VendingMachineController:controller|coin_total[0] ; clk      ;
+; N/A   ; None         ; 6.620 ns   ; confirm_button     ; VendingMachineController:controller|coin_total[2] ; clk      ;
+; N/A   ; None         ; 6.620 ns   ; confirm_button     ; VendingMachineController:controller|coin_total[3] ; clk      ;
+; N/A   ; None         ; 6.620 ns   ; confirm_button     ; VendingMachineController:controller|coin_total[1] ; clk      ;
+; N/A   ; None         ; 6.579 ns   ; confirm_button     ; VendingMachineController:controller|state.10      ; clk      ;
+; N/A   ; None         ; 6.552 ns   ; product_code[0]    ; VendingMachineController:controller|alarm         ; clk      ;
+; N/A   ; None         ; 6.478 ns   ; product_code[2]    ; VendingMachineController:controller|state.11      ; clk      ;
+; N/A   ; None         ; 6.423 ns   ; coin_insert_button ; VendingMachineController:controller|coin_total[0] ; clk      ;
+; N/A   ; None         ; 6.423 ns   ; coin_insert_button ; VendingMachineController:controller|coin_total[2] ; clk      ;
+; N/A   ; None         ; 6.423 ns   ; coin_insert_button ; VendingMachineController:controller|coin_total[3] ; clk      ;
+; N/A   ; None         ; 6.423 ns   ; coin_insert_button ; VendingMachineController:controller|coin_total[1] ; clk      ;
+; N/A   ; None         ; 6.369 ns   ; product_code[1]    ; VendingMachineController:controller|state.10      ; clk      ;
+; N/A   ; None         ; 6.341 ns   ; confirm_button     ; VendingMachineController:controller|state.11      ; clk      ;
+; N/A   ; None         ; 6.264 ns   ; product_code[3]    ; VendingMachineController:controller|state.11      ; clk      ;
+; N/A   ; None         ; 6.137 ns   ; product_code[0]    ; VendingMachineController:controller|state.11      ; clk      ;
+; N/A   ; None         ; 6.125 ns   ; confirm_button     ; VendingMachineController:controller|alarm         ; clk      ;
+; N/A   ; None         ; 6.055 ns   ; product_code[1]    ; VendingMachineController:controller|alarm         ; clk      ;
+; N/A   ; None         ; 5.822 ns   ; coin_code[0]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
+; N/A   ; None         ; 5.760 ns   ; coin_code[1]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
+; N/A   ; None         ; 5.751 ns   ; coin_code[0]       ; VendingMachineController:controller|coin_total[2] ; clk      ;
+; N/A   ; None         ; 5.719 ns   ; coin_insert_button ; VendingMachineController:controller|state.00      ; clk      ;
+; N/A   ; None         ; 5.710 ns   ; coin_insert_button ; VendingMachineController:controller|state.10      ; clk      ;
+; N/A   ; None         ; 5.710 ns   ; coin_insert_button ; VendingMachineController:controller|state.11      ; clk      ;
+; N/A   ; None         ; 5.697 ns   ; confirm_button     ; VendingMachineController:controller|state.00      ; clk      ;
+; N/A   ; None         ; 5.689 ns   ; coin_code[1]       ; VendingMachineController:controller|coin_total[2] ; clk      ;
+; N/A   ; None         ; 5.640 ns   ; product_code[1]    ; VendingMachineController:controller|state.11      ; clk      ;
+; N/A   ; None         ; 5.592 ns   ; coin_code[0]       ; VendingMachineController:controller|coin_total[1] ; clk      ;
+; N/A   ; None         ; 5.583 ns   ; coin_code[2]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
+; N/A   ; None         ; 5.344 ns   ; coin_code[3]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
+; N/A   ; None         ; 5.213 ns   ; coin_code[1]       ; VendingMachineController:controller|coin_total[1] ; clk      ;
+; N/A   ; None         ; 5.205 ns   ; coin_code[0]       ; VendingMachineController:controller|coin_total[0] ; clk      ;
+; N/A   ; None         ; 5.197 ns   ; coin_code[2]       ; VendingMachineController:controller|coin_total[2] ; clk      ;
+; N/A   ; None         ; 4.903 ns   ; coin_insert_button ; VendingMachineController:controller|state.01      ; clk      ;
+; N/A   ; None         ; 4.860 ns   ; confirm_button     ; VendingMachineController:controller|state.01      ; clk      ;
 +-------+--------------+------------+--------------------+---------------------------------------------------+----------+
 
 
@@ -255,11 +255,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+--------------+------------+-----------------------------------------------+------------------+------------+
 ; Slack ; Required tco ; Actual tco ; From                                          ; To               ; From Clock ;
 +-------+--------------+------------+-----------------------------------------------+------------------+------------+
-; N/A   ; None         ; 10.219 ns  ; VendingMachineController:controller|change[3] ; change_amount[3] ; clk        ;
-; N/A   ; None         ; 8.901 ns   ; VendingMachineController:controller|change[0] ; change_amount[0] ; clk        ;
-; N/A   ; None         ; 8.494 ns   ; VendingMachineController:controller|change[1] ; change_amount[1] ; clk        ;
-; N/A   ; None         ; 8.263 ns   ; VendingMachineController:controller|change[2] ; change_amount[2] ; clk        ;
-; N/A   ; None         ; 7.929 ns   ; VendingMachineController:controller|alarm     ; alarm            ; clk        ;
+; N/A   ; None         ; 7.685 ns   ; VendingMachineController:controller|alarm     ; alarm            ; clk        ;
+; N/A   ; None         ; 7.246 ns   ; VendingMachineController:controller|change[0] ; change_amount[0] ; clk        ;
+; N/A   ; None         ; 7.245 ns   ; VendingMachineController:controller|change[3] ; change_amount[3] ; clk        ;
+; N/A   ; None         ; 7.231 ns   ; VendingMachineController:controller|change[2] ; change_amount[2] ; clk        ;
+; N/A   ; None         ; 7.018 ns   ; VendingMachineController:controller|change[1] ; change_amount[1] ; clk        ;
 +-------+--------------+------------+-----------------------------------------------+------------------+------------+
 
 
@@ -268,34 +268,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------+-------------------+-----------------+-----------------+---------------------+
 ; Slack ; Required P2P Time ; Actual P2P Time ; From            ; To                  ;
 +-------+-------------------+-----------------+-----------------+---------------------+
-; N/A   ; None              ; 13.282 ns       ; product_code[2] ; display_segments[3] ;
-; N/A   ; None              ; 13.270 ns       ; product_code[1] ; display_segments[3] ;
-; N/A   ; None              ; 13.224 ns       ; product_code[2] ; display_segments[4] ;
-; N/A   ; None              ; 13.211 ns       ; product_code[1] ; display_segments[4] ;
-; N/A   ; None              ; 13.091 ns       ; product_code[0] ; display_segments[3] ;
-; N/A   ; None              ; 13.072 ns       ; product_code[2] ; display_segments[5] ;
-; N/A   ; None              ; 13.062 ns       ; product_code[3] ; display_segments[3] ;
-; N/A   ; None              ; 13.058 ns       ; product_code[1] ; display_segments[5] ;
-; N/A   ; None              ; 13.031 ns       ; product_code[0] ; display_segments[4] ;
-; N/A   ; None              ; 13.003 ns       ; product_code[3] ; display_segments[4] ;
-; N/A   ; None              ; 12.939 ns       ; product_code[1] ; display_segments[1] ;
-; N/A   ; None              ; 12.912 ns       ; product_code[2] ; display_segments[1] ;
-; N/A   ; None              ; 12.878 ns       ; product_code[0] ; display_segments[5] ;
-; N/A   ; None              ; 12.851 ns       ; product_code[3] ; display_segments[5] ;
-; N/A   ; None              ; 12.838 ns       ; product_code[1] ; display_segments[2] ;
-; N/A   ; None              ; 12.837 ns       ; product_code[0] ; display_segments[1] ;
-; N/A   ; None              ; 12.809 ns       ; product_code[2] ; display_segments[2] ;
-; N/A   ; None              ; 12.685 ns       ; product_code[3] ; display_segments[1] ;
-; N/A   ; None              ; 12.659 ns       ; product_code[0] ; display_segments[2] ;
-; N/A   ; None              ; 12.631 ns       ; product_code[3] ; display_segments[2] ;
-; N/A   ; None              ; 12.335 ns       ; product_code[2] ; display_segments[6] ;
-; N/A   ; None              ; 12.320 ns       ; product_code[1] ; display_segments[6] ;
-; N/A   ; None              ; 12.233 ns       ; product_code[1] ; display_segments[0] ;
-; N/A   ; None              ; 12.210 ns       ; product_code[2] ; display_segments[0] ;
-; N/A   ; None              ; 12.138 ns       ; product_code[0] ; display_segments[6] ;
-; N/A   ; None              ; 12.132 ns       ; product_code[0] ; display_segments[0] ;
-; N/A   ; None              ; 12.112 ns       ; product_code[3] ; display_segments[6] ;
-; N/A   ; None              ; 11.986 ns       ; product_code[3] ; display_segments[0] ;
+; N/A   ; None              ; 12.673 ns       ; product_code[2] ; display_segments[0] ;
+; N/A   ; None              ; 12.439 ns       ; product_code[3] ; display_segments[0] ;
+; N/A   ; None              ; 12.284 ns       ; product_code[1] ; display_segments[6] ;
+; N/A   ; None              ; 12.224 ns       ; product_code[0] ; display_segments[0] ;
+; N/A   ; None              ; 12.203 ns       ; product_code[0] ; display_segments[6] ;
+; N/A   ; None              ; 12.159 ns       ; product_code[1] ; display_segments[0] ;
+; N/A   ; None              ; 12.099 ns       ; product_code[2] ; display_segments[6] ;
+; N/A   ; None              ; 12.084 ns       ; product_code[1] ; display_segments[2] ;
+; N/A   ; None              ; 12.037 ns       ; product_code[3] ; display_segments[6] ;
+; N/A   ; None              ; 12.010 ns       ; product_code[2] ; display_segments[1] ;
+; N/A   ; None              ; 11.962 ns       ; product_code[0] ; display_segments[2] ;
+; N/A   ; None              ; 11.902 ns       ; product_code[2] ; display_segments[2] ;
+; N/A   ; None              ; 11.855 ns       ; product_code[1] ; display_segments[4] ;
+; N/A   ; None              ; 11.834 ns       ; product_code[3] ; display_segments[2] ;
+; N/A   ; None              ; 11.833 ns       ; product_code[1] ; display_segments[5] ;
+; N/A   ; None              ; 11.781 ns       ; product_code[3] ; display_segments[1] ;
+; N/A   ; None              ; 11.778 ns       ; product_code[0] ; display_segments[4] ;
+; N/A   ; None              ; 11.757 ns       ; product_code[0] ; display_segments[5] ;
+; N/A   ; None              ; 11.674 ns       ; product_code[2] ; display_segments[4] ;
+; N/A   ; None              ; 11.651 ns       ; product_code[2] ; display_segments[5] ;
+; N/A   ; None              ; 11.601 ns       ; product_code[3] ; display_segments[4] ;
+; N/A   ; None              ; 11.589 ns       ; product_code[1] ; display_segments[3] ;
+; N/A   ; None              ; 11.582 ns       ; product_code[3] ; display_segments[5] ;
+; N/A   ; None              ; 11.562 ns       ; product_code[0] ; display_segments[1] ;
+; N/A   ; None              ; 11.510 ns       ; product_code[0] ; display_segments[3] ;
+; N/A   ; None              ; 11.495 ns       ; product_code[1] ; display_segments[1] ;
+; N/A   ; None              ; 11.408 ns       ; product_code[2] ; display_segments[3] ;
+; N/A   ; None              ; 11.339 ns       ; product_code[3] ; display_segments[3] ;
 +-------+-------------------+-----------------+-----------------+---------------------+
 
 
@@ -304,65 +304,65 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------+-------------+-----------+--------------------+---------------------------------------------------+----------+
 ; Minimum Slack ; Required th ; Actual th ; From               ; To                                                ; To Clock ;
 +---------------+-------------+-----------+--------------------+---------------------------------------------------+----------+
-; N/A           ; None        ; -3.581 ns ; coin_code[1]       ; VendingMachineController:controller|coin_total[1] ; clk      ;
-; N/A           ; None        ; -3.587 ns ; coin_code[2]       ; VendingMachineController:controller|coin_total[2] ; clk      ;
-; N/A           ; None        ; -3.662 ns ; coin_code[0]       ; VendingMachineController:controller|coin_total[0] ; clk      ;
-; N/A           ; None        ; -3.994 ns ; product_code[3]    ; VendingMachineController:controller|change[3]     ; clk      ;
-; N/A           ; None        ; -4.040 ns ; coin_code[3]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
-; N/A           ; None        ; -4.125 ns ; product_code[0]    ; VendingMachineController:controller|change[0]     ; clk      ;
-; N/A           ; None        ; -4.141 ns ; coin_code[2]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
-; N/A           ; None        ; -4.191 ns ; coin_code[1]       ; VendingMachineController:controller|coin_total[2] ; clk      ;
-; N/A           ; None        ; -4.208 ns ; product_code[1]    ; VendingMachineController:controller|change[1]     ; clk      ;
-; N/A           ; None        ; -4.215 ns ; product_code[2]    ; VendingMachineController:controller|change[2]     ; clk      ;
-; N/A           ; None        ; -4.262 ns ; coin_code[1]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
-; N/A           ; None        ; -4.385 ns ; coin_code[0]       ; VendingMachineController:controller|coin_total[1] ; clk      ;
-; N/A           ; None        ; -4.450 ns ; product_code[2]    ; VendingMachineController:controller|state.11      ; clk      ;
-; N/A           ; None        ; -4.508 ns ; product_code[0]    ; VendingMachineController:controller|change[1]     ; clk      ;
-; N/A           ; None        ; -4.527 ns ; confirm_button     ; VendingMachineController:controller|state.00      ; clk      ;
-; N/A           ; None        ; -4.529 ns ; confirm_button     ; VendingMachineController:controller|state.01      ; clk      ;
-; N/A           ; None        ; -4.544 ns ; coin_code[0]       ; VendingMachineController:controller|coin_total[2] ; clk      ;
-; N/A           ; None        ; -4.579 ns ; product_code[0]    ; VendingMachineController:controller|change[2]     ; clk      ;
-; N/A           ; None        ; -4.594 ns ; product_code[1]    ; VendingMachineController:controller|change[2]     ; clk      ;
-; N/A           ; None        ; -4.598 ns ; product_code[2]    ; VendingMachineController:controller|change[3]     ; clk      ;
-; N/A           ; None        ; -4.615 ns ; coin_code[0]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
-; N/A           ; None        ; -4.650 ns ; product_code[0]    ; VendingMachineController:controller|change[3]     ; clk      ;
-; N/A           ; None        ; -4.665 ns ; product_code[1]    ; VendingMachineController:controller|change[3]     ; clk      ;
-; N/A           ; None        ; -4.712 ns ; coin_insert_button ; VendingMachineController:controller|state.01      ; clk      ;
-; N/A           ; None        ; -4.800 ns ; confirm_button     ; VendingMachineController:controller|alarm         ; clk      ;
-; N/A           ; None        ; -4.934 ns ; product_code[3]    ; VendingMachineController:controller|state.11      ; clk      ;
-; N/A           ; None        ; -5.032 ns ; product_code[2]    ; VendingMachineController:controller|alarm         ; clk      ;
-; N/A           ; None        ; -5.047 ns ; product_code[0]    ; VendingMachineController:controller|state.11      ; clk      ;
-; N/A           ; None        ; -5.146 ns ; product_code[1]    ; VendingMachineController:controller|state.11      ; clk      ;
-; N/A           ; None        ; -5.181 ns ; product_code[2]    ; VendingMachineController:controller|state.10      ; clk      ;
-; N/A           ; None        ; -5.298 ns ; confirm_button     ; VendingMachineController:controller|state.11      ; clk      ;
-; N/A           ; None        ; -5.445 ns ; product_code[2]    ; VendingMachineController:controller|change[0]     ; clk      ;
-; N/A           ; None        ; -5.445 ns ; product_code[2]    ; VendingMachineController:controller|change[1]     ; clk      ;
-; N/A           ; None        ; -5.516 ns ; product_code[3]    ; VendingMachineController:controller|alarm         ; clk      ;
-; N/A           ; None        ; -5.562 ns ; coin_insert_button ; VendingMachineController:controller|state.10      ; clk      ;
-; N/A           ; None        ; -5.562 ns ; coin_insert_button ; VendingMachineController:controller|state.11      ; clk      ;
-; N/A           ; None        ; -5.569 ns ; product_code[0]    ; VendingMachineController:controller|state.10      ; clk      ;
-; N/A           ; None        ; -5.629 ns ; product_code[0]    ; VendingMachineController:controller|alarm         ; clk      ;
-; N/A           ; None        ; -5.665 ns ; product_code[3]    ; VendingMachineController:controller|state.10      ; clk      ;
-; N/A           ; None        ; -5.668 ns ; product_code[1]    ; VendingMachineController:controller|state.10      ; clk      ;
-; N/A           ; None        ; -5.728 ns ; product_code[1]    ; VendingMachineController:controller|alarm         ; clk      ;
-; N/A           ; None        ; -5.729 ns ; coin_insert_button ; VendingMachineController:controller|state.00      ; clk      ;
-; N/A           ; None        ; -5.782 ns ; coin_insert_button ; VendingMachineController:controller|coin_total[0] ; clk      ;
-; N/A           ; None        ; -5.782 ns ; coin_insert_button ; VendingMachineController:controller|coin_total[1] ; clk      ;
-; N/A           ; None        ; -5.782 ns ; coin_insert_button ; VendingMachineController:controller|coin_total[3] ; clk      ;
-; N/A           ; None        ; -5.782 ns ; coin_insert_button ; VendingMachineController:controller|coin_total[2] ; clk      ;
-; N/A           ; None        ; -5.929 ns ; product_code[3]    ; VendingMachineController:controller|change[0]     ; clk      ;
-; N/A           ; None        ; -5.929 ns ; product_code[3]    ; VendingMachineController:controller|change[1]     ; clk      ;
-; N/A           ; None        ; -5.929 ns ; product_code[3]    ; VendingMachineController:controller|change[2]     ; clk      ;
-; N/A           ; None        ; -5.932 ns ; product_code[1]    ; VendingMachineController:controller|change[0]     ; clk      ;
-; N/A           ; None        ; -6.173 ns ; confirm_button     ; VendingMachineController:controller|state.10      ; clk      ;
-; N/A           ; None        ; -6.216 ns ; confirm_button     ; VendingMachineController:controller|coin_total[0] ; clk      ;
-; N/A           ; None        ; -6.216 ns ; confirm_button     ; VendingMachineController:controller|coin_total[1] ; clk      ;
-; N/A           ; None        ; -6.216 ns ; confirm_button     ; VendingMachineController:controller|coin_total[3] ; clk      ;
-; N/A           ; None        ; -6.216 ns ; confirm_button     ; VendingMachineController:controller|coin_total[2] ; clk      ;
-; N/A           ; None        ; -6.468 ns ; confirm_button     ; VendingMachineController:controller|change[0]     ; clk      ;
-; N/A           ; None        ; -6.468 ns ; confirm_button     ; VendingMachineController:controller|change[1]     ; clk      ;
-; N/A           ; None        ; -6.468 ns ; confirm_button     ; VendingMachineController:controller|change[2]     ; clk      ;
-; N/A           ; None        ; -6.468 ns ; confirm_button     ; VendingMachineController:controller|change[3]     ; clk      ;
+; N/A           ; None        ; -4.630 ns ; confirm_button     ; VendingMachineController:controller|state.01      ; clk      ;
+; N/A           ; None        ; -4.673 ns ; coin_insert_button ; VendingMachineController:controller|state.01      ; clk      ;
+; N/A           ; None        ; -4.798 ns ; coin_code[2]       ; VendingMachineController:controller|coin_total[2] ; clk      ;
+; N/A           ; None        ; -4.807 ns ; coin_code[0]       ; VendingMachineController:controller|coin_total[0] ; clk      ;
+; N/A           ; None        ; -4.814 ns ; coin_code[1]       ; VendingMachineController:controller|coin_total[1] ; clk      ;
+; N/A           ; None        ; -4.892 ns ; confirm_button     ; VendingMachineController:controller|state.00      ; clk      ;
+; N/A           ; None        ; -4.896 ns ; confirm_button     ; VendingMachineController:controller|alarm         ; clk      ;
+; N/A           ; None        ; -4.945 ns ; coin_code[3]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
+; N/A           ; None        ; -4.947 ns ; product_code[3]    ; VendingMachineController:controller|change[3]     ; clk      ;
+; N/A           ; None        ; -5.125 ns ; product_code[0]    ; VendingMachineController:controller|change[0]     ; clk      ;
+; N/A           ; None        ; -5.158 ns ; product_code[2]    ; VendingMachineController:controller|change[2]     ; clk      ;
+; N/A           ; None        ; -5.203 ns ; product_code[1]    ; VendingMachineController:controller|change[1]     ; clk      ;
+; N/A           ; None        ; -5.353 ns ; coin_code[2]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
+; N/A           ; None        ; -5.362 ns ; coin_code[0]       ; VendingMachineController:controller|coin_total[1] ; clk      ;
+; N/A           ; None        ; -5.410 ns ; product_code[1]    ; VendingMachineController:controller|state.11      ; clk      ;
+; N/A           ; None        ; -5.459 ns ; coin_code[1]       ; VendingMachineController:controller|coin_total[2] ; clk      ;
+; N/A           ; None        ; -5.480 ns ; coin_insert_button ; VendingMachineController:controller|state.10      ; clk      ;
+; N/A           ; None        ; -5.480 ns ; coin_insert_button ; VendingMachineController:controller|state.11      ; clk      ;
+; N/A           ; None        ; -5.480 ns ; confirm_button     ; VendingMachineController:controller|state.11      ; clk      ;
+; N/A           ; None        ; -5.489 ns ; coin_insert_button ; VendingMachineController:controller|state.00      ; clk      ;
+; N/A           ; None        ; -5.508 ns ; product_code[0]    ; VendingMachineController:controller|change[1]     ; clk      ;
+; N/A           ; None        ; -5.521 ns ; coin_code[0]       ; VendingMachineController:controller|coin_total[2] ; clk      ;
+; N/A           ; None        ; -5.530 ns ; coin_code[1]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
+; N/A           ; None        ; -5.541 ns ; product_code[2]    ; VendingMachineController:controller|change[3]     ; clk      ;
+; N/A           ; None        ; -5.579 ns ; product_code[0]    ; VendingMachineController:controller|change[2]     ; clk      ;
+; N/A           ; None        ; -5.589 ns ; product_code[1]    ; VendingMachineController:controller|change[2]     ; clk      ;
+; N/A           ; None        ; -5.592 ns ; coin_code[0]       ; VendingMachineController:controller|coin_total[3] ; clk      ;
+; N/A           ; None        ; -5.650 ns ; product_code[0]    ; VendingMachineController:controller|change[3]     ; clk      ;
+; N/A           ; None        ; -5.660 ns ; coin_insert_button ; VendingMachineController:controller|coin_total[0] ; clk      ;
+; N/A           ; None        ; -5.660 ns ; coin_insert_button ; VendingMachineController:controller|coin_total[2] ; clk      ;
+; N/A           ; None        ; -5.660 ns ; coin_insert_button ; VendingMachineController:controller|coin_total[3] ; clk      ;
+; N/A           ; None        ; -5.660 ns ; coin_insert_button ; VendingMachineController:controller|coin_total[1] ; clk      ;
+; N/A           ; None        ; -5.660 ns ; product_code[1]    ; VendingMachineController:controller|change[3]     ; clk      ;
+; N/A           ; None        ; -5.825 ns ; product_code[1]    ; VendingMachineController:controller|alarm         ; clk      ;
+; N/A           ; None        ; -5.860 ns ; product_code[3]    ; VendingMachineController:controller|state.11      ; clk      ;
+; N/A           ; None        ; -5.907 ns ; product_code[0]    ; VendingMachineController:controller|state.11      ; clk      ;
+; N/A           ; None        ; -6.048 ns ; product_code[2]    ; VendingMachineController:controller|state.11      ; clk      ;
+; N/A           ; None        ; -6.111 ns ; confirm_button     ; VendingMachineController:controller|state.10      ; clk      ;
+; N/A           ; None        ; -6.139 ns ; product_code[1]    ; VendingMachineController:controller|state.10      ; clk      ;
+; N/A           ; None        ; -6.275 ns ; product_code[3]    ; VendingMachineController:controller|alarm         ; clk      ;
+; N/A           ; None        ; -6.322 ns ; product_code[0]    ; VendingMachineController:controller|alarm         ; clk      ;
+; N/A           ; None        ; -6.341 ns ; product_code[3]    ; VendingMachineController:controller|state.10      ; clk      ;
+; N/A           ; None        ; -6.390 ns ; confirm_button     ; VendingMachineController:controller|coin_total[0] ; clk      ;
+; N/A           ; None        ; -6.390 ns ; confirm_button     ; VendingMachineController:controller|coin_total[2] ; clk      ;
+; N/A           ; None        ; -6.390 ns ; confirm_button     ; VendingMachineController:controller|coin_total[3] ; clk      ;
+; N/A           ; None        ; -6.390 ns ; confirm_button     ; VendingMachineController:controller|coin_total[1] ; clk      ;
+; N/A           ; None        ; -6.409 ns ; product_code[1]    ; VendingMachineController:controller|change[0]     ; clk      ;
+; N/A           ; None        ; -6.463 ns ; product_code[2]    ; VendingMachineController:controller|alarm         ; clk      ;
+; N/A           ; None        ; -6.529 ns ; product_code[2]    ; VendingMachineController:controller|state.10      ; clk      ;
+; N/A           ; None        ; -6.611 ns ; product_code[3]    ; VendingMachineController:controller|change[0]     ; clk      ;
+; N/A           ; None        ; -6.611 ns ; product_code[3]    ; VendingMachineController:controller|change[1]     ; clk      ;
+; N/A           ; None        ; -6.611 ns ; product_code[3]    ; VendingMachineController:controller|change[2]     ; clk      ;
+; N/A           ; None        ; -6.619 ns ; confirm_button     ; VendingMachineController:controller|change[0]     ; clk      ;
+; N/A           ; None        ; -6.619 ns ; confirm_button     ; VendingMachineController:controller|change[1]     ; clk      ;
+; N/A           ; None        ; -6.619 ns ; confirm_button     ; VendingMachineController:controller|change[2]     ; clk      ;
+; N/A           ; None        ; -6.619 ns ; confirm_button     ; VendingMachineController:controller|change[3]     ; clk      ;
+; N/A           ; None        ; -6.636 ns ; product_code[0]    ; VendingMachineController:controller|state.10      ; clk      ;
+; N/A           ; None        ; -6.799 ns ; product_code[2]    ; VendingMachineController:controller|change[0]     ; clk      ;
+; N/A           ; None        ; -6.799 ns ; product_code[2]    ; VendingMachineController:controller|change[1]     ; clk      ;
 +---------------+-------------+-----------+--------------------+---------------------------------------------------+----------+
 
 
@@ -372,83 +372,84 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Sep 07 12:06:02 2023
+    Info: Processing started: Thu Sep 07 12:23:49 2023
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off VendingMachine -c VendingMachine --timing_analysis_only
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "clk" is an undefined clock
-Info: Clock "clk" has Internal fmax of 344.35 MHz between source register "VendingMachineController:controller|coin_total[1]" and destination register "VendingMachineController:controller|change[0]" (period= 2.904 ns)
-    Info: + Longest register to register delay is 2.690 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X61_Y2_N15; Fanout = 5; REG Node = 'VendingMachineController:controller|coin_total[1]'
-        Info: 2: + IC(0.491 ns) + CELL(0.437 ns) = 0.928 ns; Loc. = LCCOMB_X62_Y2_N4; Fanout = 2; COMB Node = 'VendingMachineController:controller|LessThan0~1'
-        Info: 3: + IC(0.266 ns) + CELL(0.420 ns) = 1.614 ns; Loc. = LCCOMB_X62_Y2_N26; Fanout = 5; COMB Node = 'VendingMachineController:controller|change[0]~7'
-        Info: 4: + IC(0.416 ns) + CELL(0.660 ns) = 2.690 ns; Loc. = LCFF_X61_Y2_N23; Fanout = 1; REG Node = 'VendingMachineController:controller|change[0]'
-        Info: Total cell delay = 1.517 ns ( 56.39 % )
-        Info: Total interconnect delay = 1.173 ns ( 43.61 % )
-    Info: - Smallest clock skew is 0.000 ns
-        Info: + Shortest clock path from clock "clk" to destination register is 2.871 ns
+Info: Clock "clk" has Internal fmax of 356.89 MHz between source register "VendingMachineController:controller|state.01" and destination register "VendingMachineController:controller|change[0]" (period= 2.802 ns)
+    Info: + Longest register to register delay is 2.589 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X15_Y1_N7; Fanout = 9; REG Node = 'VendingMachineController:controller|state.01'
+        Info: 2: + IC(0.507 ns) + CELL(0.275 ns) = 0.782 ns; Loc. = LCCOMB_X15_Y1_N24; Fanout = 2; COMB Node = 'VendingMachineController:controller|change[0]~4'
+        Info: 3: + IC(0.285 ns) + CELL(0.438 ns) = 1.505 ns; Loc. = LCCOMB_X15_Y1_N2; Fanout = 5; COMB Node = 'VendingMachineController:controller|change[0]~7'
+        Info: 4: + IC(0.424 ns) + CELL(0.660 ns) = 2.589 ns; Loc. = LCFF_X16_Y1_N23; Fanout = 1; REG Node = 'VendingMachineController:controller|change[0]'
+        Info: Total cell delay = 1.373 ns ( 53.03 % )
+        Info: Total interconnect delay = 1.216 ns ( 46.97 % )
+    Info: - Smallest clock skew is 0.001 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 2.873 ns
             Info: 1: + IC(0.000 ns) + CELL(0.959 ns) = 0.959 ns; Loc. = PIN_AD15; Fanout = 1; CLK Node = 'clk'
             Info: 2: + IC(0.112 ns) + CELL(0.000 ns) = 1.071 ns; Loc. = CLKCTRL_G14; Fanout = 13; COMB Node = 'clk~clkctrl'
-            Info: 3: + IC(1.263 ns) + CELL(0.537 ns) = 2.871 ns; Loc. = LCFF_X61_Y2_N23; Fanout = 1; REG Node = 'VendingMachineController:controller|change[0]'
-            Info: Total cell delay = 1.496 ns ( 52.11 % )
-            Info: Total interconnect delay = 1.375 ns ( 47.89 % )
-        Info: - Longest clock path from clock "clk" to source register is 2.871 ns
+            Info: 3: + IC(1.265 ns) + CELL(0.537 ns) = 2.873 ns; Loc. = LCFF_X16_Y1_N23; Fanout = 1; REG Node = 'VendingMachineController:controller|change[0]'
+            Info: Total cell delay = 1.496 ns ( 52.07 % )
+            Info: Total interconnect delay = 1.377 ns ( 47.93 % )
+        Info: - Longest clock path from clock "clk" to source register is 2.872 ns
             Info: 1: + IC(0.000 ns) + CELL(0.959 ns) = 0.959 ns; Loc. = PIN_AD15; Fanout = 1; CLK Node = 'clk'
             Info: 2: + IC(0.112 ns) + CELL(0.000 ns) = 1.071 ns; Loc. = CLKCTRL_G14; Fanout = 13; COMB Node = 'clk~clkctrl'
-            Info: 3: + IC(1.263 ns) + CELL(0.537 ns) = 2.871 ns; Loc. = LCFF_X61_Y2_N15; Fanout = 5; REG Node = 'VendingMachineController:controller|coin_total[1]'
-            Info: Total cell delay = 1.496 ns ( 52.11 % )
-            Info: Total interconnect delay = 1.375 ns ( 47.89 % )
+            Info: 3: + IC(1.264 ns) + CELL(0.537 ns) = 2.872 ns; Loc. = LCFF_X15_Y1_N7; Fanout = 9; REG Node = 'VendingMachineController:controller|state.01'
+            Info: Total cell delay = 1.496 ns ( 52.09 % )
+            Info: Total interconnect delay = 1.376 ns ( 47.91 % )
     Info: + Micro clock to output delay of source is 0.250 ns
     Info: + Micro setup delay of destination is -0.036 ns
-Info: tsu for register "VendingMachineController:controller|change[0]" (data pin = "confirm_button", clock pin = "clk") is 6.698 ns
-    Info: + Longest pin to register delay is 9.605 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_T28; Fanout = 7; PIN Node = 'confirm_button'
-        Info: 2: + IC(6.590 ns) + CELL(0.393 ns) = 7.825 ns; Loc. = LCCOMB_X62_Y2_N24; Fanout = 2; COMB Node = 'VendingMachineController:controller|change[0]~4'
-        Info: 3: + IC(0.266 ns) + CELL(0.438 ns) = 8.529 ns; Loc. = LCCOMB_X62_Y2_N26; Fanout = 5; COMB Node = 'VendingMachineController:controller|change[0]~7'
-        Info: 4: + IC(0.416 ns) + CELL(0.660 ns) = 9.605 ns; Loc. = LCFF_X61_Y2_N23; Fanout = 1; REG Node = 'VendingMachineController:controller|change[0]'
-        Info: Total cell delay = 2.333 ns ( 24.29 % )
-        Info: Total interconnect delay = 7.272 ns ( 75.71 % )
+Info: tsu for register "VendingMachineController:controller|change[0]" (data pin = "product_code[2]", clock pin = "clk") is 7.305 ns
+    Info: + Longest pin to register delay is 10.214 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.832 ns) = 0.832 ns; Loc. = PIN_AB25; Fanout = 11; PIN Node = 'product_code[2]'
+        Info: 2: + IC(7.176 ns) + CELL(0.438 ns) = 8.446 ns; Loc. = LCCOMB_X15_Y1_N14; Fanout = 2; COMB Node = 'VendingMachineController:controller|LessThan0~2'
+        Info: 3: + IC(0.264 ns) + CELL(0.420 ns) = 9.130 ns; Loc. = LCCOMB_X15_Y1_N2; Fanout = 5; COMB Node = 'VendingMachineController:controller|change[0]~7'
+        Info: 4: + IC(0.424 ns) + CELL(0.660 ns) = 10.214 ns; Loc. = LCFF_X16_Y1_N23; Fanout = 1; REG Node = 'VendingMachineController:controller|change[0]'
+        Info: Total cell delay = 2.350 ns ( 23.01 % )
+        Info: Total interconnect delay = 7.864 ns ( 76.99 % )
     Info: + Micro setup delay of destination is -0.036 ns
-    Info: - Shortest clock path from clock "clk" to destination register is 2.871 ns
+    Info: - Shortest clock path from clock "clk" to destination register is 2.873 ns
         Info: 1: + IC(0.000 ns) + CELL(0.959 ns) = 0.959 ns; Loc. = PIN_AD15; Fanout = 1; CLK Node = 'clk'
         Info: 2: + IC(0.112 ns) + CELL(0.000 ns) = 1.071 ns; Loc. = CLKCTRL_G14; Fanout = 13; COMB Node = 'clk~clkctrl'
-        Info: 3: + IC(1.263 ns) + CELL(0.537 ns) = 2.871 ns; Loc. = LCFF_X61_Y2_N23; Fanout = 1; REG Node = 'VendingMachineController:controller|change[0]'
-        Info: Total cell delay = 1.496 ns ( 52.11 % )
-        Info: Total interconnect delay = 1.375 ns ( 47.89 % )
-Info: tco from clock "clk" to destination pin "change_amount[3]" through register "VendingMachineController:controller|change[3]" is 10.219 ns
-    Info: + Longest clock path from clock "clk" to source register is 2.871 ns
+        Info: 3: + IC(1.265 ns) + CELL(0.537 ns) = 2.873 ns; Loc. = LCFF_X16_Y1_N23; Fanout = 1; REG Node = 'VendingMachineController:controller|change[0]'
+        Info: Total cell delay = 1.496 ns ( 52.07 % )
+        Info: Total interconnect delay = 1.377 ns ( 47.93 % )
+Info: tco from clock "clk" to destination pin "alarm" through register "VendingMachineController:controller|alarm" is 7.685 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.872 ns
         Info: 1: + IC(0.000 ns) + CELL(0.959 ns) = 0.959 ns; Loc. = PIN_AD15; Fanout = 1; CLK Node = 'clk'
         Info: 2: + IC(0.112 ns) + CELL(0.000 ns) = 1.071 ns; Loc. = CLKCTRL_G14; Fanout = 13; COMB Node = 'clk~clkctrl'
-        Info: 3: + IC(1.263 ns) + CELL(0.537 ns) = 2.871 ns; Loc. = LCFF_X61_Y2_N29; Fanout = 1; REG Node = 'VendingMachineController:controller|change[3]'
-        Info: Total cell delay = 1.496 ns ( 52.11 % )
-        Info: Total interconnect delay = 1.375 ns ( 47.89 % )
+        Info: 3: + IC(1.264 ns) + CELL(0.537 ns) = 2.872 ns; Loc. = LCFF_X15_Y1_N17; Fanout = 2; REG Node = 'VendingMachineController:controller|alarm'
+        Info: Total cell delay = 1.496 ns ( 52.09 % )
+        Info: Total interconnect delay = 1.376 ns ( 47.91 % )
     Info: + Micro clock to output delay of source is 0.250 ns
-    Info: + Longest register to pin delay is 7.098 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X61_Y2_N29; Fanout = 1; REG Node = 'VendingMachineController:controller|change[3]'
-        Info: 2: + IC(4.270 ns) + CELL(2.828 ns) = 7.098 ns; Loc. = PIN_AJ2; Fanout = 0; PIN Node = 'change_amount[3]'
-        Info: Total cell delay = 2.828 ns ( 39.84 % )
-        Info: Total interconnect delay = 4.270 ns ( 60.16 % )
-Info: Longest tpd from source pin "product_code[2]" to destination pin "display_segments[3]" is 13.282 ns
+    Info: + Longest register to pin delay is 4.563 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X15_Y1_N17; Fanout = 2; REG Node = 'VendingMachineController:controller|alarm'
+        Info: 2: + IC(1.805 ns) + CELL(2.758 ns) = 4.563 ns; Loc. = PIN_AD14; Fanout = 0; PIN Node = 'alarm'
+        Info: Total cell delay = 2.758 ns ( 60.44 % )
+        Info: Total interconnect delay = 1.805 ns ( 39.56 % )
+Info: Longest tpd from source pin "product_code[2]" to destination pin "display_segments[0]" is 12.673 ns
     Info: 1: + IC(0.000 ns) + CELL(0.832 ns) = 0.832 ns; Loc. = PIN_AB25; Fanout = 11; PIN Node = 'product_code[2]'
-    Info: 2: + IC(6.020 ns) + CELL(0.419 ns) = 7.271 ns; Loc. = LCCOMB_X61_Y2_N10; Fanout = 1; COMB Node = 'DisplayModule:display|seven_segment_map~3'
-    Info: 3: + IC(3.243 ns) + CELL(2.768 ns) = 13.282 ns; Loc. = PIN_AD10; Fanout = 0; PIN Node = 'display_segments[3]'
-    Info: Total cell delay = 4.019 ns ( 30.26 % )
-    Info: Total interconnect delay = 9.263 ns ( 69.74 % )
-Info: th for register "VendingMachineController:controller|coin_total[1]" (data pin = "coin_code[1]", clock pin = "clk") is -3.581 ns
-    Info: + Longest clock path from clock "clk" to destination register is 2.871 ns
+    Info: 2: + IC(7.180 ns) + CELL(0.438 ns) = 8.450 ns; Loc. = LCCOMB_X15_Y1_N18; Fanout = 1; COMB Node = 'DisplayModule:display|seven_segment_map~0'
+    Info: 3: + IC(1.455 ns) + CELL(2.768 ns) = 12.673 ns; Loc. = PIN_AE8; Fanout = 0; PIN Node = 'display_segments[0]'
+    Info: Total cell delay = 4.038 ns ( 31.86 % )
+    Info: Total interconnect delay = 8.635 ns ( 68.14 % )
+Info: th for register "VendingMachineController:controller|state.01" (data pin = "confirm_button", clock pin = "clk") is -4.630 ns
+    Info: + Longest clock path from clock "clk" to destination register is 2.872 ns
         Info: 1: + IC(0.000 ns) + CELL(0.959 ns) = 0.959 ns; Loc. = PIN_AD15; Fanout = 1; CLK Node = 'clk'
         Info: 2: + IC(0.112 ns) + CELL(0.000 ns) = 1.071 ns; Loc. = CLKCTRL_G14; Fanout = 13; COMB Node = 'clk~clkctrl'
-        Info: 3: + IC(1.263 ns) + CELL(0.537 ns) = 2.871 ns; Loc. = LCFF_X61_Y2_N15; Fanout = 5; REG Node = 'VendingMachineController:controller|coin_total[1]'
-        Info: Total cell delay = 1.496 ns ( 52.11 % )
-        Info: Total interconnect delay = 1.375 ns ( 47.89 % )
+        Info: 3: + IC(1.264 ns) + CELL(0.537 ns) = 2.872 ns; Loc. = LCFF_X15_Y1_N7; Fanout = 9; REG Node = 'VendingMachineController:controller|state.01'
+        Info: Total cell delay = 1.496 ns ( 52.09 % )
+        Info: Total interconnect delay = 1.376 ns ( 47.91 % )
     Info: + Micro hold delay of destination is 0.266 ns
-    Info: - Shortest pin to register delay is 6.718 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.822 ns) = 0.822 ns; Loc. = PIN_AC23; Fanout = 3; PIN Node = 'coin_code[1]'
-        Info: 2: + IC(5.530 ns) + CELL(0.366 ns) = 6.718 ns; Loc. = LCFF_X61_Y2_N15; Fanout = 5; REG Node = 'VendingMachineController:controller|coin_total[1]'
-        Info: Total cell delay = 1.188 ns ( 17.68 % )
-        Info: Total interconnect delay = 5.530 ns ( 82.32 % )
+    Info: - Shortest pin to register delay is 7.768 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.812 ns) = 0.812 ns; Loc. = PIN_L7; Fanout = 7; PIN Node = 'confirm_button'
+        Info: 2: + IC(6.722 ns) + CELL(0.150 ns) = 7.684 ns; Loc. = LCCOMB_X15_Y1_N6; Fanout = 1; COMB Node = 'VendingMachineController:controller|Selector1~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 7.768 ns; Loc. = LCFF_X15_Y1_N7; Fanout = 9; REG Node = 'VendingMachineController:controller|state.01'
+        Info: Total cell delay = 1.046 ns ( 13.47 % )
+        Info: Total interconnect delay = 6.722 ns ( 86.53 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 194 megabytes
-    Info: Processing ended: Thu Sep 07 12:06:02 2023
+    Info: Processing ended: Thu Sep 07 12:23:49 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

@@ -5,7 +5,7 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.517 ns
+Actual Time    : 6.589 ns
 From           : confirm_button
 To             : VendingMachineController:controller|total_sales[7]
 From Clock     : --
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 21.617 ns
-From           : q[2]~reg0
-To             : seg[4]
+Actual Time    : 19.217 ns
+From           : q[0]~reg0
+To             : seg[1]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -3.654 ns
-From           : product_code[3]
-To             : Product_codetoprice:comb_4|product_price[3]
+Actual Time    : -4.160 ns
+From           : coin_code[0]
+To             : VendingMachineController:controller|coin_total[0]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -35,22 +35,12 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 308.17 MHz ( period = 3.245 ns )
-From           : Product_codetoprice:comb_4|product_price[0]
+Actual Time    : 326.69 MHz ( period = 3.061 ns )
+From           : VendingMachineController:controller|coin_total[2]
 To             : VendingMachineController:controller|total_sales[7]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0
-
-Type           : Clock Hold: 'clk'
-Slack          : Not operational: Clock Skew > Data Delay
-Required Time  : None
-Actual Time    : N/A
-From           : clk_1hz:clk1|divide_by_50:d6|count[3]
-To             : clk_1hz:clk1|divide_by_50:d6|Q
-From Clock     : clk
-To Clock       : clk
-Failed Paths   : 2
 
 Type           : Total number of failed paths
 Slack          : 
@@ -60,7 +50,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 2
+Failed Paths   : 0
 
 --------------------------------------------------------------------------------------
 

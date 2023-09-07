@@ -44,7 +44,14 @@ initialized_value[0] <= InitializeModule:initializer.initialized_value
 initialized_value[1] <= InitializeModule:initializer.initialized_value
 initialized_value[2] <= InitializeModule:initializer.initialized_value
 initialized_value[3] <= InitializeModule:initializer.initialized_value
-dt_zero <= <VCC>
+dt_zero[0] <= <VCC>
+dt_zero[1] <= <VCC>
+dt_zero[2] <= <VCC>
+dt_zero[3] <= <VCC>
+dt_zero[4] <= <VCC>
+dt_zero[5] <= <VCC>
+dt_zero[6] <= <VCC>
+dt_zero[7] <= <VCC>
 state[0] <= VendingMachineController:controller.state
 state[1] <= VendingMachineController:controller.state
 seg[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
@@ -68,7 +75,7 @@ total_sales[6] <= VendingMachineController:controller.total_sales
 total_sales[7] <= VendingMachineController:controller.total_sales
 
 
-|VendingMachine|Product_codetoprice:comb_4
+|VendingMachine|Product_codetoprice:comb_11
 clk => product_price[0]~reg0.CLK
 clk => product_price[1]~reg0.CLK
 clk => product_price[2]~reg0.CLK

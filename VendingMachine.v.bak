@@ -29,7 +29,7 @@ wire clk_1Hz;
 
 wire [7:0] product_price;
 
-Product_codetoprice(.product_code(product_code), .product_price(product_price));
+Product_codetoprice(.clk(clk),.product_code(product_code), .product_price(product_price));
 
 clk_1hz clk1(clk,rst_n,clk_1Hz);
 

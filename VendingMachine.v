@@ -13,14 +13,14 @@ module VendingMachine (
     output wire [3:0] cleared_sales_total,     // 输出已清零销售总额
     output wire [13:0] display_segments,       // 输出用于数码管显示的段
     output wire [3:0] initialized_value,       // 输出初始化值
-    output wire dt_zero,							// set dotpoint
+    output wire [7:0] dt_zero,							// set dotpoint
     output wire [1:0] state,
     output reg [6:0] seg,
     output reg [3:0] q,
     output wire [7:0] total_sales
 );
 
-assign dt_zero = 1'b1;
+assign dt_zero = 8'hff;
 //assign state = 2'b00;
 
 wire [3:0] coin_total;                        // 用于记录硬币总额

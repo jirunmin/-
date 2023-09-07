@@ -1,7 +1,7 @@
 module SalesTotalReset (
     input wire reset_button,       // 输入的复位按钮信号
     input wire clear_sales,       // 输入的清零销售额信号
-    input wire [3:0] sales_total, // 输入的销售总额
+    input wire [7:0] sales_total, // 输入的销售总额
     output wire [3:0] cleared_total // 输出已清零销售总额
 );
 

@@ -1,11 +1,12 @@
 module DisplayModule (
     input wire [7:0] value_to_display, // 输入要显示的值
-    output wire [13:0] display_segments_code // 输出数码管段选信号
+    output wire [13:0] display_segments // 输出数码管段选信号
 );
 
 wire [3:0] ones;
 wire [3:0] tens;
 
+assign value_to_display = value_to_display % 100;
 assign ones = value_to_display % 10;
 assign tens = value_to_display / 10;
 

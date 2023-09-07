@@ -1,9 +1,14 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="VendingMachine">
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_1dm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_45m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_1dm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_45m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_75m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_35m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_75m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_35m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_75m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_35m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

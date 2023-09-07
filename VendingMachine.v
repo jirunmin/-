@@ -8,17 +8,17 @@ module VendingMachine (
     input wire rst_n,
     
     output wire alarm,                        // 输出报警信号
-    output wire [3:0] change_amount,          // 输出找零金额
     output wire product_dispensed,            // 输出产品发放信号
-    output wire [3:0] sales_total,            // 输出销售总额
     output wire [3:0] cleared_sales_total,     // 输出已清零销售总额
     
     output wire [13:0] display_segments,       // 输出用于数码管显示的段
     output wire [13:0] display_segments_code,
+    output wire [13:0] display_change,			// change
+    output wire [13:0] display_sellingAmount,
+    
     
     output wire [3:0] initialized_value,       // 输出初始化值
     output wire [7:0] dt_zero,							// set dotpoint
-    output wire [1:0] state,
     output reg [6:0] seg,
     output reg [3:0] q,
     output wire [7:0] total_sales
@@ -34,6 +34,9 @@ wire clk_1Hz;
 wire [7:0] product_price;
 wire [7:0] coin_value;
 wire [7:0] coin_total;
+wire [7:0] change_amount;          // 找零金额
+wire [7:0] sales_total;            // 输出销售总额
+
 
 Product_codetoprice(.clk(clk),.product_code(product_code), .product_price(product_price));
 
@@ -61,9 +64,9 @@ VendingMachineController controller (          // 自动售货机控制器模块
     .alarm(alarm),
     .change(change_amount),
     .product_dispensed(product_dispensed),
-    .state(state),
     .total_sales(total_sales)
 );
+
 
 DisplayModule display (                        // 显示模块
     .value_to_display(product_price),
@@ -74,6 +77,18 @@ DisplayModule display_1 (                        // 显示模块
     .value_to_display(coin_total),
     .display_segments(display_segments_code)
 );
+
+DisplayModule display_2 (                        // 显示模块
+    .value_to_display(change_amount),
+    .display_segments(display_change)
+);
+
+DisplayModule display_3 (                        // 显示模块
+    .value_to_display(sales_total),
+    .display_segments(display_sellingAmount)
+);
+
+
 
 InitializeModule initializer (                  // 初始化模块
     .initialize_button(reset_button),

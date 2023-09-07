@@ -6,8 +6,8 @@ module DisplayModule (
 wire [3:0] ones;
 wire [3:0] tens;
 
-assign ones = value_to_display % 10;
-assign tens = value_to_display / 10;
+assign ones = value_to_display % 100 % 10;
+assign tens = value_to_display % 100 / 10;
 
 reg [6:0] seven_segment_map [0:9]; // 定义七段数码管编码映射数组，从0到9
 

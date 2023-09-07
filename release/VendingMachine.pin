@@ -242,7 +242,7 @@ GND*                         : AE20      :        :                   :         
 VCCIO7                       : AE21      : power  :                   : 3.3V    : 7         :                
 GND                          : AE22      : gnd    :                   :         :           :                
 GND*                         : AE23      :        :                   :         : 7         :                
-GND*                         : AE24      :        :                   :         : 7         :                
+rst_n                        : AE24      : input  : 3.3-V LVTTL       :         : 7         : N              
 GND                          : AE25      : gnd    :                   :         :           :                
 VCCIO6                       : AE26      : power  :                   : 3.3V    : 6         :                
 coin_code[3]                 : AE27      : input  : 3.3-V LVTTL       :         : 6         : Y              
@@ -336,7 +336,7 @@ GND*                         : AH24      :        :                   :         
 GND                          : AH25      : gnd    :                   :         :           :                
 GND*                         : AH26      :        :                   :         : 7         :                
 GND*                         : AH27      :        :                   :         : 7         :                
-rst_n                        : AH28      : input  : 3.3-V LVTTL       :         : 6         : N              
+GND*                         : AH28      :        :                   :         : 6         :                
 GND*                         : AH29      :        :                   :         : 6         :                
 GND*                         : AH30      :        :                   :         : 6         :                
 GND                          : AJ1       : gnd    :                   :         :           :                
@@ -670,11 +670,11 @@ GND*                         : K30       :        :                   :         
 GND*                         : L1        :        :                   :         : 2         :                
 GND*                         : L2        :        :                   :         : 2         :                
 GND*                         : L3        :        :                   :         : 2         :                
-GND*                         : L4        :        :                   :         : 2         :                
+coin_insert_button           : L4        : input  : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : L5        :        :                   :         : 2         :                
 GND*                         : L6        :        :                   :         : 2         :                
-GND*                         : L7        :        :                   :         : 2         :                
-GND*                         : L8        :        :                   :         : 2         :                
+confirm_button               : L7        : input  : 3.3-V LVTTL       :         : 2         : Y              
+reset_button                 : L8        : input  : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : L9        :        :                   :         : 2         :                
 GND*                         : L10       :        :                   :         : 2         :                
 VCCIO2                       : L11       : power  :                   : 3.3V    : 2         :                
@@ -844,8 +844,8 @@ GND+                         : T24       :        :                   :         
 GND+                         : T25       :        :                   :         : 6         :                
 GND*                         : T26       :        :                   :         : 6         :                
 GND*                         : T27       :        :                   :         : 6         :                
-confirm_button               : T28       : input  : 3.3-V LVTTL       :         : 6         : Y              
-reset_button                 : T29       : input  : 3.3-V LVTTL       :         : 6         : Y              
+GND*                         : T28       :        :                   :         : 6         :                
+GND*                         : T29       :        :                   :         : 6         :                
 VCCIO6                       : T30       : power  :                   : 3.3V    : 6         :                
 GND*                         : U1        :        :                   :         : 1         :                
 GND*                         : U2        :        :                   :         : 1         :                
@@ -876,7 +876,7 @@ nSTATUS                      : U26       :        :                   :         
 CONF_DONE                    : U27       :        :                   :         : 6         :                
 MSEL1                        : U28       :        :                   :         : 6         :                
 GND*                         : U29       :        :                   :         : 6         :                
-coin_insert_button           : U30       : input  : 3.3-V LVTTL       :         : 6         : Y              
+GND*                         : U30       :        :                   :         : 6         :                
 GND                          : V1        : gnd    :                   :         :           :                
 GND*                         : V2        :        :                   :         : 1         :                
 GND*                         : V3        :        :                   :         : 1         :                

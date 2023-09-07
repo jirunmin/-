@@ -88,9 +88,9 @@ set_location_assignment PIN_AH4 -to change_amount[1]
 set_location_assignment PIN_AJ3 -to change_amount[2]
 set_location_assignment PIN_AJ2 -to change_amount[3]
 set_location_assignment PIN_AD14 -to alarm
-set_location_assignment PIN_T29 -to reset_button
-set_location_assignment PIN_T28 -to confirm_button
-set_location_assignment PIN_U30 -to coin_insert_button
+set_location_assignment PIN_L8 -to reset_button
+set_location_assignment PIN_L7 -to confirm_button
+set_location_assignment PIN_L4 -to coin_insert_button
 set_location_assignment PIN_AB13 -to initialized_value[0]
 set_location_assignment PIN_AC12 -to initialized_value[1]
 set_location_assignment PIN_AB12 -to initialized_value[2]

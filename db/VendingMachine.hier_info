@@ -1,5 +1,5 @@
 |VendingMachine
-clk => clk.IN3
+clk => clk.IN2
 reset_button => reset_button.IN2
 coin_insert_button => coin_insert_button.IN1
 confirm_button => confirm_button.IN2
@@ -11,7 +11,7 @@ product_code[0] => product_code[0].IN2
 product_code[1] => product_code[1].IN2
 product_code[2] => product_code[2].IN2
 product_code[3] => product_code[3].IN2
-rst_n => rst_n.IN1
+rst_n => ~NO_FANOUT~
 alarm <= VendingMachineController:controller.alarm
 change_amount[0] <= VendingMachineController:controller.change
 change_amount[1] <= VendingMachineController:controller.change
@@ -38,100 +38,6 @@ initialized_value[1] <= InitializeModule:initializer.initialized_value
 initialized_value[2] <= InitializeModule:initializer.initialized_value
 initialized_value[3] <= InitializeModule:initializer.initialized_value
 dt_zero <= <VCC>
-
-
-|VendingMachine|clk_1hz:clk1
-CLK => CLK.IN1
-RST => RST.IN7
-clk_1Hz <= divide_by_10:d0.port0
-
-
-|VendingMachine|clk_1hz:clk1|divide_by_50:d6
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CLK => count[0].CLK
-CLK => count[1].CLK
-CLK => count[2].CLK
-CLK => count[3].CLK
-CLK => count[4].CLK
-CLK => Q~reg0.CLK
-RST => count[0].ACLR
-RST => count[1].ACLR
-RST => count[2].ACLR
-RST => count[3].ACLR
-RST => count[4].ACLR
-RST => Q~reg0.ACLR
-
-
-|VendingMachine|clk_1hz:clk1|divide_by_10:d5
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CLK => count[0].CLK
-CLK => count[1].CLK
-CLK => count[2].CLK
-CLK => Q~reg0.CLK
-RST => count[0].ACLR
-RST => count[1].ACLR
-RST => count[2].ACLR
-RST => Q~reg0.ACLR
-
-
-|VendingMachine|clk_1hz:clk1|divide_by_10:d4
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CLK => count[0].CLK
-CLK => count[1].CLK
-CLK => count[2].CLK
-CLK => Q~reg0.CLK
-RST => count[0].ACLR
-RST => count[1].ACLR
-RST => count[2].ACLR
-RST => Q~reg0.ACLR
-
-
-|VendingMachine|clk_1hz:clk1|divide_by_10:d3
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CLK => count[0].CLK
-CLK => count[1].CLK
-CLK => count[2].CLK
-CLK => Q~reg0.CLK
-RST => count[0].ACLR
-RST => count[1].ACLR
-RST => count[2].ACLR
-RST => Q~reg0.ACLR
-
-
-|VendingMachine|clk_1hz:clk1|divide_by_10:d2
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CLK => count[0].CLK
-CLK => count[1].CLK
-CLK => count[2].CLK
-CLK => Q~reg0.CLK
-RST => count[0].ACLR
-RST => count[1].ACLR
-RST => count[2].ACLR
-RST => Q~reg0.ACLR
-
-
-|VendingMachine|clk_1hz:clk1|divide_by_10:d1
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CLK => count[0].CLK
-CLK => count[1].CLK
-CLK => count[2].CLK
-CLK => Q~reg0.CLK
-RST => count[0].ACLR
-RST => count[1].ACLR
-RST => count[2].ACLR
-RST => Q~reg0.ACLR
-
-
-|VendingMachine|clk_1hz:clk1|divide_by_10:d0
-Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CLK => count[0].CLK
-CLK => count[1].CLK
-CLK => count[2].CLK
-CLK => Q~reg0.CLK
-RST => count[0].ACLR
-RST => count[1].ACLR
-RST => count[2].ACLR
-RST => Q~reg0.ACLR
 
 
 |VendingMachine|ClockDivider:clock_divider

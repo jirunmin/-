@@ -7,6 +7,7 @@ module VendingMachineController (
     output reg alarm,                 // 输出报警信号
     output reg [3:0] change,          // 输出找零信号
     output reg product_dispensed      // 输出产品发放信号
+    
 );
 
 reg [3:0] total_sales = 0;            // 记录总销售额

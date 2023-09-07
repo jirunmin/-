@@ -5,7 +5,7 @@ module VendingMachine (
     input wire confirm_button,                // 输入确认按钮信号
     input wire [3:0] coin_code,               // 输入硬币代码
     input wire [3:0] product_code,            // 输入产品代码
-    input wire rst_n;
+    input wire rst_n,
     output wire alarm,                        // 输出报警信号
     output wire [3:0] change_amount,          // 输出找零金额
     output wire product_dispensed,            // 输出产品发放信号

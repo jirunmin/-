@@ -21,7 +21,7 @@ wire [3:0] coin_total;                        // 用于记录硬币总额
 wire [3:0] cleared_total;                     // 用于记录已清零销售总额
 wire clk_1Hz;
 
-clk_1hz clk1(clk,rst_n,clk_1Hz);
+// clk_1hz clk1(clk,rst_n,clk_1Hz);
 
 ClockDivider clock_divider (.clk(clk), .sec_pulse()); // 时钟分频器模块
 

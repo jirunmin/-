@@ -6,12 +6,16 @@ module VendingMachine (
     input wire [3:0] coin_code,               // 输入硬币代码
     input wire [3:0] product_code,            // 输入产品代码
     input wire rst_n,
+    
     output wire alarm,                        // 输出报警信号
     output wire [3:0] change_amount,          // 输出找零金额
     output wire product_dispensed,            // 输出产品发放信号
     output wire [3:0] sales_total,            // 输出销售总额
     output wire [3:0] cleared_sales_total,     // 输出已清零销售总额
+    
     output wire [13:0] display_segments,       // 输出用于数码管显示的段
+    output wire [13:0] display_segments_code,
+    
     output wire [3:0] initialized_value,       // 输出初始化值
     output wire [7:0] dt_zero,							// set dotpoint
     output wire [1:0] state,
@@ -28,8 +32,11 @@ wire [3:0] cleared_total;                     // 用于记录已清零销售总额
 wire clk_1Hz;
 
 wire [7:0] product_price;
+wire [7:0] coin_value;
 
 Product_codetoprice(.clk(clk),.product_code(product_code), .product_price(product_price));
+
+CoinDetector coin_detector (.clk(clk),.coin_code(coin_code), .coin_value(coin_value)); // 硬币检测器模块
 
 clk_1hz clk1(clk,rst_n,clk_1Hz);
 
@@ -69,7 +76,7 @@ always @(q)
 
 //ClockDivider clock_divider (.clk(clk), .sec_pulse()); // 时钟分频器模块
 
-CoinDetector coin_detector (.coin_input(coin_code), .coin_code(coin_total)); // 硬币检测器模块
+
 
 SalesTotalReset sales_total_reset (            // 销售总额重置模块
     .reset_button(reset_button),
@@ -82,7 +89,7 @@ VendingMachineController controller (          // 自动售货机控制器模块
     .clk(clk),
     .coin_insert_button(coin_insert_button),
     .confirm_button(confirm_button),
-    .coin_code(coin_code),
+    .coin_value(coin_value),
     .product_price(product_price),
     .alarm(alarm),
     .change(change_amount),
@@ -94,6 +101,11 @@ VendingMachineController controller (          // 自动售货机控制器模块
 DisplayModule display (                        // 显示模块
     .value_to_display(product_price),
     .display_segments(display_segments)
+);
+
+DisplayModule display_1 (                        // 显示模块
+    .value_to_display(coin_value),
+    .display_segments(display_segments_code)
 );
 
 InitializeModule initializer (                  // 初始化模块

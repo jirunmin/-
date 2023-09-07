@@ -53,42 +53,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 
 # end
 # entity
-CoinDetector
-# storage
-db|VendingMachine.(2).cnf
-db|VendingMachine.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-coindetector.v
-e2d9d948457afe41ef3c58645313f314
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-CoinDetector:coin_detector
-}
-# macro_sequence
-
-# end
-# entity
 SalesTotalReset
 # storage
 db|VendingMachine.(3).cnf
@@ -927,42 +891,6 @@ Product_codetoprice:comb_11
 
 # end
 # entity
-VendingMachineController
-# storage
-db|VendingMachine.(18).cnf
-db|VendingMachine.(18).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-vendingmachinecontroller.v
-7c9b985d6a77867e71395d86ebf674f2
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-VendingMachineController:controller
-}
-# macro_sequence
-
-# end
-# entity
 lpm_divide
 # storage
 db|VendingMachine.(19).cnf
@@ -1205,6 +1133,78 @@ denom1
 
 # end
 # entity
+CoinDetector
+# storage
+db|VendingMachine.(2).cnf
+db|VendingMachine.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+coindetector.v
+59d229b47bf4f37c21f056738d24cbe2
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+CoinDetector:coin_detector
+}
+# macro_sequence
+
+# end
+# entity
+VendingMachineController
+# storage
+db|VendingMachine.(18).cnf
+db|VendingMachine.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+vendingmachinecontroller.v
+949532736854164453c33947dfd1db9
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+VendingMachineController:controller
+}
+# macro_sequence
+
+# end
+# entity
 DisplayModule
 # storage
 db|VendingMachine.(5).cnf
@@ -1236,6 +1236,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 DisplayModule:display
+DisplayModule:display_1
 }
 # macro_sequence
 
@@ -1252,7 +1253,7 @@ ON
 # case_sensitive
 # source_file
 vendingmachine.v
-459fb750e78214fecfbcfa8d33c33fc
+7fec5e24f2763f7a227fc465317f566d
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

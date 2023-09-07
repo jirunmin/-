@@ -1,4 +1,5 @@
 module Product_codetoprice (
+	input wire clk,
     input wire [3:0] product_code,    // 输入产品代码
     output reg [7:0] product_price
 );

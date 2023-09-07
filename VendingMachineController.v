@@ -3,13 +3,14 @@ module VendingMachineController (
     input wire coin_insert_button,    // 输入硬币插入按钮信号
     input wire confirm_button,        // 输入确认按钮信号
     input wire [7:0] coin_value,       // 输入硬币代码
+    output reg [7:0] coin_total,
     input wire [7:0] product_price,    // 输入产品代码
     output reg alarm,                 // 输出报警信号
     output reg [3:0] change,          // 输出找零信号
     output reg product_dispensed,      // 输出产品发放信号
     output reg [1:0] state,
-    output reg [7:0] total_sales,
-    output reg [7:0] coin_total
+    output reg [7:0] total_sales
+    
 );
 
 //reg [3:0] total_sales = 0;            // 记录总销售额

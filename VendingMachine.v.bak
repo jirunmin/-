@@ -32,6 +32,7 @@ wire [3:0] cleared_total;                     // 用于记录已清零销售总额
 wire clk_1Hz;
 
 wire [7:0] product_price;
+wire [7:0] coin_value;
 wire [7:0] coin_total;
 
 Product_codetoprice(.clk(clk),.product_code(product_code), .product_price(product_price));
@@ -39,6 +40,54 @@ Product_codetoprice(.clk(clk),.product_code(product_code), .product_price(produc
 CoinDetector coin_detector (.clk(clk),.coin_code(coin_code), .coin_value(coin_value)); // 硬币检测器模块
 
 clk_1hz clk1(clk,rst_n,clk_1Hz);
+
+
+//ClockDivider clock_divider (.clk(clk), .sec_pulse()); // 时钟分频器模块
+
+SalesTotalReset sales_total_reset (            // 销售总额重置模块
+    .reset_button(reset_button),
+    .clear_sales(confirm_button),
+    .sales_total(sales_total),
+    .cleared_total(cleared_total)
+);
+
+VendingMachineController controller (          // 自动售货机控制器模块
+    .clk(clk_1Hz),
+    .coin_insert_button(coin_insert_button),
+    .confirm_button(confirm_button),
+    .coin_value(coin_value),
+	.coin_total(coin_total),
+    .product_price(product_price),
+    .alarm(alarm),
+    .change(change_amount),
+    .product_dispensed(product_dispensed),
+    .state(state),
+    .total_sales(total_sales)
+);
+
+DisplayModule display (                        // 显示模块
+    .value_to_display(product_price),
+    .display_segments(display_segments)
+);
+
+DisplayModule display_1 (                        // 显示模块
+    .value_to_display(coin_value),
+    .display_segments(display_segments_code)
+);
+
+InitializeModule initializer (                  // 初始化模块
+    .initialize_button(reset_button),
+    .initialized_value(initialized_value)
+);
+
+/*
+ChangeModule change_calculator (                // 找零计算模块 (已注释掉)
+    .total_amount(coin_total),
+    .product_price(product_code),
+    .change_amount(change_amount)
+);
+*/
+
 
 always @(posedge clk_1Hz or negedge rst_n)
 begin
@@ -69,57 +118,4 @@ always @(q)
              4'he: seg = ~7'h79;
              4'hf: seg = ~7'h71;
          endcase
-
-
-
-
-
-//ClockDivider clock_divider (.clk(clk), .sec_pulse()); // 时钟分频器模块
-
-
-
-SalesTotalReset sales_total_reset (            // 销售总额重置模块
-    .reset_button(reset_button),
-    .clear_sales(confirm_button),
-    .sales_total(sales_total),
-    .cleared_total(cleared_total)
-);
-
-VendingMachineController controller (          // 自动售货机控制器模块
-    .clk(clk),
-    .coin_insert_button(coin_insert_button),
-    .confirm_button(confirm_button),
-    .coin_value(coin_value),
-	.coin_total(coin_total),
-    .product_price(product_price),
-    .alarm(alarm),
-    .change(change_amount),
-    .product_dispensed(product_dispensed),
-    .state(state),
-    .total_sales(total_sales)
-);
-
-DisplayModule display (                        // 显示模块
-    .value_to_display(product_price),
-    .display_segments(display_segments)
-);
-
-DisplayModule display_1 (                        // 显示模块
-    .value_to_display(coin_total),
-    .display_segments(display_segments_code)
-);
-
-InitializeModule initializer (                  // 初始化模块
-    .initialize_button(reset_button),
-    .initialized_value(initialized_value)
-);
-
-/*
-ChangeModule change_calculator (                // 找零计算模块 (已注释掉)
-    .total_amount(coin_total),
-    .product_price(product_code),
-    .change_amount(change_amount)
-);
-*/
-
 endmodule

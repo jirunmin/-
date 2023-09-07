@@ -855,42 +855,6 @@ denom0
 
 # end
 # entity
-Product_codetoprice
-# storage
-db|VendingMachine.(4).cnf
-db|VendingMachine.(4).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-product_codetoprice.v
-3dd54464affb5be7c5e81b9a2b9f3286
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-Product_codetoprice:comb_11
-}
-# macro_sequence
-
-# end
-# entity
 lpm_divide
 # storage
 db|VendingMachine.(19).cnf
@@ -1133,42 +1097,6 @@ denom1
 
 # end
 # entity
-CoinDetector
-# storage
-db|VendingMachine.(2).cnf
-db|VendingMachine.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-coindetector.v
-59d229b47bf4f37c21f056738d24cbe2
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-CoinDetector:coin_detector
-}
-# macro_sequence
-
-# end
-# entity
 DisplayModule
 # storage
 db|VendingMachine.(5).cnf
@@ -1201,42 +1129,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 # hierarchies {
 DisplayModule:display
 DisplayModule:display_1
-}
-# macro_sequence
-
-# end
-# entity
-VendingMachineController
-# storage
-db|VendingMachine.(18).cnf
-db|VendingMachine.(18).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-vendingmachinecontroller.v
-949d45e5848491a3e9d67250ec7db85f
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-VendingMachineController:controller
 }
 # macro_sequence
 
@@ -1363,6 +1255,78 @@ denom1
 
 # end
 # entity
+Product_codetoprice
+# storage
+db|VendingMachine.(2).cnf
+db|VendingMachine.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+product_codetoprice.v
+b5763fa771c13a9bf758cb14d8a092e9
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+Product_codetoprice:comb_11
+}
+# macro_sequence
+
+# end
+# entity
+CoinDetector
+# storage
+db|VendingMachine.(4).cnf
+db|VendingMachine.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+coindetector.v
+2f6ce532949b98180dfca6e2fc266ab
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+CoinDetector:coin_detector
+}
+# macro_sequence
+
+# end
+# entity
 VendingMachine
 # storage
 db|VendingMachine.(0).cnf
@@ -1374,7 +1338,7 @@ ON
 # case_sensitive
 # source_file
 vendingmachine.v
-35768f44fb30c499409d6f168a4aeed8
+c1e9399ba4cdd0ee562d44e666365146
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1394,6 +1358,42 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+VendingMachineController
+# storage
+db|VendingMachine.(18).cnf
+db|VendingMachine.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+vendingmachinecontroller.v
+58b81af86745ed817c3b2ff01ffe803a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+VendingMachineController:controller
 }
 # macro_sequence
 

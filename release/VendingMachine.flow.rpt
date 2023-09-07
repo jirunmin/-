@@ -1,5 +1,5 @@
 Flow report for VendingMachine
-Thu Sep 07 16:27:06 2023
+Thu Sep 07 16:57:01 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Thu Sep 07 16:27:06 2023        ;
+; Flow Status                        ; Successful - Thu Sep 07 16:57:01 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; VendingMachine                               ;
 ; Top-level Entity Name              ; VendingMachine                               ;
@@ -46,10 +46,10 @@ applicable agreement for further details.
 ; Device                             ; EP2C70F896C6                                 ;
 ; Timing Models                      ; Final                                        ;
 ; Met timing requirements            ; No                                           ;
-; Total logic elements               ; 241 / 68,416 ( < 1 % )                       ;
-;     Total combinational functions  ; 241 / 68,416 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 63 / 68,416 ( < 1 % )                        ;
-; Total registers                    ; 63                                           ;
+; Total logic elements               ; 244 / 68,416 ( < 1 % )                       ;
+;     Total combinational functions  ; 244 / 68,416 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 66 / 68,416 ( < 1 % )                        ;
+; Total registers                    ; 66                                           ;
 ; Total pins                         ; 88 / 622 ( 14 % )                            ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0 / 1,152,000 ( 0 % )                        ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/07/2023 16:26:57 ;
+; Start date & time ; 09/07/2023 16:56:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; VendingMachine      ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                              ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+--------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 185479160770092.169407521713120                                    ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 185479160770092.169407701211956                                    ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                                                 ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                                                  ; --            ; --          ; --             ;
 ; MISC_FILE                          ; E:/ѧϰ/   ֵ ·/       /VendingMachine_9_5_(1)/VendingMachine.dpf ; --            ; --          ; --             ;
@@ -94,9 +94,9 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 230 MB              ; 00:00:00                           ;
 ; Fitter                  ; 00:00:05     ; 1.0                     ; 383 MB              ; 00:00:01                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 348 MB              ; 00:00:01                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 348 MB              ; 00:00:00                           ;
 ; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 181 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:07     ; --                      ; --                  ; 00:00:02                           ;
+; Total                   ; 00:00:07     ; --                      ; --                  ; 00:00:01                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

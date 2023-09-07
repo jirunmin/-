@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.179 ns
-From           : product_code[0]
-To             : Product_codetoprice:comb_11|product_price[0]
+Actual Time    : 4.932 ns
+From           : coin_code[0]
+To             : CoinDetector:coin_detector|coin_value[0]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 38.923 ns
-From           : VendingMachineController:controller|coin_total[5]
-To             : display_segments_code[2]
+Actual Time    : 35.750 ns
+From           : VendingMachineController:controller|coin_total[6]
+To             : display_segments_code[13]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.805 ns
+Actual Time    : 7.481 ns
 From           : confirm_button
-To             : VendingMachineController:controller|state[0]
+To             : VendingMachineController:controller|state[1]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -35,8 +35,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 315.76 MHz ( period = 3.167 ns )
-From           : VendingMachineController:controller|coin_total[1]
+Actual Time    : 337.27 MHz ( period = 2.965 ns )
+From           : VendingMachineController:controller|coin_total[3]
 To             : VendingMachineController:controller|total_sales[7]
 From Clock     : clk
 To Clock       : clk
@@ -46,11 +46,11 @@ Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : Product_codetoprice:comb_11|product_price[0]
-To             : VendingMachineController:controller|change[0]
+From           : Product_codetoprice:comb_11|product_price[2]
+To             : VendingMachineController:controller|total_sales[2]
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 68
+Failed Paths   : 87
 
 Type           : Total number of failed paths
 Slack          : 
@@ -60,7 +60,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 68
+Failed Paths   : 87
 
 --------------------------------------------------------------------------------------
 

@@ -32,6 +32,7 @@ wire [3:0] cleared_total;                     // 用于记录已清零销售总额
 wire clk_1Hz;
 
 wire [7:0] product_price;
+wire [7:0] coin_value;
 wire [7:0] coin_total;
 
 Product_codetoprice(.clk(clk),.product_code(product_code), .product_price(product_price));
@@ -40,43 +41,8 @@ CoinDetector coin_detector (.clk(clk),.coin_code(coin_code), .coin_value(coin_va
 
 clk_1hz clk1(clk,rst_n,clk_1Hz);
 
-always @(posedge clk_1Hz or negedge rst_n)
-begin
-   if(~rst_n) q <= 4'h0;
-   else
-   begin
-      if(4'h9 == q) q <= 4'h0;
-      else q <= q + 4'h1;
-   end
-end
-
-always @(q)
-         case(q)
-             4'h0: seg = ~7'h3F;
-             4'h1: seg = ~7'h06;     // - a(0)--
-             4'h2: seg = ~7'h5B;     // |      |
-             4'h3: seg = ~7'h4F;     // f      b(1)
-             4'h4: seg = ~7'h66;     // |      |
-             4'h5: seg = ~7'h6D;     // ---g----
-             4'h6: seg = ~7'h7D;     // |      |
-             4'h7: seg = ~7'h07;     // e      c(2)
-             4'h8: seg = ~7'h7F;     // |      |
-             4'h9: seg = ~7'h67;     // ---d----
-             4'ha: seg = ~7'h77;
-             4'hb: seg = ~7'h7C;
-             4'hc: seg = ~7'h39;
-             4'hd: seg = ~7'h5E;
-             4'he: seg = ~7'h79;
-             4'hf: seg = ~7'h71;
-         endcase
-
-
-
-
 
 //ClockDivider clock_divider (.clk(clk), .sec_pulse()); // 时钟分频器模块
-
-
 
 SalesTotalReset sales_total_reset (            // 销售总额重置模块
     .reset_button(reset_button),
@@ -122,4 +88,34 @@ ChangeModule change_calculator (                // 找零计算模块 (已注释掉)
 );
 */
 
+
+always @(posedge clk_1Hz or negedge rst_n)
+begin
+   if(~rst_n) q <= 4'h0;
+   else
+   begin
+      if(4'h9 == q) q <= 4'h0;
+      else q <= q + 4'h1;
+   end
+end
+
+always @(q)
+         case(q)
+             4'h0: seg = ~7'h3F;
+             4'h1: seg = ~7'h06;     // - a(0)--
+             4'h2: seg = ~7'h5B;     // |      |
+             4'h3: seg = ~7'h4F;     // f      b(1)
+             4'h4: seg = ~7'h66;     // |      |
+             4'h5: seg = ~7'h6D;     // ---g----
+             4'h6: seg = ~7'h7D;     // |      |
+             4'h7: seg = ~7'h07;     // e      c(2)
+             4'h8: seg = ~7'h7F;     // |      |
+             4'h9: seg = ~7'h67;     // ---d----
+             4'ha: seg = ~7'h77;
+             4'hb: seg = ~7'h7C;
+             4'hc: seg = ~7'h39;
+             4'hd: seg = ~7'h5E;
+             4'he: seg = ~7'h79;
+             4'hf: seg = ~7'h71;
+         endcase
 endmodule

@@ -10,20 +10,20 @@ module CoinDetector (
 always @(posedge clk) begin
     case (coin_code)
         4'b0001: begin 
-            coin_value = 8'd1;
+            coin_value <= 8'd1;
         end
 
         4'b0010: begin 
-            coin_value = 8'd2;
+            coin_value <= 8'd2;
         end
         4'b0100: begin 
-            coin_value = 8'd5;
+            coin_value <= 8'd5;
         end
         4'b1000: begin 
-            coin_value = 8'd10;
+            coin_value <= 8'd10;
         end
         default: begin
-			coin_value = 8'd0;
+			coin_value <= 8'd0;
         end
     endcase
 end

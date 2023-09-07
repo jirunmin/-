@@ -1,5 +1,5 @@
 Flow report for VendingMachine
-Thu Sep 07 12:06:02 2023
+Thu Sep 07 15:08:48 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,19 +38,19 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Thu Sep 07 12:06:02 2023        ;
+; Flow Status                        ; Successful - Thu Sep 07 15:08:48 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; VendingMachine                               ;
 ; Top-level Entity Name              ; VendingMachine                               ;
 ; Family                             ; Cyclone II                                   ;
 ; Device                             ; EP2C70F896C6                                 ;
 ; Timing Models                      ; Final                                        ;
-; Met timing requirements            ; Yes                                          ;
-; Total logic elements               ; 29 / 68,416 ( < 1 % )                        ;
-;     Total combinational functions  ; 29 / 68,416 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 13 / 68,416 ( < 1 % )                        ;
-; Total registers                    ; 13                                           ;
-; Total pins                         ; 39 / 622 ( 6 % )                             ;
+; Met timing requirements            ; No                                           ;
+; Total logic elements               ; 99 / 68,416 ( < 1 % )                        ;
+;     Total combinational functions  ; 99 / 68,416 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 58 / 68,416 ( < 1 % )                        ;
+; Total registers                    ; 58                                           ;
+; Total pins                         ; 67 / 622 ( 11 % )                            ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0 / 1,152,000 ( 0 % )                        ;
 ; Embedded Multiplier 9-bit elements ; 0 / 300 ( 0 % )                              ;
@@ -63,26 +63,28 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/07/2023 12:05:53 ;
+; Start date & time ; 09/07/2023 15:08:38 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; VendingMachine      ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                        ;
-+------------------------------------+---------------------------------------------------------------------+---------------+-------------+----------------+
-; Assignment Name                    ; Value                                                               ; Default Value ; Entity Name ; Section Id     ;
-+------------------------------------+---------------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 185479160770092.169405955312868                                     ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                                                                  ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                                                                   ; --            ; --          ; --             ;
-; MISC_FILE                          ; E:/学习/数字电路/数电课设/VendingMachine_9_5_(1)/VendingMachine.dpf ; --            ; --          ; --             ;
-; PARTITION_COLOR                    ; 16764057                                                            ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                                                              ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY           ; .\release                                                           ; --            ; --          ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                                 ; --            ; --          ; eda_blast_fpga ;
-+------------------------------------+---------------------------------------------------------------------+---------------+-------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                       ;
++------------------------------------+--------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                                                              ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+--------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 185479160770092.169407051817036                                    ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                                                 ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                                                  ; --            ; --          ; --             ;
+; MISC_FILE                          ; E:/学习/   值 路/       /VendingMachine_9_5_(1)/VendingMachine.dpf ; --            ; --          ; --             ;
+; MISC_FILE                          ; E:/学习/   值 路/       /VendingMachine_Git/VendingMachine.dpf     ; --            ; --          ; --             ;
+; MISC_FILE                          ; E:/学习/数字电路/数电课设/VendingMachine_Git/VendingMachine.dpf    ; --            ; --          ; --             ;
+; PARTITION_COLOR                    ; 16764057                                                           ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                                                             ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY           ; .\release                                                          ; --            ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                                ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+--------------------------------------------------------------------+---------------+-------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -90,11 +92,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:00     ; 1.0                     ; 228 MB              ; 00:00:00                           ;
-; Fitter                  ; 00:00:05     ; 1.0                     ; 382 MB              ; 00:00:01                           ;
-; Assembler               ; 00:00:02     ; 1.0                     ; 347 MB              ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 179 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:07     ; --                      ; --                  ; 00:00:01                           ;
+; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 233 MB              ; 00:00:00                           ;
+; Fitter                  ; 00:00:05     ; 1.0                     ; 382 MB              ; 00:00:02                           ;
+; Assembler               ; 00:00:02     ; 1.0                     ; 348 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 180 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:08     ; --                      ; --                  ; 00:00:03                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

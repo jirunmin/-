@@ -1,24 +1,30 @@
 module DisplayModule (
-    input wire [3:0] value_to_display, // 输入要显示的值
-    output wire [6:0] display_segments // 输出数码管段选信号
+    input wire [7:0] value_to_display, // 输入要显示的值
+    output wire [13:0] display_segments // 输出数码管段选信号
 );
+
+wire [3:0] ones;
+wire [3:0] tens;
+
+assign ones = value_to_display % 10;
+assign tens = value_to_display / 10-16;
 
 reg [6:0] seven_segment_map [0:9]; // 定义七段数码管编码映射数组，从0到9
 
 initial begin
-    seven_segment_map[0] = 7'b0000001;  // 数码管显示0的编码
-    seven_segment_map[1] = 7'b1001111;  // 数码管显示1的编码
-    seven_segment_map[2] = 7'b0010010;  // 数码管显示2的编码
-    seven_segment_map[3] = 7'b0000110;  // 数码管显示3的编码
-    seven_segment_map[4] = 7'b1001100;  // 数码管显示4的编码
-    seven_segment_map[5] = 7'b0100100;  // 数码管显示5的编码
-    seven_segment_map[6] = 7'b0100000;  // 数码管显示6的编码
-    seven_segment_map[7] = 7'b0001111;  // 数码管显示7的编码
-    seven_segment_map[8] = 7'b0000000;  // 数码管显示8的编码
-    seven_segment_map[9] = 7'b0000100;  // 数码管显示9的编码
+    seven_segment_map[0] = ~7'h3F;  // 数码管显示0的编码
+    seven_segment_map[1] = ~7'h06;  // 数码管显示1的编码
+    seven_segment_map[2] = ~7'h5B;  // 数码管显示2的编码
+    seven_segment_map[3] = ~7'h4F;  // 数码管显示3的编码
+    seven_segment_map[4] = ~7'h66;  // 数码管显示4的编码
+    seven_segment_map[5] = ~7'h6D;  // 数码管显示5的编码
+    seven_segment_map[6] = ~7'h7D;  // 数码管显示6的编码
+    seven_segment_map[7] = ~7'h07;  // 数码管显示7的编码
+    seven_segment_map[8] = ~7'h7F;  // 数码管显示8的编码
+    seven_segment_map[9] = ~7'h67;  // 数码管显示9的编码
 end
 
-assign display_segments = seven_segment_map[value_to_display]; // 将输入值映射到数码管编码并输出
+assign display_segments = {seven_segment_map[tens], seven_segment_map[ones]}; // 将输入值映射到数码管编码并输出
 
 endmodule
 /*

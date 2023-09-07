@@ -1,5 +1,5 @@
 |VendingMachine
-clk => clk.IN4
+clk => clk.IN3
 reset_button => reset_button.IN2
 coin_insert_button => coin_insert_button.IN1
 confirm_button => confirm_button.IN2
@@ -260,14 +260,14 @@ clk => total_sales[4]~reg0.CLK
 clk => total_sales[5]~reg0.CLK
 clk => total_sales[6]~reg0.CLK
 clk => total_sales[7]~reg0.CLK
-clk => coin_total[0].CLK
-clk => coin_total[1].CLK
-clk => coin_total[2].CLK
-clk => coin_total[3].CLK
-clk => coin_total[4].CLK
-clk => coin_total[5].CLK
-clk => coin_total[6].CLK
-clk => coin_total[7].CLK
+clk => coin_total[0]~reg0.CLK
+clk => coin_total[1]~reg0.CLK
+clk => coin_total[2]~reg0.CLK
+clk => coin_total[3]~reg0.CLK
+clk => coin_total[4]~reg0.CLK
+clk => coin_total[5]~reg0.CLK
+clk => coin_total[6]~reg0.CLK
+clk => coin_total[7]~reg0.CLK
 clk => state[0]~reg0.CLK
 clk => state[1]~reg0.CLK
 clk => alarm~reg0.CLK
@@ -375,6 +375,14 @@ total_sales[4] <= total_sales[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 total_sales[5] <= total_sales[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 total_sales[6] <= total_sales[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 total_sales[7] <= total_sales[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_total[0] <= coin_total[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_total[1] <= coin_total[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_total[2] <= coin_total[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_total[3] <= coin_total[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_total[4] <= coin_total[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_total[5] <= coin_total[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_total[6] <= coin_total[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_total[7] <= coin_total[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |VendingMachine|DisplayModule:display

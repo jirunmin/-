@@ -8,11 +8,11 @@ module VendingMachineController (
     output reg [3:0] change,          // 输出找零信号
     output reg product_dispensed,      // 输出产品发放信号
     output reg [1:0] state,
-    output reg [7:0] total_sales
+    output reg [7:0] total_sales,
+    output reg [7:0] coin_total
 );
 
 //reg [3:0] total_sales = 0;            // 记录总销售额
-reg [7:0] coin_total = 0;             // 记录投币总额
 //reg [1:0] state = 2'b00;              // 控制状态机状态的寄存器
 //total_sales = 0;
 

@@ -27,12 +27,12 @@ module VendingMachine (
 assign dt_zero = 8'hff;
 //assign state = 2'b00;
 
-wire [3:0] coin_total;                        // 用于记录硬币总额
+//wire [3:0] coin_total;                        // 用于记录硬币总额
 wire [3:0] cleared_total;                     // 用于记录已清零销售总额
 wire clk_1Hz;
 
 wire [7:0] product_price;
-wire [7:0] coin_value;
+wire [7:0] coin_total;
 
 Product_codetoprice(.clk(clk),.product_code(product_code), .product_price(product_price));
 
@@ -86,10 +86,11 @@ SalesTotalReset sales_total_reset (            // 销售总额重置模块
 );
 
 VendingMachineController controller (          // 自动售货机控制器模块
-    .clk(clk),
+    .clk(clk_1Hz),
     .coin_insert_button(coin_insert_button),
     .confirm_button(confirm_button),
     .coin_value(coin_value),
+	.coin_total(coin_total),
     .product_price(product_price),
     .alarm(alarm),
     .change(change_amount),
@@ -104,7 +105,7 @@ DisplayModule display (                        // 显示模块
 );
 
 DisplayModule display_1 (                        // 显示模块
-    .value_to_display(coin_value),
+    .value_to_display(coin_total),
     .display_segments(display_segments_code)
 );
 

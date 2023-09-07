@@ -1,0 +1,26 @@
+module SecondsDetector (
+	input wire clk,
+	input wire startflag,
+    output reg secondsflag
+);
+
+reg [1:0] cnt;
+
+
+always @(posedge clk) 
+begin
+	if(startflag)
+	begin
+		if(cnt == 2'd3)
+		begin
+			cnt <= 2'b00;
+			secondsflag <=  1'b1;
+		end		
+		else cnt <= cnt + 1;
+	end
+end		
+
+
+
+
+endmodule

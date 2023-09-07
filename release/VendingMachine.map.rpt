@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VendingMachine
-Fri Sep 08 00:09:01 2023
+Fri Sep 08 01:57:38 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -53,15 +53,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 08 00:09:01 2023        ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 08 01:57:38 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; VendingMachine                               ;
 ; Top-level Entity Name              ; VendingMachine                               ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 412                                          ;
-;     Total combinational functions  ; 412                                          ;
-;     Dedicated logic registers      ; 72                                           ;
-; Total registers                    ; 72                                           ;
+; Total logic elements               ; 408                                          ;
+;     Total combinational functions  ; 404                                          ;
+;     Dedicated logic registers      ; 78                                           ;
+; Total registers                    ; 78                                           ;
 ; Total pins                         ; 106                                          ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
@@ -173,6 +173,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; CoinDetector.v                   ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/CoinDetector.v             ;
 ; clk_1hz.v                        ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/clk_1hz.v                  ;
 ; Product_codetoprice.v            ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/Product_codetoprice.v      ;
+; SecondsDetector.v                ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/SecondsDetector.v          ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; f:/qu/quartus/libraries/megafunctions/lpm_divide.tdf                    ;
 ; db/lpm_divide_75m.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/lpm_divide_75m.tdf      ;
 ; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/sign_div_unsign_ekh.tdf ;
@@ -191,27 +192,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------------------+
 ; Resource                                    ; Usage                          ;
 +---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 412                            ;
+; Estimated Total logic elements              ; 408                            ;
 ;                                             ;                                ;
-; Total combinational functions               ; 412                            ;
+; Total combinational functions               ; 404                            ;
 ; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 131                            ;
+;     -- 4 input functions                    ; 125                            ;
 ;     -- 3 input functions                    ; 109                            ;
-;     -- <=2 input functions                  ; 172                            ;
+;     -- <=2 input functions                  ; 170                            ;
 ;                                             ;                                ;
 ; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 297                            ;
+;     -- normal mode                          ; 289                            ;
 ;     -- arithmetic mode                      ; 115                            ;
 ;                                             ;                                ;
-; Total registers                             ; 72                             ;
-;     -- Dedicated logic registers            ; 72                             ;
+; Total registers                             ; 78                             ;
+;     -- Dedicated logic registers            ; 78                             ;
 ;     -- I/O registers                        ; 0                              ;
 ;                                             ;                                ;
 ; I/O pins                                    ; 106                            ;
 ; Maximum fan-out node                        ; clk_1hz:clk1|divide_by_10:d0|Q ;
-; Maximum fan-out                             ; 35                             ;
-; Total fan-out                               ; 1414                           ;
-; Average fan-out                             ; 2.39                           ;
+; Maximum fan-out                             ; 41                             ;
+; Total fan-out                               ; 1396                           ;
+; Average fan-out                             ; 2.37                           ;
 +---------------------------------------------+--------------------------------+
 
 
@@ -220,7 +221,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |VendingMachine                           ; 412 (11)          ; 72 (4)       ; 0           ; 0            ; 0       ; 0         ; 106  ; 0            ; |VendingMachine                                                                                                                         ; work         ;
+; |VendingMachine                           ; 404 (0)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 106  ; 0            ; |VendingMachine                                                                                                                         ; work         ;
 ;    |CoinDetector:coin_detector|           ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|CoinDetector:coin_detector                                                                                              ;              ;
 ;    |DisplayModule:display_1|              ; 146 (14)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1                                                                                                 ;              ;
 ;       |lpm_divide:Div0|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Div0                                                                                 ;              ;
@@ -258,7 +259,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |sign_div_unsign_akh:divider| ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider                         ;              ;
 ;                |alt_u_div_mve:divider|    ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider   ;              ;
 ;    |Product_codetoprice:comb_11|          ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|Product_codetoprice:comb_11                                                                                             ;              ;
-;    |VendingMachineController:controller|  ; 49 (49)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|VendingMachineController:controller                                                                                     ;              ;
+;    |SecondsDetector:comb_12|              ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|SecondsDetector:comb_12                                                                                                 ;              ;
+;    |SecondsDetector:comb_13|              ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|SecondsDetector:comb_13                                                                                                 ;              ;
+;    |VendingMachineController:controller|  ; 46 (46)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|VendingMachineController:controller                                                                                     ;              ;
 ;    |clk_1hz:clk1|                         ; 31 (0)            ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1                                                                                                            ;              ;
 ;       |divide_by_10:d0|                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d0                                                                                            ;              ;
 ;       |divide_by_10:d1|                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d1                                                                                            ;              ;
@@ -284,298 +287,299 @@ Encoding Type:  One-Hot
 +----------+----------+----------+----------+-------------------------------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                        ;
-+--------------------------------------------------+----------------------------------------+
-; Register name                                    ; Reason for Removal                     ;
-+--------------------------------------------------+----------------------------------------+
-; InitializeModule:initializer|initial_value[0..3] ; Stuck at GND due to stuck port data_in ;
-; CoinDetector:coin_detector|coin_value[4..7]      ; Stuck at GND due to stuck port data_in ;
-; Product_codetoprice:comb_11|product_price[4..7]  ; Stuck at GND due to stuck port data_in ;
-; VendingMachineController:controller|state~6      ; Lost fanout                            ;
-; VendingMachineController:controller|state~7      ; Lost fanout                            ;
-; DisplayModule:display|seven_segment_map~0        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~1        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~2        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~3        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~4        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~5        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~6        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~7        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~8        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~9        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~10       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~11       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~12       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~13       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~14       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~15       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~16       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~17       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~18       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~19       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~20       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~21       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~22       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~23       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~24       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~25       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~26       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~27       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~28       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~29       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~30       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~31       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~32       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~33       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~34       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~35       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~36       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~37       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~38       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~39       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~40       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~41       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~42       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~43       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~44       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~45       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~46       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~47       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~48       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~49       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~50       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~51       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~52       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~53       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~54       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~55       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~56       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~57       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~58       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~59       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~60       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~61       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~62       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~63       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~64       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~65       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~66       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~67       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~68       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~69       ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~0      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~1      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~2      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~3      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~4      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~5      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~6      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~7      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~8      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~9      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~10     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~11     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~12     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~13     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~14     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~15     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~16     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~17     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~18     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~19     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~20     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~21     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~22     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~23     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~24     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~25     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~26     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~27     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~28     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~29     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~30     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~31     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~32     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~33     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~34     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~35     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~36     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~37     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~38     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~39     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~40     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~41     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~42     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~43     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~44     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~45     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~46     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~47     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~48     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~49     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~50     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~51     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~52     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~53     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~54     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~55     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~56     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~57     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~58     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~59     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~60     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~61     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~62     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~63     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~64     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~65     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~66     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~67     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~68     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~69     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~0      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~1      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~2      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~3      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~4      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~5      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~6      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~7      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~8      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~9      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~10     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~11     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~12     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~13     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~14     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~15     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~16     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~17     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~18     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~19     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~20     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~21     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~22     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~23     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~24     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~25     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~26     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~27     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~28     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~29     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~30     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~31     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~32     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~33     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~34     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~35     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~36     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~37     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~38     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~39     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~40     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~41     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~42     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~43     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~44     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~45     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~46     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~47     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~48     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~49     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~50     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~51     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~52     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~53     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~54     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~55     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~56     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~57     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~58     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~59     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~60     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~61     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~62     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~63     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~64     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~65     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~66     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~67     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~68     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~69     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~0      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~1      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~2      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~3      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~4      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~5      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~6      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~7      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~8      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~9      ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~10     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~11     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~12     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~13     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~14     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~15     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~16     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~17     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~18     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~19     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~20     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~21     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~22     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~23     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~24     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~25     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~26     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~27     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~28     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~29     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~30     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~31     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~32     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~33     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~34     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~35     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~36     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~37     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~38     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~39     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~40     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~41     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~42     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~43     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~44     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~45     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~46     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~47     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~48     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~49     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~50     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~51     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~52     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~53     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~54     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~55     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~56     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~57     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~58     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~59     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~60     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~61     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~62     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~63     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~64     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~65     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~66     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~67     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~68     ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~69     ; Stuck at GND due to stuck port clock   ;
-; Total Number of Removed Registers = 294          ;                                        ;
-+--------------------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                           ;
++-----------------------------------------------------+----------------------------------------+
+; Register name                                       ; Reason for Removal                     ;
++-----------------------------------------------------+----------------------------------------+
+; InitializeModule:initializer|initial_value[0..3]    ; Stuck at GND due to stuck port data_in ;
+; CoinDetector:coin_detector|coin_value[4..7]         ; Stuck at GND due to stuck port data_in ;
+; Product_codetoprice:comb_11|product_price[4..7]     ; Stuck at GND due to stuck port data_in ;
+; VendingMachineController:controller|coin_temp[4..7] ; Stuck at GND due to stuck port data_in ;
+; VendingMachineController:controller|state~6         ; Lost fanout                            ;
+; VendingMachineController:controller|state~7         ; Lost fanout                            ;
+; DisplayModule:display|seven_segment_map~0           ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~1           ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~2           ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~3           ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~4           ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~5           ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~6           ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~7           ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~8           ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~9           ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~10          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~11          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~12          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~13          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~14          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~15          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~16          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~17          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~18          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~19          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~20          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~21          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~22          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~23          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~24          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~25          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~26          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~27          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~28          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~29          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~30          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~31          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~32          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~33          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~34          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~35          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~36          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~37          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~38          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~39          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~40          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~41          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~42          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~43          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~44          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~45          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~46          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~47          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~48          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~49          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~50          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~51          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~52          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~53          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~54          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~55          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~56          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~57          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~58          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~59          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~60          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~61          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~62          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~63          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~64          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~65          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~66          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~67          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~68          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display|seven_segment_map~69          ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~0         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~1         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~2         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~3         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~4         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~5         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~6         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~7         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~8         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~9         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~10        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~11        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~12        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~13        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~14        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~15        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~16        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~17        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~18        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~19        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~20        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~21        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~22        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~23        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~24        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~25        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~26        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~27        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~28        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~29        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~30        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~31        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~32        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~33        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~34        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~35        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~36        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~37        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~38        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~39        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~40        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~41        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~42        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~43        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~44        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~45        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~46        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~47        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~48        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~49        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~50        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~51        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~52        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~53        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~54        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~55        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~56        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~57        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~58        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~59        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~60        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~61        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~62        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~63        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~64        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~65        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~66        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~67        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~68        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_1|seven_segment_map~69        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~0         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~1         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~2         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~3         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~4         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~5         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~6         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~7         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~8         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~9         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~10        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~11        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~12        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~13        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~14        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~15        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~16        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~17        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~18        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~19        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~20        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~21        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~22        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~23        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~24        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~25        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~26        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~27        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~28        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~29        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~30        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~31        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~32        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~33        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~34        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~35        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~36        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~37        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~38        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~39        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~40        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~41        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~42        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~43        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~44        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~45        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~46        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~47        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~48        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~49        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~50        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~51        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~52        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~53        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~54        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~55        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~56        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~57        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~58        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~59        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~60        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~61        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~62        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~63        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~64        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~65        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~66        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~67        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~68        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_2|seven_segment_map~69        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~0         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~1         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~2         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~3         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~4         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~5         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~6         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~7         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~8         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~9         ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~10        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~11        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~12        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~13        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~14        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~15        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~16        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~17        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~18        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~19        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~20        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~21        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~22        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~23        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~24        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~25        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~26        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~27        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~28        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~29        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~30        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~31        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~32        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~33        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~34        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~35        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~36        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~37        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~38        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~39        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~40        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~41        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~42        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~43        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~44        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~45        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~46        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~47        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~48        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~49        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~50        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~51        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~52        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~53        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~54        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~55        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~56        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~57        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~58        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~59        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~60        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~61        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~62        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~63        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~64        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~65        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~66        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~67        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~68        ; Stuck at GND due to stuck port clock   ;
+; DisplayModule:display_3|seven_segment_map~69        ; Stuck at GND due to stuck port clock   ;
+; Total Number of Removed Registers = 298             ;                                        ;
++-----------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -583,12 +587,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 72    ;
-; Number of registers using Synchronous Clear  ; 5     ;
+; Total registers                              ; 78    ;
+; Number of registers using Synchronous Clear  ; 13    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 34    ;
+; Number of registers using Asynchronous Clear ; 30    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 26    ;
+; Number of registers using Clock Enable       ; 30    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -598,8 +602,10 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 7:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |VendingMachine|VendingMachineController:controller|coin_total[7] ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VendingMachine|VendingMachineController:controller|coin_total[0] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_12|cnt[1]                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_13|cnt[1]                    ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |VendingMachine|VendingMachineController:controller|coin_total[5] ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|Selector2     ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|Selector3     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
@@ -826,7 +832,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Sep 08 00:09:00 2023
+    Info: Processing started: Fri Sep 08 01:57:37 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VendingMachine -c VendingMachine
 Info: Found 1 design units, including 1 entities, in source file vendingmachine.v
     Info: Found entity 1: VendingMachine
@@ -851,9 +857,15 @@ Info: Found 3 design units, including 3 entities, in source file clk_1hz.v
     Info: Found entity 3: divide_by_50
 Info: Found 1 design units, including 1 entities, in source file product_codetoprice.v
     Info: Found entity 1: Product_codetoprice
+Info: Found 1 design units, including 1 entities, in source file secondsdetector.v
+    Info: Found entity 1: SecondsDetector
 Critical Warning (10846): Verilog HDL Instantiation warning at VendingMachine.v(41): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at VendingMachine.v(55): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at VendingMachine.v(57): instance has no name
 Info: Elaborating entity "VendingMachine" for the top level hierarchy
 Warning (10034): Output port "cleared_sales_total" at VendingMachine.v(12) has no driver
+Warning (10034): Output port "seg" at VendingMachine.v(22) has no driver
+Warning (10034): Output port "q" at VendingMachine.v(23) has no driver
 Info: Elaborating entity "Product_codetoprice" for hierarchy "Product_codetoprice:comb_11"
 Info (10264): Verilog HDL Case Statement information at Product_codetoprice.v(9): all case item expressions in this case statement are onehot
 Info: Elaborating entity "CoinDetector" for hierarchy "CoinDetector:coin_detector"
@@ -868,6 +880,8 @@ Info (10041): Inferred latch for "total[0]" at SalesTotalReset.v(10)
 Info (10041): Inferred latch for "total[1]" at SalesTotalReset.v(10)
 Info (10041): Inferred latch for "total[2]" at SalesTotalReset.v(10)
 Info (10041): Inferred latch for "total[3]" at SalesTotalReset.v(10)
+Info: Elaborating entity "SecondsDetector" for hierarchy "SecondsDetector:comb_12"
+Warning (10230): Verilog HDL assignment warning at SecondsDetector.v(19): truncated value with size 32 to match size of target (2)
 Info: Elaborating entity "VendingMachineController" for hierarchy "VendingMachineController:controller"
 Info: Elaborating entity "DisplayModule" for hierarchy "DisplayModule:display"
 Warning (10230): Verilog HDL assignment warning at DisplayModule.v(9): truncated value with size 32 to match size of target (4)
@@ -1004,6 +1018,17 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "dt_zero[5]" is stuck at VCC
     Warning (13410): Pin "dt_zero[6]" is stuck at VCC
     Warning (13410): Pin "dt_zero[7]" is stuck at VCC
+    Warning (13410): Pin "seg[0]" is stuck at GND
+    Warning (13410): Pin "seg[1]" is stuck at GND
+    Warning (13410): Pin "seg[2]" is stuck at GND
+    Warning (13410): Pin "seg[3]" is stuck at GND
+    Warning (13410): Pin "seg[4]" is stuck at GND
+    Warning (13410): Pin "seg[5]" is stuck at GND
+    Warning (13410): Pin "seg[6]" is stuck at GND
+    Warning (13410): Pin "q[0]" is stuck at GND
+    Warning (13410): Pin "q[1]" is stuck at GND
+    Warning (13410): Pin "q[2]" is stuck at GND
+    Warning (13410): Pin "q[3]" is stuck at GND
 Info: 2 registers lost all their fanouts during netlist optimizations. The first 2 are displayed below.
     Info: Register "VendingMachineController:controller|state~6" lost all its fanouts during netlist optimizations.
     Info: Register "VendingMachineController:controller|state~7" lost all its fanouts during netlist optimizations.
@@ -1011,13 +1036,13 @@ Info: Found the following redundant logic cells in design
     Info (17048): Logic cell "DisplayModule:display|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[0]~0"
 Warning: Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset_button"
-Info: Implemented 521 device resources after synthesis - the final resource count might be different
+Info: Implemented 517 device resources after synthesis - the final resource count might be different
     Info: Implemented 13 input pins
     Info: Implemented 93 output pins
-    Info: Implemented 415 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 83 warnings
-    Info: Peak virtual memory: 234 megabytes
-    Info: Processing ended: Fri Sep 08 00:09:01 2023
+    Info: Implemented 411 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 99 warnings
+    Info: Peak virtual memory: 235 megabytes
+    Info: Processing ended: Fri Sep 08 01:57:38 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

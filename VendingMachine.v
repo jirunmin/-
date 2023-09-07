@@ -25,9 +25,7 @@ module VendingMachine (
 );
 
 assign dt_zero = 8'hff;
-//assign state = 2'b00;
 
-//wire [3:0] coin_total;                        // 用于记录硬币总额
 wire [3:0] cleared_total;                     // 用于记录已清零销售总额
 wire clk_1Hz;
 
@@ -36,6 +34,8 @@ wire [7:0] coin_value;
 wire [7:0] coin_total;
 wire [7:0] change_amount;          // 找零金额
 wire [7:0] sales_total;            // 输出销售总额
+wire confirm_flag;
+wire alarm_flag;
 
 
 Product_codetoprice(.clk(clk),.product_code(product_code), .product_price(product_price));
@@ -45,14 +45,16 @@ CoinDetector coin_detector (.clk(clk),.coin_code(coin_code), .coin_value(coin_va
 clk_1hz clk1(clk,rst_n,clk_1Hz);
 
 
-//ClockDivider clock_divider (.clk(clk), .sec_pulse()); // 时钟分频器模块
-
 SalesTotalReset sales_total_reset (            // 销售总额重置模块
     .reset_button(reset_button),
     .clear_sales(confirm_button),
     .sales_total(sales_total),
     .cleared_total(cleared_total)
 );
+
+SecondsDetector(.clk(clk_1Hz), .startflag(confirm_button), .secondsflag(confirm_flag));
+
+SecondsDetector(.clk(clk_1Hz), .startflag(alarm), .secondsflag(alarm_flag));
 
 VendingMachineController controller (          // 自动售货机控制器模块
     .clk(clk_1Hz),
@@ -64,7 +66,9 @@ VendingMachineController controller (          // 自动售货机控制器模块
     .alarm(alarm),
     .change(change_amount),
     .product_dispensed(product_dispensed),
-    .total_sales(total_sales)
+    .total_sales(total_sales),
+    .confirm_flag(confirm_flag),
+    .alarm_flag(alarm_flag)
 );
 
 
@@ -103,7 +107,7 @@ ChangeModule change_calculator (                // 找零计算模块 (已注释掉)
 );
 */
 
-
+/*
 always @(posedge clk_1Hz or negedge rst_n)
 begin
    if(~rst_n) q <= 4'h0;
@@ -133,4 +137,5 @@ always @(q)
              4'he: seg = ~7'h79;
              4'hf: seg = ~7'h71;
          endcase
+*/
 endmodule

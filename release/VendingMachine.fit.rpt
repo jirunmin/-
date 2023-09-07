@@ -1,5 +1,5 @@
 Fitter report for VendingMachine
-Thu Sep 07 14:58:51 2023
+Thu Sep 07 15:08:44 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -61,7 +61,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Thu Sep 07 14:58:51 2023        ;
+; Fitter Status                      ; Successful - Thu Sep 07 15:08:44 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; VendingMachine                               ;
 ; Top-level Entity Name              ; VendingMachine                               ;
@@ -224,7 +224,7 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )         ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )         ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%          ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%          ;
+; Peak interconnect usage (total/H/V)         ; 1% / 1% / 1%          ;
 ; Maximum fan-out node                        ; rst_n                 ;
 ; Maximum fan-out                             ; 34                    ;
 ; Highest non-global fan-out signal           ; rst_n                 ;
@@ -271,30 +271,30 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; cleared_sales_total[1] ; AK5   ; 8        ; 9            ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; cleared_sales_total[2] ; AJ5   ; 8        ; 9            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; cleared_sales_total[3] ; AJ4   ; 8        ; 7            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[0]    ; P1    ; 2        ; 0            ; 30           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[10]   ; L3    ; 2        ; 0            ; 36           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[11]   ; K1    ; 2        ; 0            ; 35           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[12]   ; K4    ; 2        ; 0            ; 38           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[13]   ; K5    ; 2        ; 0            ; 42           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[1]    ; P2    ; 2        ; 0            ; 30           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[2]    ; P3    ; 2        ; 0            ; 31           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[3]    ; N2    ; 2        ; 0            ; 32           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[4]    ; N3    ; 2        ; 0            ; 32           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[5]    ; M1    ; 2        ; 0            ; 33           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[6]    ; M2    ; 2        ; 0            ; 33           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[7]    ; M3    ; 2        ; 0            ; 33           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[8]    ; L1    ; 2        ; 0            ; 34           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; display_segments[9]    ; L2    ; 2        ; 0            ; 34           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[0]    ; AE8   ; 8        ; 1            ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[10]   ; AG16  ; 7        ; 53           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[11]   ; AE17  ; 7        ; 58           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[12]   ; AF17  ; 7        ; 62           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[13]   ; AD17  ; 7        ; 60           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[1]    ; AF9   ; 8        ; 13           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[2]    ; AH9   ; 8        ; 24           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[3]    ; AD10  ; 8        ; 15           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[4]    ; AF10  ; 8        ; 18           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[5]    ; AD11  ; 8        ; 20           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[6]    ; AD12  ; 8        ; 24           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[7]    ; AG13  ; 8        ; 40           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[8]    ; AE16  ; 7        ; 51           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; display_segments[9]    ; AF16  ; 7        ; 56           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; dt_zero                ; AF12  ; 8        ; 29           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; initialized_value[0]   ; AB13  ; 8        ; 35           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; initialized_value[1]   ; AC12  ; 8        ; 20           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; initialized_value[2]   ; AB12  ; 8        ; 31           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; initialized_value[3]   ; AC11  ; 8        ; 15           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; product_dispensed      ; AA24  ; 6        ; 95           ; 8            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; q[0]                   ; G3    ; 2        ; 0            ; 47           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; q[1]                   ; G5    ; 2        ; 0            ; 48           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; q[2]                   ; G6    ; 2        ; 0            ; 48           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; q[3]                   ; F3    ; 2        ; 0            ; 48           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; q[0]                   ; B2    ; 2        ; 0            ; 46           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; q[1]                   ; E3    ; 2        ; 0            ; 46           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; q[2]                   ; G3    ; 2        ; 0            ; 47           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; q[3]                   ; C3    ; 2        ; 0            ; 46           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; sales_total[0]         ; Y27   ; 6        ; 95           ; 18           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; sales_total[1]         ; Y24   ; 6        ; 95           ; 10           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; sales_total[2]         ; Y23   ; 6        ; 95           ; 10           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
@@ -308,14 +308,14 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; seg[6]                 ; E4    ; 2        ; 0            ; 46           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; state[0]               ; AD8   ; 8        ; 5            ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; state[1]               ; AJ7   ; 8        ; 18           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
-; total_sales[0]         ; C9    ; 3        ; 18           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; total_sales[1]         ; N4    ; 2        ; 0            ; 31           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; total_sales[2]         ; B8    ; 3        ; 18           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; total_sales[3]         ; D9    ; 3        ; 18           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; total_sales[4]         ; T7    ; 1        ; 0            ; 24           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; total_sales[5]         ; AK7   ; 8        ; 18           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; total_sales[6]         ; P4    ; 2        ; 0            ; 30           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; total_sales[7]         ; AF10  ; 8        ; 18           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; total_sales[0]         ; AD16  ; 7        ; 53           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; total_sales[1]         ; AG17  ; 7        ; 56           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; total_sales[2]         ; AH17  ; 7        ; 56           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; total_sales[3]         ; AK17  ; 7        ; 58           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; total_sales[4]         ; AC17  ; 7        ; 60           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; total_sales[5]         ; AC16  ; 7        ; 53           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; total_sales[6]         ; AJ17  ; 7        ; 58           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; total_sales[7]         ; AJ16  ; 7        ; 51           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 +------------------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 
 
@@ -324,14 +324,14 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 1 / 85 ( 1 % )   ; 3.3V          ; --           ;
-; 2        ; 32 / 79 ( 41 % ) ; 3.3V          ; --           ;
-; 3        ; 3 / 72 ( 4 % )   ; 3.3V          ; --           ;
+; 1        ; 0 / 85 ( 0 % )   ; 3.3V          ; --           ;
+; 2        ; 16 / 79 ( 20 % ) ; 3.3V          ; --           ;
+; 3        ; 0 / 72 ( 0 % )   ; 3.3V          ; --           ;
 ; 4        ; 0 / 74 ( 0 % )   ; 3.3V          ; --           ;
 ; 5        ; 0 / 85 ( 0 % )   ; 3.3V          ; --           ;
 ; 6        ; 15 / 81 ( 19 % ) ; 3.3V          ; --           ;
-; 7        ; 1 / 74 ( 1 % )   ; 3.3V          ; --           ;
-; 8        ; 18 / 72 ( 25 % ) ; 3.3V          ; --           ;
+; 7        ; 15 / 74 ( 20 % ) ; 3.3V          ; --           ;
+; 8        ; 24 / 72 ( 33 % ) ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -443,8 +443,8 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; AC13     ; 223        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC14     ; 231        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC15     ; 245        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; AC16     ; 250        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC17     ; 259        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AC16     ; 250        ; 7        ; total_sales[5]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC17     ; 259        ; 7        ; total_sales[4]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AC18     ; 272        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC19     ; 282        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC20     ; 293        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -467,14 +467,14 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; AD7      ; 171        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AD8      ; 180        ; 8        ; state[0]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AD9      ; 195        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD10     ; 197        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD11     ; 202        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD12     ; 210        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AD10     ; 197        ; 8        ; display_segments[3]                      ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AD11     ; 202        ; 8        ; display_segments[5]                      ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AD12     ; 210        ; 8        ; display_segments[6]                      ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AD13     ; 222        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD14     ; 229        ; 8        ; alarm                                    ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AD15     ; 244        ; 7        ; clk                                      ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
-; AD16     ; 249        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD17     ; 258        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AD16     ; 249        ; 7        ; total_sales[0]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD17     ; 258        ; 7        ; display_segments[13]                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AD18     ; 271        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD19     ; 281        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD20     ; 294        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -495,7 +495,7 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; AE5      ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AE6      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AE7      ; 173        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE8      ; 172        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE8      ; 172        ; 8        ; display_segments[0]                      ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE9      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AE10     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AE11     ; 204        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -503,8 +503,8 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; AE13     ; 221        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE14     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AE15     ; 235        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE16     ; 248        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AE17     ; 255        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE16     ; 248        ; 7        ; display_segments[8]                      ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AE17     ; 255        ; 7        ; display_segments[11]                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE18     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AE19     ; 284        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE20     ; 290        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -526,15 +526,15 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; AF6      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF7      ; 183        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF8      ; 189        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF9      ; 192        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF10     ; 200        ; 8        ; total_sales[7]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF9      ; 192        ; 8        ; display_segments[1]                      ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AF10     ; 200        ; 8        ; display_segments[4]                      ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AF11     ; 203        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF12     ; 217        ; 8        ; dt_zero                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AF13     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF14     ; 233        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF15     ; 234        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF16     ; 252        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF17     ; 264        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF16     ; 252        ; 7        ; display_segments[9]                      ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AF17     ; 264        ; 7        ; display_segments[12]                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AF18     ; 269        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF19     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF20     ; 276        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -560,11 +560,11 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; AG10     ; 212        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AG11     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG12     ; 226        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AG13     ; 230        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AG13     ; 230        ; 8        ; display_segments[7]                      ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AG14     ; 232        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AG15     ; 242        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; AG16     ; 251        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AG17     ; 254        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AG16     ; 251        ; 7        ; display_segments[10]                     ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
+; AG17     ; 254        ; 7        ; total_sales[1]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AG18     ; 270        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AG19     ; 268        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AG20     ; 275        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -586,7 +586,7 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; AH6      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AH7      ; 190        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH8      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AH9      ; 207        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AH9      ; 207        ; 8        ; display_segments[2]                      ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AH10     ; 211        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH11     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AH12     ; 225        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -594,7 +594,7 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; AH14     ; 243        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AH15     ; 241        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH16     ; 247        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AH17     ; 253        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AH17     ; 253        ; 7        ; total_sales[2]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AH18     ; 261        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH19     ; 267        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH20     ; 283        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -623,8 +623,8 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; AJ13     ; 236        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ14     ; 239        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ15     ; 240        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AJ16     ; 246        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AJ17     ; 257        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AJ16     ; 246        ; 7        ; total_sales[7]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AJ17     ; 257        ; 7        ; total_sales[6]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AJ18     ; 260        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ19     ; 263        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ20     ; 266        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -643,7 +643,7 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; AK4      ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AK5      ; 186        ; 8        ; cleared_sales_total[1]                   ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AK6      ; 193        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AK7      ; 198        ; 8        ; total_sales[5]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AK7      ; 198        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK8      ; 205        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK9      ; 213        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK10     ; 215        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -653,7 +653,7 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; AK14     ; 238        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK15     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AK16     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AK17     ; 256        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AK17     ; 256        ; 7        ; total_sales[3]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AK18     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AK19     ; 262        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK20     ; 265        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -667,13 +667,13 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; AK28     ; 308        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK29     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; B2       ; 14         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; B2       ; 14         ; 2        ; q[0]                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; B3       ; 626        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B4       ; 621        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B5       ; 618        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B6       ; 614        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B7       ; 611        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B8       ; 605        ; 3        ; total_sales[2]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B8       ; 605        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B9       ; 593        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B10      ; 591        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B11      ; 585        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -698,13 +698,13 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; B30      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C1       ; 16         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C2       ; 17         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; C3       ; 15         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; C3       ; 15         ; 2        ; q[3]                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; C4       ; 620        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C5       ; 624        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C6       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C7       ; 613        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C8       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; C9       ; 603        ; 3        ; total_sales[0]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C9       ; 603        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C10      ; 600        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C11      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; C12      ; 584        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -734,7 +734,7 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; D6       ; 617        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D7       ; 616        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D8       ; 608        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; D9       ; 604        ; 3        ; total_sales[3]                           ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D9       ; 604        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D10      ; 599        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D11      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; D12      ; 583        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -758,7 +758,7 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; D30      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E1       ; 37         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E2       ; 38         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; E3       ; 12         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; E3       ; 12         ; 2        ; q[1]                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; E4       ; 13         ; 2        ; seg[6]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; E5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; E6       ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -788,7 +788,7 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; E30      ; 471        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F1       ; 39         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F2       ; 40         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F3       ; 6          ; 2        ; q[3]                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F3       ; 6          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F4       ; 7          ; 2        ; seg[5]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; F5       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; F6       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -818,10 +818,10 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; F30      ; 464        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G1       ; 41         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G2       ; 42         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; G3       ; 10         ; 2        ; q[0]                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G3       ; 10         ; 2        ; q[2]                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; G4       ; 11         ; 2        ; seg[4]                                   ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; G5       ; 4          ; 2        ; q[1]                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G6       ; 5          ; 2        ; q[2]                                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G5       ; 4          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G6       ; 5          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; G7       ; 0          ; 2        ; ~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
 ; G8       ;            ;          ; GNDA_PLL3                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G9       ; 625        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -906,11 +906,11 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; J28      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; J29      ; 439        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; J30      ; 440        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; K1       ; 56         ; 2        ; display_segments[11]                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; K1       ; 56         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K2       ; 57         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K3       ; 45         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; K4       ; 46         ; 2        ; display_segments[12]                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; K5       ; 32         ; 2        ; display_segments[13]                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; K4       ; 46         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; K5       ; 32         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K6       ; 31         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K7       ; 26         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K8       ; 25         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -936,9 +936,9 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; K28      ; 446        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K29      ; 433        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; K30      ; 434        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; L1       ; 60         ; 2        ; display_segments[8]                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; L2       ; 61         ; 2        ; display_segments[9]                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; L3       ; 54         ; 2        ; display_segments[10]                     ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; L1       ; 60         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; L2       ; 61         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; L3       ; 54         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L4       ; 55         ; 2        ; coin_insert_button                       ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; L5       ; 34         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L6       ; 33         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -966,9 +966,9 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; L28      ; 435        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L29      ; 431        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L30      ; 432        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; M1       ; 64         ; 2        ; display_segments[5]                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; M2       ; 65         ; 2        ; display_segments[6]                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; M3       ; 66         ; 2        ; display_segments[7]                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; M1       ; 64         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; M2       ; 65         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; M3       ; 66         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M4       ; 67         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M5       ; 53         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M6       ; 49         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -997,9 +997,9 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; M29      ; 425        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M30      ; 426        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; N2       ; 68         ; 2        ; display_segments[3]                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; N3       ; 69         ; 2        ; display_segments[4]                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; N4       ; 71         ; 2        ; total_sales[1]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N2       ; 68         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N3       ; 69         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N4       ; 71         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N5       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; N6       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N7       ; 59         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1026,10 +1026,10 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; N28      ; 421        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N29      ; 422        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N30      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; P1       ; 75         ; 2        ; display_segments[0]                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; P2       ; 76         ; 2        ; display_segments[1]                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; P3       ; 73         ; 2        ; display_segments[2]                      ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; P4       ; 74         ; 2        ; total_sales[6]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P1       ; 75         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P2       ; 76         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P3       ; 73         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P4       ; 74         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P5       ; 78         ; 2        ; #TCK                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; P6       ; 72         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P7       ; 70         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1092,7 +1092,7 @@ The pin-out file can be found in E:/学习/数字电路/数电课设/VendingMachine_Git/re
 ; T4       ; 91         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T5       ; 92         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T6       ; 89         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; T7       ; 90         ; 1        ; total_sales[4]                           ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T7       ; 90         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T8       ; 97         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T9       ; 96         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T10      ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -1404,55 +1404,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - Product_codetoprice:comb_4|Decoder0~0                   ; 1                 ; 6       ;
 ;      - Product_codetoprice:comb_4|Decoder0~1                   ; 1                 ; 6       ;
 ; product_code[1]                                                ;                   ;         ;
-;      - Product_codetoprice:comb_4|product_price~0              ; 0                 ; 6       ;
-;      - Product_codetoprice:comb_4|product_price~1              ; 0                 ; 6       ;
-;      - Product_codetoprice:comb_4|Decoder0~0                   ; 0                 ; 6       ;
-;      - Product_codetoprice:comb_4|Decoder0~1                   ; 0                 ; 6       ;
+;      - Product_codetoprice:comb_4|product_price~0              ; 1                 ; 6       ;
+;      - Product_codetoprice:comb_4|product_price~1              ; 1                 ; 6       ;
+;      - Product_codetoprice:comb_4|Decoder0~0                   ; 1                 ; 6       ;
+;      - Product_codetoprice:comb_4|Decoder0~1                   ; 1                 ; 6       ;
 ; product_code[2]                                                ;                   ;         ;
 ;      - Product_codetoprice:comb_4|product_price~0              ; 0                 ; 6       ;
 ;      - Product_codetoprice:comb_4|product_price~1              ; 0                 ; 6       ;
 ;      - Product_codetoprice:comb_4|Decoder0~0                   ; 0                 ; 6       ;
 ;      - Product_codetoprice:comb_4|Decoder0~1                   ; 0                 ; 6       ;
 ; product_code[3]                                                ;                   ;         ;
-;      - Product_codetoprice:comb_4|product_price~0              ; 0                 ; 6       ;
-;      - Product_codetoprice:comb_4|product_price~1              ; 0                 ; 6       ;
-;      - Product_codetoprice:comb_4|Decoder0~0                   ; 0                 ; 6       ;
-;      - Product_codetoprice:comb_4|Decoder0~1                   ; 0                 ; 6       ;
+;      - Product_codetoprice:comb_4|product_price~0              ; 1                 ; 6       ;
+;      - Product_codetoprice:comb_4|product_price~1              ; 1                 ; 6       ;
+;      - Product_codetoprice:comb_4|Decoder0~0                   ; 1                 ; 6       ;
+;      - Product_codetoprice:comb_4|Decoder0~1                   ; 1                 ; 6       ;
 ; rst_n                                                          ;                   ;         ;
-;      - q[0]~reg0                                               ; 0                 ; 6       ;
-;      - q[1]~reg0                                               ; 0                 ; 6       ;
-;      - q[2]~reg0                                               ; 0                 ; 6       ;
-;      - q[3]~reg0                                               ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d0|Q                          ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_50:d6|count[3]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_50:d6|count[4]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_50:d6|count[2]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_50:d6|count[1]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_50:d6|count[0]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d0|count[2]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d1|Q                          ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d0|count[0]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d0|count[1]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d1|count[2]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d2|Q                          ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d1|count[0]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d1|count[1]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d2|count[2]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d3|Q                          ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d2|count[0]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d2|count[1]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d3|count[2]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d4|Q                          ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d3|count[0]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d3|count[1]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d4|count[2]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d5|Q                          ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d4|count[0]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d4|count[1]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d5|count[2]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_50:d6|Q                          ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d5|count[0]                   ; 0                 ; 6       ;
-;      - clk_1hz:clk1|divide_by_10:d5|count[1]                   ; 0                 ; 6       ;
+;      - q[0]~reg0                                               ; 1                 ; 6       ;
+;      - q[1]~reg0                                               ; 1                 ; 6       ;
+;      - q[2]~reg0                                               ; 1                 ; 6       ;
+;      - q[3]~reg0                                               ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d0|Q                          ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_50:d6|count[3]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_50:d6|count[4]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_50:d6|count[2]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_50:d6|count[1]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_50:d6|count[0]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d0|count[2]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d1|Q                          ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d0|count[0]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d0|count[1]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d1|count[2]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d2|Q                          ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d1|count[0]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d1|count[1]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d2|count[2]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d3|Q                          ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d2|count[0]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d2|count[1]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d3|count[2]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d4|Q                          ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d3|count[0]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d3|count[1]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d4|count[2]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d5|Q                          ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d4|count[0]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d4|count[1]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d5|count[2]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_50:d6|Q                          ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d5|count[0]                   ; 1                 ; 6       ;
+;      - clk_1hz:clk1|divide_by_10:d5|count[1]                   ; 1                 ; 6       ;
 ; coin_code[2]                                                   ;                   ;         ;
 ;      - VendingMachineController:controller|Add0~4              ; 0                 ; 6       ;
 ;      - VendingMachineController:controller|Mux4~0              ; 0                 ; 6       ;
@@ -1468,32 +1468,32 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                  ;
-+-----------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                                ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+-----------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; VendingMachineController:controller|change[0]~7     ; LCCOMB_X20_Y30_N16 ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; VendingMachineController:controller|coin_total[0]~0 ; LCCOMB_X20_Y30_N6  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; VendingMachineController:controller|state[0]        ; LCFF_X20_Y30_N1    ; 12      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; clk                                                 ; PIN_AD15           ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk                                                 ; PIN_AD15           ; 29      ; Clock        ; yes    ; Global Clock         ; GCLK14           ; --                        ;
-; clk_1hz:clk1|divide_by_10:d0|Q                      ; LCFF_X47_Y50_N13   ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK11           ; --                        ;
-; clk_1hz:clk1|divide_by_10:d1|Q                      ; LCFF_X48_Y50_N31   ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk_1hz:clk1|divide_by_10:d1|Q                      ; LCFF_X48_Y50_N31   ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; clk_1hz:clk1|divide_by_10:d2|Q                      ; LCFF_X74_Y47_N13   ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk_1hz:clk1|divide_by_10:d2|Q                      ; LCFF_X74_Y47_N13   ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK8            ; --                        ;
-; clk_1hz:clk1|divide_by_10:d3|Q                      ; LCFF_X94_Y27_N21   ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk_1hz:clk1|divide_by_10:d3|Q                      ; LCFF_X94_Y27_N21   ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; clk_1hz:clk1|divide_by_10:d4|Q                      ; LCFF_X93_Y26_N1    ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk_1hz:clk1|divide_by_10:d4|Q                      ; LCFF_X93_Y26_N1    ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
-; clk_1hz:clk1|divide_by_10:d5|Q                      ; LCFF_X94_Y26_N31   ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk_1hz:clk1|divide_by_10:d5|Q                      ; LCFF_X94_Y26_N31   ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
-; clk_1hz:clk1|divide_by_50:d6|LessThan0~0            ; LCCOMB_X72_Y20_N20 ; 5       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; clk_1hz:clk1|divide_by_50:d6|Q                      ; LCFF_X72_Y20_N7    ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clk_1hz:clk1|divide_by_50:d6|Q                      ; LCFF_X72_Y20_N7    ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; rst_n                                               ; PIN_T29            ; 34      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-+-----------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                 ;
++-----------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; VendingMachineController:controller|change[0]~7     ; LCCOMB_X57_Y9_N16 ; 12      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; VendingMachineController:controller|coin_total[0]~0 ; LCCOMB_X57_Y9_N30 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; VendingMachineController:controller|state[0]        ; LCFF_X57_Y9_N1    ; 12      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; clk                                                 ; PIN_AD15          ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk                                                 ; PIN_AD15          ; 29      ; Clock        ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; clk_1hz:clk1|divide_by_10:d0|Q                      ; LCFF_X94_Y26_N7   ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; clk_1hz:clk1|divide_by_10:d1|Q                      ; LCFF_X93_Y26_N15  ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk_1hz:clk1|divide_by_10:d1|Q                      ; LCFF_X93_Y26_N15  ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; clk_1hz:clk1|divide_by_10:d2|Q                      ; LCFF_X92_Y26_N15  ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk_1hz:clk1|divide_by_10:d2|Q                      ; LCFF_X92_Y26_N15  ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; clk_1hz:clk1|divide_by_10:d3|Q                      ; LCFF_X91_Y26_N15  ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk_1hz:clk1|divide_by_10:d3|Q                      ; LCFF_X91_Y26_N15  ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; clk_1hz:clk1|divide_by_10:d4|Q                      ; LCFF_X47_Y25_N1   ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk_1hz:clk1|divide_by_10:d4|Q                      ; LCFF_X47_Y25_N1   ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK8            ; --                        ;
+; clk_1hz:clk1|divide_by_10:d5|Q                      ; LCFF_X1_Y25_N9    ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk_1hz:clk1|divide_by_10:d5|Q                      ; LCFF_X1_Y25_N9    ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; clk_1hz:clk1|divide_by_50:d6|LessThan0~0            ; LCCOMB_X2_Y25_N0  ; 5       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; clk_1hz:clk1|divide_by_50:d6|Q                      ; LCFF_X2_Y25_N31   ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; clk_1hz:clk1|divide_by_50:d6|Q                      ; LCFF_X2_Y25_N31   ; 3       ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; rst_n                                               ; PIN_T29           ; 34      ; Async. clear ; no     ; --                   ; --               ; --                        ;
++-----------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------+
@@ -1502,13 +1502,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                           ; Location         ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------+------------------+---------+----------------------+------------------+---------------------------+
 ; clk                            ; PIN_AD15         ; 29      ; Global Clock         ; GCLK14           ; --                        ;
-; clk_1hz:clk1|divide_by_10:d0|Q ; LCFF_X47_Y50_N13 ; 4       ; Global Clock         ; GCLK11           ; --                        ;
-; clk_1hz:clk1|divide_by_10:d1|Q ; LCFF_X48_Y50_N31 ; 3       ; Global Clock         ; GCLK10           ; --                        ;
-; clk_1hz:clk1|divide_by_10:d2|Q ; LCFF_X74_Y47_N13 ; 3       ; Global Clock         ; GCLK8            ; --                        ;
-; clk_1hz:clk1|divide_by_10:d3|Q ; LCFF_X94_Y27_N21 ; 3       ; Global Clock         ; GCLK7            ; --                        ;
-; clk_1hz:clk1|divide_by_10:d4|Q ; LCFF_X93_Y26_N1  ; 3       ; Global Clock         ; GCLK5            ; --                        ;
-; clk_1hz:clk1|divide_by_10:d5|Q ; LCFF_X94_Y26_N31 ; 3       ; Global Clock         ; GCLK6            ; --                        ;
-; clk_1hz:clk1|divide_by_50:d6|Q ; LCFF_X72_Y20_N7  ; 3       ; Global Clock         ; GCLK4            ; --                        ;
+; clk_1hz:clk1|divide_by_10:d0|Q ; LCFF_X94_Y26_N7  ; 4       ; Global Clock         ; GCLK5            ; --                        ;
+; clk_1hz:clk1|divide_by_10:d1|Q ; LCFF_X93_Y26_N15 ; 3       ; Global Clock         ; GCLK6            ; --                        ;
+; clk_1hz:clk1|divide_by_10:d2|Q ; LCFF_X92_Y26_N15 ; 3       ; Global Clock         ; GCLK7            ; --                        ;
+; clk_1hz:clk1|divide_by_10:d3|Q ; LCFF_X91_Y26_N15 ; 3       ; Global Clock         ; GCLK4            ; --                        ;
+; clk_1hz:clk1|divide_by_10:d4|Q ; LCFF_X47_Y25_N1  ; 3       ; Global Clock         ; GCLK8            ; --                        ;
+; clk_1hz:clk1|divide_by_10:d5|Q ; LCFF_X1_Y25_N9   ; 3       ; Global Clock         ; GCLK3            ; --                        ;
+; clk_1hz:clk1|divide_by_50:d6|Q ; LCFF_X2_Y25_N31  ; 3       ; Global Clock         ; GCLK2            ; --                        ;
 +--------------------------------+------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1575,14 +1575,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-------------------------+
 ; Interconnect Resource Type ; Usage                   ;
 +----------------------------+-------------------------+
-; Block interconnects        ; 128 / 197,592 ( < 1 % ) ;
-; C16 interconnects          ; 21 / 6,270 ( < 1 % )    ;
-; C4 interconnects           ; 136 / 123,120 ( < 1 % ) ;
-; Direct links               ; 33 / 197,592 ( < 1 % )  ;
+; Block interconnects        ; 125 / 197,592 ( < 1 % ) ;
+; C16 interconnects          ; 14 / 6,270 ( < 1 % )    ;
+; C4 interconnects           ; 97 / 123,120 ( < 1 % )  ;
+; Direct links               ; 37 / 197,592 ( < 1 % )  ;
 ; Global clocks              ; 8 / 16 ( 50 % )         ;
 ; Local interconnects        ; 53 / 68,416 ( < 1 % )   ;
-; R24 interconnects          ; 42 / 5,926 ( < 1 % )    ;
-; R4 interconnects           ; 123 / 167,484 ( < 1 % ) ;
+; R24 interconnects          ; 44 / 5,926 ( < 1 % )    ;
+; R4 interconnects           ; 164 / 167,484 ( < 1 % ) ;
 +----------------------------+-------------------------+
 
 
@@ -1747,7 +1747,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Sep 07 14:58:46 2023
+    Info: Processing started: Thu Sep 07 15:08:39 2023
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off VendingMachine -c VendingMachine
 Info: Selected device EP2C70F896C6 for design "VendingMachine"
 Info: Low junction temperature is 0 degrees C
@@ -1827,13 +1827,13 @@ Info: Statistics of I/O pins that need to be placed that use the same VCCIO and 
 Info: I/O bank details before I/O pin placement
     Info: Statistics of I/O banks
         Info: I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  85 pins available
-        Info: I/O bank number 2 does not use VREF pins and has 3.3V VCCIO pins. 26 total pin(s) used --  53 pins available
+        Info: I/O bank number 2 does not use VREF pins and has 3.3V VCCIO pins. 12 total pin(s) used --  67 pins available
         Info: I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
         Info: I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  74 pins available
         Info: I/O bank number 5 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  85 pins available
         Info: I/O bank number 6 does not use VREF pins and has 3.3V VCCIO pins. 15 total pin(s) used --  66 pins available
-        Info: I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  73 pins available
-        Info: I/O bank number 8 does not use VREF pins and has 3.3V VCCIO pins. 16 total pin(s) used --  56 pins available
+        Info: I/O bank number 7 does not use VREF pins and has 3.3V VCCIO pins. 7 total pin(s) used --  67 pins available
+        Info: I/O bank number 8 does not use VREF pins and has 3.3V VCCIO pins. 24 total pin(s) used --  48 pins available
 Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1841,15 +1841,15 @@ Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:00
 Info: Estimated most critical path is register to register delay of 2.477 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X21_Y30; Fanout = 4; REG Node = 'VendingMachineController:controller|coin_total[3]'
-    Info: 2: + IC(0.473 ns) + CELL(0.150 ns) = 0.623 ns; Loc. = LAB_X21_Y30; Fanout = 2; COMB Node = 'VendingMachineController:controller|LessThan0~0'
-    Info: 3: + IC(0.606 ns) + CELL(0.150 ns) = 1.379 ns; Loc. = LAB_X20_Y30; Fanout = 12; COMB Node = 'VendingMachineController:controller|change[0]~7'
-    Info: 4: + IC(0.438 ns) + CELL(0.660 ns) = 2.477 ns; Loc. = LAB_X19_Y30; Fanout = 3; REG Node = 'VendingMachineController:controller|total_sales[0]'
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X58_Y9; Fanout = 4; REG Node = 'VendingMachineController:controller|coin_total[3]'
+    Info: 2: + IC(0.473 ns) + CELL(0.150 ns) = 0.623 ns; Loc. = LAB_X58_Y9; Fanout = 2; COMB Node = 'VendingMachineController:controller|LessThan0~0'
+    Info: 3: + IC(0.606 ns) + CELL(0.150 ns) = 1.379 ns; Loc. = LAB_X57_Y9; Fanout = 12; COMB Node = 'VendingMachineController:controller|change[0]~7'
+    Info: 4: + IC(0.438 ns) + CELL(0.660 ns) = 2.477 ns; Loc. = LAB_X56_Y9; Fanout = 3; REG Node = 'VendingMachineController:controller|total_sales[0]'
     Info: Total cell delay = 0.960 ns ( 38.76 % )
     Info: Total interconnect delay = 1.517 ns ( 61.24 % )
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 0% of the available device resources
-    Info: Peak interconnect usage is 0% of the available device resources in the region that extends from location X12_Y26 to location X23_Y38
+    Info: Peak interconnect usage is 1% of the available device resources in the region that extends from location X48_Y0 to location X59_Y12
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
@@ -1914,7 +1914,7 @@ Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 382 megabytes
-    Info: Processing ended: Thu Sep 07 14:58:51 2023
+    Info: Processing ended: Thu Sep 07 15:08:44 2023
     Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:02
 

@@ -1,0 +1,15 @@
+module ChangeModule (
+    input wire [3:0] total_amount,    // ÊäÈë×Ü½ğ¶î
+    input wire [3:0] product_price,   // ÊäÈë²úÆ·¼Û¸ñ
+    output wire [3:0] change_amount   // Êä³öÕÒÁã½ğ¶î
+);
+
+assign change_amount = total_amount - product_price; // ¼ÆËãÕÒÁã½ğ¶î
+
+endmodule
+/*
+
+×÷ÓÃÊÇ¼ÆËã³öÕÒÁã½ğ¶î£¬ËüÍ¨¹ı½«ÊäÈëµÄ²úÆ·¼Û¸ñ´Ó×Ü½ğ¶îÖĞ¼õÈ¥À´ÊµÏÖ¡£
+ÊäÈëµÄ×Ü½ğ¶îºÍ²úÆ·¼Û¸ñ·Ö±ğÍ¨¹ı total_amount ºÍ product_price ÊäÈëĞÅºÅ´«µİ¸øÄ
+Ä£¿éÖ´ĞĞ¼õ·¨ÔËËã£¬½«½á¹û¸³Öµ¸ø change_amount Êä³öĞÅºÅ
+*/

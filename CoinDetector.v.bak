@@ -1,0 +1,8 @@
+module CoinDetector (
+    input wire [3:0] coin_input, // 输入硬币信号，用于检测硬币类型
+    output wire [3:0] coin_code  // 输出硬币编码，表示检测到的硬币类型
+);
+
+assign coin_code = coin_input; // 直接将硬币输入信号复制到硬币编码输出信号
+
+endmodule

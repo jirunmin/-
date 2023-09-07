@@ -1,0 +1,108 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2010 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+# Date created = 13:50:00  September 05, 2023
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		VendingMachine_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C70F896C6
+set_global_assignment -name TOP_LEVEL_ENTITY VendingMachine
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:50:00  SEPTEMBER 05, 2023"
+set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name DEVICE_FILTER_PACKAGE FBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 896
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name VERILOG_FILE VendingMachine.v
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY .\\release
+set_global_assignment -name VERILOG_FILE ChangeModule.v
+set_global_assignment -name VERILOG_FILE InitializeModule.v
+set_global_assignment -name VERILOG_FILE DisplayModule.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name VERILOG_FILE SalesTotalReset.v
+set_global_assignment -name VERILOG_FILE VendingMachineController.v
+set_global_assignment -name VERILOG_FILE ClockDivider.v
+set_global_assignment -name VERILOG_FILE CoinDetector.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Vending.vwf
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE Vending.vwf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_AC24 -to coin_code[0]
+set_location_assignment PIN_AC23 -to coin_code[1]
+set_location_assignment PIN_AD24 -to coin_code[2]
+set_location_assignment PIN_AE27 -to coin_code[3]
+set_location_assignment PIN_AD15 -to clk
+set_location_assignment PIN_AA23 -to product_code[0]
+set_location_assignment PIN_AA24 -to product_dispensed
+set_location_assignment PIN_Y27 -to sales_total[0]
+set_location_assignment PIN_Y24 -to sales_total[1]
+set_location_assignment PIN_Y23 -to sales_total[2]
+set_location_assignment PIN_AA27 -to sales_total[3]
+set_location_assignment PIN_AB26 -to product_code[1]
+set_location_assignment PIN_AB25 -to product_code[2]
+set_location_assignment PIN_AC27 -to product_code[3]
+set_location_assignment PIN_AJ6 -to cleared_sales_total[0]
+set_location_assignment PIN_AK5 -to cleared_sales_total[1]
+set_location_assignment PIN_AJ5 -to cleared_sales_total[2]
+set_location_assignment PIN_AJ4 -to cleared_sales_total[3]
+set_location_assignment PIN_AK3 -to change_amount[0]
+set_location_assignment PIN_AH4 -to change_amount[1]
+set_location_assignment PIN_AJ3 -to change_amount[2]
+set_location_assignment PIN_AJ2 -to change_amount[3]
+set_location_assignment PIN_AD14 -to alarm
+set_location_assignment PIN_T29 -to reset_button
+set_location_assignment PIN_T28 -to confirm_button
+set_location_assignment PIN_U30 -to coin_insert_button
+set_location_assignment PIN_AB13 -to initialized_value[0]
+set_location_assignment PIN_AC12 -to initialized_value[1]
+set_location_assignment PIN_AB12 -to initialized_value[2]
+set_location_assignment PIN_AC11 -to initialized_value[3]
+set_location_assignment PIN_AE8 -to display_segments[0]
+set_location_assignment PIN_AF9 -to display_segments[1]
+set_location_assignment PIN_AH9 -to display_segments[2]
+set_location_assignment PIN_AD10 -to display_segments[3]
+set_location_assignment PIN_AF10 -to display_segments[4]
+set_location_assignment PIN_AD11 -to display_segments[5]
+set_location_assignment PIN_AD12 -to display_segments[6]
+set_global_assignment -name MISC_FILE "E:/学习/数字电路/数电课设/VendingMachine_9_5_(1)/VendingMachine.dpf"
+set_location_assignment PIN_AF12 -to dt_zero
+set_global_assignment -name VERILOG_FILE clk_1hz.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

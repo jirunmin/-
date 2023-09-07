@@ -1,0 +1,288 @@
+|VendingMachine
+clk => clk.IN3
+reset_button => reset_button.IN2
+coin_insert_button => coin_insert_button.IN1
+confirm_button => confirm_button.IN2
+coin_code[0] => coin_code[0].IN2
+coin_code[1] => coin_code[1].IN2
+coin_code[2] => coin_code[2].IN2
+coin_code[3] => coin_code[3].IN2
+product_code[0] => product_code[0].IN2
+product_code[1] => product_code[1].IN2
+product_code[2] => product_code[2].IN2
+product_code[3] => product_code[3].IN2
+rst_n => rst_n.IN1
+alarm <= VendingMachineController:controller.alarm
+change_amount[0] <= VendingMachineController:controller.change
+change_amount[1] <= VendingMachineController:controller.change
+change_amount[2] <= VendingMachineController:controller.change
+change_amount[3] <= VendingMachineController:controller.change
+product_dispensed <= VendingMachineController:controller.product_dispensed
+sales_total[0] <= SalesTotalReset:sales_total_reset.sales_total
+sales_total[1] <= SalesTotalReset:sales_total_reset.sales_total
+sales_total[2] <= SalesTotalReset:sales_total_reset.sales_total
+sales_total[3] <= SalesTotalReset:sales_total_reset.sales_total
+cleared_sales_total[0] <= <GND>
+cleared_sales_total[1] <= <GND>
+cleared_sales_total[2] <= <GND>
+cleared_sales_total[3] <= <GND>
+display_segments[0] <= DisplayModule:display.display_segments
+display_segments[1] <= DisplayModule:display.display_segments
+display_segments[2] <= DisplayModule:display.display_segments
+display_segments[3] <= DisplayModule:display.display_segments
+display_segments[4] <= DisplayModule:display.display_segments
+display_segments[5] <= DisplayModule:display.display_segments
+display_segments[6] <= DisplayModule:display.display_segments
+initialized_value[0] <= InitializeModule:initializer.initialized_value
+initialized_value[1] <= InitializeModule:initializer.initialized_value
+initialized_value[2] <= InitializeModule:initializer.initialized_value
+initialized_value[3] <= InitializeModule:initializer.initialized_value
+dt_zero <= <VCC>
+
+
+|VendingMachine|clk_1hz:clk1
+CLK => CLK.IN1
+RST => RST.IN7
+clk_1Hz <= divide_by_10:d0.port0
+
+
+|VendingMachine|clk_1hz:clk1|divide_by_50:d6
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => count[0].CLK
+CLK => count[1].CLK
+CLK => count[2].CLK
+CLK => count[3].CLK
+CLK => count[4].CLK
+CLK => Q~reg0.CLK
+RST => count[0].ACLR
+RST => count[1].ACLR
+RST => count[2].ACLR
+RST => count[3].ACLR
+RST => count[4].ACLR
+RST => Q~reg0.ACLR
+
+
+|VendingMachine|clk_1hz:clk1|divide_by_10:d5
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => count[0].CLK
+CLK => count[1].CLK
+CLK => count[2].CLK
+CLK => Q~reg0.CLK
+RST => count[0].ACLR
+RST => count[1].ACLR
+RST => count[2].ACLR
+RST => Q~reg0.ACLR
+
+
+|VendingMachine|clk_1hz:clk1|divide_by_10:d4
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => count[0].CLK
+CLK => count[1].CLK
+CLK => count[2].CLK
+CLK => Q~reg0.CLK
+RST => count[0].ACLR
+RST => count[1].ACLR
+RST => count[2].ACLR
+RST => Q~reg0.ACLR
+
+
+|VendingMachine|clk_1hz:clk1|divide_by_10:d3
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => count[0].CLK
+CLK => count[1].CLK
+CLK => count[2].CLK
+CLK => Q~reg0.CLK
+RST => count[0].ACLR
+RST => count[1].ACLR
+RST => count[2].ACLR
+RST => Q~reg0.ACLR
+
+
+|VendingMachine|clk_1hz:clk1|divide_by_10:d2
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => count[0].CLK
+CLK => count[1].CLK
+CLK => count[2].CLK
+CLK => Q~reg0.CLK
+RST => count[0].ACLR
+RST => count[1].ACLR
+RST => count[2].ACLR
+RST => Q~reg0.ACLR
+
+
+|VendingMachine|clk_1hz:clk1|divide_by_10:d1
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => count[0].CLK
+CLK => count[1].CLK
+CLK => count[2].CLK
+CLK => Q~reg0.CLK
+RST => count[0].ACLR
+RST => count[1].ACLR
+RST => count[2].ACLR
+RST => Q~reg0.ACLR
+
+
+|VendingMachine|clk_1hz:clk1|divide_by_10:d0
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => count[0].CLK
+CLK => count[1].CLK
+CLK => count[2].CLK
+CLK => Q~reg0.CLK
+RST => count[0].ACLR
+RST => count[1].ACLR
+RST => count[2].ACLR
+RST => Q~reg0.ACLR
+
+
+|VendingMachine|ClockDivider:clock_divider
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+clk => counter[20].CLK
+clk => counter[21].CLK
+clk => counter[22].CLK
+clk => counter[23].CLK
+clk => counter[24].CLK
+sec_pulse <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VendingMachine|CoinDetector:coin_detector
+coin_input[0] => coin_code[0].DATAIN
+coin_input[1] => coin_code[1].DATAIN
+coin_input[2] => coin_code[2].DATAIN
+coin_input[3] => coin_code[3].DATAIN
+coin_code[0] <= coin_input[0].DB_MAX_OUTPUT_PORT_TYPE
+coin_code[1] <= coin_input[1].DB_MAX_OUTPUT_PORT_TYPE
+coin_code[2] <= coin_input[2].DB_MAX_OUTPUT_PORT_TYPE
+coin_code[3] <= coin_input[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VendingMachine|SalesTotalReset:sales_total_reset
+reset_button => total[3].IN0
+clear_sales => total[0].OUTPUTSELECT
+clear_sales => total[1].OUTPUTSELECT
+clear_sales => total[2].OUTPUTSELECT
+clear_sales => total[3].OUTPUTSELECT
+clear_sales => total[3].IN1
+sales_total[0] => total[0].DATAB
+sales_total[1] => total[1].DATAB
+sales_total[2] => total[2].DATAB
+sales_total[3] => total[3].DATAB
+cleared_total[0] <= total[0].DB_MAX_OUTPUT_PORT_TYPE
+cleared_total[1] <= total[1].DB_MAX_OUTPUT_PORT_TYPE
+cleared_total[2] <= total[2].DB_MAX_OUTPUT_PORT_TYPE
+cleared_total[3] <= total[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VendingMachine|VendingMachineController:controller
+clk => alarm~reg0.CLK
+clk => product_dispensed~reg0.CLK
+clk => change[0]~reg0.CLK
+clk => change[1]~reg0.CLK
+clk => change[2]~reg0.CLK
+clk => change[3]~reg0.CLK
+clk => coin_total[0].CLK
+clk => coin_total[1].CLK
+clk => coin_total[2].CLK
+clk => coin_total[3].CLK
+clk => state~5.DATAIN
+coin_insert_button => state.OUTPUTSELECT
+coin_insert_button => state.OUTPUTSELECT
+coin_insert_button => state.OUTPUTSELECT
+coin_insert_button => state.OUTPUTSELECT
+coin_insert_button => coin_total.OUTPUTSELECT
+coin_insert_button => coin_total.OUTPUTSELECT
+coin_insert_button => coin_total.OUTPUTSELECT
+coin_insert_button => coin_total.OUTPUTSELECT
+coin_insert_button => coin_total.OUTPUTSELECT
+coin_insert_button => coin_total.OUTPUTSELECT
+coin_insert_button => coin_total.OUTPUTSELECT
+coin_insert_button => coin_total.OUTPUTSELECT
+confirm_button => change.OUTPUTSELECT
+confirm_button => change.OUTPUTSELECT
+confirm_button => change.OUTPUTSELECT
+confirm_button => change.OUTPUTSELECT
+confirm_button => product_dispensed.OUTPUTSELECT
+confirm_button => state.OUTPUTSELECT
+confirm_button => state.OUTPUTSELECT
+confirm_button => state.OUTPUTSELECT
+confirm_button => state.OUTPUTSELECT
+confirm_button => alarm.OUTPUTSELECT
+confirm_button => coin_total.OUTPUTSELECT
+confirm_button => coin_total.OUTPUTSELECT
+confirm_button => coin_total.OUTPUTSELECT
+confirm_button => coin_total.OUTPUTSELECT
+confirm_button => state.OUTPUTSELECT
+confirm_button => state.OUTPUTSELECT
+confirm_button => state.OUTPUTSELECT
+confirm_button => alarm.OUTPUTSELECT
+confirm_button => state.OUTPUTSELECT
+confirm_button => state.OUTPUTSELECT
+confirm_button => state.OUTPUTSELECT
+confirm_button => state.OUTPUTSELECT
+coin_code[0] => coin_total.DATAB
+coin_code[0] => Add0.IN4
+coin_code[1] => coin_total.DATAB
+coin_code[1] => Add0.IN3
+coin_code[2] => coin_total.DATAB
+coin_code[2] => Add0.IN2
+coin_code[3] => coin_total.DATAB
+coin_code[3] => Add0.IN1
+product_code[0] => LessThan0.IN4
+product_code[0] => Add1.IN4
+product_code[1] => LessThan0.IN3
+product_code[1] => Add1.IN3
+product_code[2] => LessThan0.IN2
+product_code[2] => Add1.IN2
+product_code[3] => LessThan0.IN1
+product_code[3] => Add1.IN1
+alarm <= alarm~reg0.DB_MAX_OUTPUT_PORT_TYPE
+change[0] <= change[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+change[1] <= change[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+change[2] <= change[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+change[3] <= change[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+product_dispensed <= product_dispensed~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VendingMachine|DisplayModule:display
+value_to_display[0] => seven_segment_map.RADDR
+value_to_display[1] => seven_segment_map.RADDR1
+value_to_display[2] => seven_segment_map.RADDR2
+value_to_display[3] => seven_segment_map.RADDR3
+display_segments[0] <= seven_segment_map.DATAOUT
+display_segments[1] <= seven_segment_map.DATAOUT1
+display_segments[2] <= seven_segment_map.DATAOUT2
+display_segments[3] <= seven_segment_map.DATAOUT3
+display_segments[4] <= seven_segment_map.DATAOUT4
+display_segments[5] <= seven_segment_map.DATAOUT5
+display_segments[6] <= seven_segment_map.DATAOUT6
+
+
+|VendingMachine|InitializeModule:initializer
+initialize_button => initial_value[0].CLK
+initialize_button => initial_value[1].CLK
+initialize_button => initial_value[2].CLK
+initialize_button => initial_value[3].CLK
+initialized_value[0] <= initial_value[0].DB_MAX_OUTPUT_PORT_TYPE
+initialized_value[1] <= initial_value[1].DB_MAX_OUTPUT_PORT_TYPE
+initialized_value[2] <= initial_value[2].DB_MAX_OUTPUT_PORT_TYPE
+initialized_value[3] <= initial_value[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

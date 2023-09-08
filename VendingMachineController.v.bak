@@ -8,7 +8,7 @@ module VendingMachineController (
     input wire confirm_flag,  
     input wire alarm_flag,
     input wire sales_flag,
-    input wire bussines_flag,
+    input wire [3:0] bussines_flag,
     output reg alarm,                 // 输出报警信号
     output reg [7:0] change,          // 输出找零信号
     output reg product_dispensed,      // 输出产品发放信号
@@ -26,10 +26,10 @@ always @(posedge clk) begin
 		total_sales <= 8'd0;
 	end
 	
-	if(bussines_flag) begin
+	if(!bussines_flag) begin
     case (state)
         2'b00: begin // 初始状态
-			product_dispensed <= 1'b0;
+			product_dispensed <= 4'b0000;
 			change <= 8'd0;
             if (coin_insert_button) begin
 				
@@ -49,7 +49,12 @@ always @(posedge clk) begin
                 if (coin_total >= product_price) begin
                     total_sales <= total_sales + product_price; // 更新总销售额
                     change <= coin_total - product_price; // 计算找零
-                    product_dispensed <= 1'b1; // 发放产品
+                    case(product_price)
+						8'd1: product_dispensed <= 4'b0001; 
+						8'd2: product_dispensed <= 4'b0010;
+						8'd5: product_dispensed <= 4'b0100;  
+						8'd10: product_dispensed <= 4'b1000;
+					endcase 
                     state <= 2'b10; // 切换到成功状态
                 end else begin
 					change <= coin_total;

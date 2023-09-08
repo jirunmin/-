@@ -71,7 +71,6 @@ set_location_assignment PIN_AD24 -to coin_code[2]
 set_location_assignment PIN_AE27 -to coin_code[3]
 set_location_assignment PIN_AD15 -to clk
 set_location_assignment PIN_AA23 -to product_code[0]
-set_location_assignment PIN_AA24 -to product_dispensed
 set_location_assignment PIN_AB26 -to product_code[1]
 set_location_assignment PIN_AB25 -to product_code[2]
 set_location_assignment PIN_AC27 -to product_code[3]
@@ -157,7 +156,6 @@ set_location_assignment PIN_M2 -to display_change[6]
 set_location_assignment PIN_M3 -to display_change[7]
 set_location_assignment PIN_L1 -to display_change[8]
 set_location_assignment PIN_L2 -to display_change[9]
-set_global_assignment -name MISC_FILE "E:/学习/   值 路/       /VendingMachine_Git/VendingMachine.dpf"
 set_location_assignment PIN_H6 -to display_sellingAmount[0]
 set_location_assignment PIN_H4 -to display_sellingAmount[1]
 set_location_assignment PIN_H7 -to display_sellingAmount[2]
@@ -174,6 +172,11 @@ set_location_assignment PIN_H3 -to display_sellingAmount[12]
 set_location_assignment PIN_G1 -to display_sellingAmount[13]
 set_global_assignment -name VERILOG_FILE SecondsDetector.v
 set_global_assignment -name VERILOG_FILE TotalZero.v
-set_global_assignment -name MISC_FILE "E:/学习/数字电路/数电课设/VendingMachine_Git/VendingMachine.dpf"
+set_global_assignment -name MISC_FILE "E:/学习/   值 路/       /VendingMachine_Git/VendingMachine.dpf"
 set_location_assignment PIN_L5 -to business
+set_global_assignment -name MISC_FILE "E:/学习/数字电路/数电课设/VendingMachine_Git/VendingMachine.dpf"
+set_location_assignment PIN_W27 -to product_dispensed[0]
+set_location_assignment PIN_W25 -to product_dispensed[1]
+set_location_assignment PIN_W23 -to product_dispensed[2]
+set_location_assignment PIN_Y27 -to product_dispensed[3]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

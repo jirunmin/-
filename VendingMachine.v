@@ -10,7 +10,7 @@ module VendingMachine (
 
     
     output wire alarm,                        // 输出报警信号
-    output wire product_dispensed,            // 输出产品发放信号
+    output wire [3:0] product_dispensed,            // 输出产品发放信号
     
     output wire [13:0] display_segments,       // 输出用于数码管显示的段
     output wire [13:0] display_segments_code,

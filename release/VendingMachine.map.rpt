@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VendingMachine
-Fri Sep 08 09:24:16 2023
+Fri Sep 08 10:10:52 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -17,19 +17,8 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   9. Registers Removed During Synthesis
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for Inferred Entity Instance: DisplayModule:display|lpm_divide:Mod1
- 13. Parameter Settings for Inferred Entity Instance: DisplayModule:display|lpm_divide:Mod0
- 14. Parameter Settings for Inferred Entity Instance: DisplayModule:display|lpm_divide:Div0
- 15. Parameter Settings for Inferred Entity Instance: DisplayModule:display_1|lpm_divide:Mod1
- 16. Parameter Settings for Inferred Entity Instance: DisplayModule:display_1|lpm_divide:Mod0
- 17. Parameter Settings for Inferred Entity Instance: DisplayModule:display_1|lpm_divide:Div0
- 18. Parameter Settings for Inferred Entity Instance: DisplayModule:display_2|lpm_divide:Mod1
- 19. Parameter Settings for Inferred Entity Instance: DisplayModule:display_2|lpm_divide:Mod0
- 20. Parameter Settings for Inferred Entity Instance: DisplayModule:display_2|lpm_divide:Div0
- 21. Parameter Settings for Inferred Entity Instance: DisplayModule:display_3|lpm_divide:Mod1
- 22. Parameter Settings for Inferred Entity Instance: DisplayModule:display_3|lpm_divide:Mod0
- 23. Parameter Settings for Inferred Entity Instance: DisplayModule:display_3|lpm_divide:Div0
- 24. Analysis & Synthesis Messages
+ 12. Port Connectivity Checks: "VendingMachineController:controller"
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -55,16 +44,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 08 09:24:16 2023        ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 08 10:10:52 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; VendingMachine                               ;
 ; Top-level Entity Name              ; VendingMachine                               ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 583                                          ;
-;     Total combinational functions  ; 577                                          ;
-;     Dedicated logic registers      ; 80                                           ;
-; Total registers                    ; 80                                           ;
-; Total pins                         ; 84                                           ;
+; Total logic elements               ; 108                                          ;
+;     Total combinational functions  ; 103                                          ;
+;     Dedicated logic registers      ; 66                                           ;
+; Total registers                    ; 66                                           ;
+; Total pins                         ; 87                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -162,31 +151,21 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+
-; VendingMachine.v                 ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/VendingMachine.v           ;
-; InitializeModule.v               ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/InitializeModule.v         ;
-; DisplayModule.v                  ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/DisplayModule.v            ;
-; VendingMachineController.v       ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/VendingMachineController.v ;
-; CoinDetector.v                   ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/CoinDetector.v             ;
-; clk_1hz.v                        ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/clk_1hz.v                  ;
-; Product_codetoprice.v            ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/Product_codetoprice.v      ;
-; SecondsDetector.v                ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/SecondsDetector.v          ;
-; TotalZero.v                      ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/TotalZero.v                ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; f:/qu/quartus/libraries/megafunctions/lpm_divide.tdf                    ;
-; db/lpm_divide_75m.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/lpm_divide_75m.tdf      ;
-; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/sign_div_unsign_ekh.tdf ;
-; db/alt_u_div_uve.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/alt_u_div_uve.tdf       ;
-; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/add_sub_lkc.tdf         ;
-; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/add_sub_mkc.tdf         ;
-; db/lpm_divide_35m.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/lpm_divide_35m.tdf      ;
-; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/sign_div_unsign_akh.tdf ;
-; db/alt_u_div_mve.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/alt_u_div_mve.tdf       ;
-; db/lpm_divide_0dm.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/lpm_divide_0dm.tdf      ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                            ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+
+; VendingMachine.v                 ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/VendingMachine.v           ;
+; InitializeModule.v               ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/InitializeModule.v         ;
+; DisplayModule.v                  ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/DisplayModule.v            ;
+; VendingMachineController.v       ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/VendingMachineController.v ;
+; CoinDetector.v                   ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/CoinDetector.v             ;
+; clk_1hz.v                        ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/clk_1hz.v                  ;
+; Product_codetoprice.v            ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/Product_codetoprice.v      ;
+; SecondsDetector.v                ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/SecondsDetector.v          ;
+; TotalZero.v                      ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/TotalZero.v                ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -194,100 +173,51 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 583   ;
+; Estimated Total logic elements              ; 108   ;
 ;                                             ;       ;
-; Total combinational functions               ; 577   ;
+; Total combinational functions               ; 103   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 189   ;
-;     -- 3 input functions                    ; 151   ;
-;     -- <=2 input functions                  ; 237   ;
+;     -- 4 input functions                    ; 40    ;
+;     -- 3 input functions                    ; 33    ;
+;     -- <=2 input functions                  ; 30    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 421   ;
-;     -- arithmetic mode                      ; 156   ;
+;     -- normal mode                          ; 92    ;
+;     -- arithmetic mode                      ; 11    ;
 ;                                             ;       ;
-; Total registers                             ; 80    ;
-;     -- Dedicated logic registers            ; 80    ;
+; Total registers                             ; 66    ;
+;     -- Dedicated logic registers            ; 66    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 84    ;
+; I/O pins                                    ; 87    ;
 ; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 50    ;
-; Total fan-out                               ; 1905  ;
-; Average fan-out                             ; 2.57  ;
+; Maximum fan-out                             ; 36    ;
+; Total fan-out                               ; 508   ;
+; Average fan-out                             ; 1.98  ;
 +---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                            ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |VendingMachine                           ; 577 (0)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 84   ; 0            ; |VendingMachine                                                                                                                         ; work         ;
-;    |CoinDetector:coin_detector|           ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|CoinDetector:coin_detector                                                                                              ;              ;
-;    |DisplayModule:display_1|              ; 146 (14)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1                                                                                                 ;              ;
-;       |lpm_divide:Div0|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Div0                                                                                 ;              ;
-;          |lpm_divide_0dm:auto_generated|  ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Div0|lpm_divide_0dm:auto_generated                                                   ;              ;
-;             |sign_div_unsign_akh:divider| ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider                       ;              ;
-;                |alt_u_div_mve:divider|    ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ;              ;
-;       |lpm_divide:Mod0|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Mod0                                                                                 ;              ;
-;          |lpm_divide_35m:auto_generated|  ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Mod0|lpm_divide_35m:auto_generated                                                   ;              ;
-;             |sign_div_unsign_akh:divider| ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider                       ;              ;
-;                |alt_u_div_mve:divider|    ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ;              ;
-;       |lpm_divide:Mod1|                   ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Mod1                                                                                 ;              ;
-;          |lpm_divide_75m:auto_generated|  ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Mod1|lpm_divide_75m:auto_generated                                                   ;              ;
-;             |sign_div_unsign_ekh:divider| ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider                       ;              ;
-;                |alt_u_div_uve:divider|    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ;              ;
-;    |DisplayModule:display_2|              ; 146 (14)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2                                                                                                 ;              ;
-;       |lpm_divide:Div0|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Div0                                                                                 ;              ;
-;          |lpm_divide_0dm:auto_generated|  ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Div0|lpm_divide_0dm:auto_generated                                                   ;              ;
-;             |sign_div_unsign_akh:divider| ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider                       ;              ;
-;                |alt_u_div_mve:divider|    ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ;              ;
-;       |lpm_divide:Mod0|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Mod0                                                                                 ;              ;
-;          |lpm_divide_35m:auto_generated|  ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Mod0|lpm_divide_35m:auto_generated                                                   ;              ;
-;             |sign_div_unsign_akh:divider| ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider                       ;              ;
-;                |alt_u_div_mve:divider|    ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ;              ;
-;       |lpm_divide:Mod1|                   ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Mod1                                                                                 ;              ;
-;          |lpm_divide_75m:auto_generated|  ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Mod1|lpm_divide_75m:auto_generated                                                   ;              ;
-;             |sign_div_unsign_ekh:divider| ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider                       ;              ;
-;                |alt_u_div_uve:divider|    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ;              ;
-;    |DisplayModule:display_3|              ; 146 (14)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3                                                                                                 ;              ;
-;       |lpm_divide:Div0|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Div0                                                                                 ;              ;
-;          |lpm_divide_0dm:auto_generated|  ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated                                                   ;              ;
-;             |sign_div_unsign_akh:divider| ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider                       ;              ;
-;                |alt_u_div_mve:divider|    ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ;              ;
-;       |lpm_divide:Mod0|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod0                                                                                 ;              ;
-;          |lpm_divide_35m:auto_generated|  ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated                                                   ;              ;
-;             |sign_div_unsign_akh:divider| ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider                       ;              ;
-;                |alt_u_div_mve:divider|    ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ;              ;
-;       |lpm_divide:Mod1|                   ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod1                                                                                 ;              ;
-;          |lpm_divide_75m:auto_generated|  ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod1|lpm_divide_75m:auto_generated                                                   ;              ;
-;             |sign_div_unsign_ekh:divider| ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider                       ;              ;
-;                |alt_u_div_uve:divider|    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ;              ;
-;    |DisplayModule:display|                ; 21 (7)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display                                                                                                   ;              ;
-;       |lpm_divide:Div0|                   ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Div0                                                                                   ;              ;
-;          |lpm_divide_0dm:auto_generated|  ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Div0|lpm_divide_0dm:auto_generated                                                     ;              ;
-;             |sign_div_unsign_akh:divider| ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider                         ;              ;
-;                |alt_u_div_mve:divider|    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider   ;              ;
-;       |lpm_divide:Mod0|                   ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Mod0                                                                                   ;              ;
-;          |lpm_divide_35m:auto_generated|  ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Mod0|lpm_divide_35m:auto_generated                                                     ;              ;
-;             |sign_div_unsign_akh:divider| ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider                         ;              ;
-;                |alt_u_div_mve:divider|    ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider   ;              ;
-;    |InitializeModule:initializer|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|InitializeModule:initializer                                                                                            ;              ;
-;    |Product_codetoprice:comb_11|          ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|Product_codetoprice:comb_11                                                                                             ;              ;
-;    |SecondsDetector:comb_13|              ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|SecondsDetector:comb_13                                                                                                 ;              ;
-;    |SecondsDetector:comb_14|              ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|SecondsDetector:comb_14                                                                                                 ;              ;
-;    |TotalZero:comb_12|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|TotalZero:comb_12                                                                                                       ;              ;
-;    |VendingMachineController:controller|  ; 73 (73)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|VendingMachineController:controller                                                                                     ;              ;
-;    |clk_1hz:clk1|                         ; 31 (0)            ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1                                                                                                            ;              ;
-;       |divide_by_10:d0|                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d0                                                                                            ;              ;
-;       |divide_by_10:d1|                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d1                                                                                            ;              ;
-;       |divide_by_10:d2|                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d2                                                                                            ;              ;
-;       |divide_by_10:d3|                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d3                                                                                            ;              ;
-;       |divide_by_10:d4|                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d4                                                                                            ;              ;
-;       |divide_by_10:d5|                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d5                                                                                            ;              ;
-;       |divide_by_50:d6|                   ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_50:d6                                                                                            ;              ;
-+-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
+; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Library Name ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
+; |VendingMachine                          ; 103 (0)           ; 66 (0)       ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |VendingMachine                                     ; work         ;
+;    |CoinDetector:coin_detector|          ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|CoinDetector:coin_detector          ;              ;
+;    |InitializeModule:initializer|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|InitializeModule:initializer        ;              ;
+;    |Product_codetoprice:comb_11|         ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|Product_codetoprice:comb_11         ;              ;
+;    |SecondsDetector:comb_13|             ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|SecondsDetector:comb_13             ;              ;
+;    |SecondsDetector:comb_14|             ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|SecondsDetector:comb_14             ;              ;
+;    |VendingMachineController:controller| ; 58 (58)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|VendingMachineController:controller ;              ;
+;    |clk_1hz:clk1|                        ; 31 (0)            ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1                        ;              ;
+;       |divide_by_10:d0|                  ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d0        ;              ;
+;       |divide_by_10:d1|                  ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d1        ;              ;
+;       |divide_by_10:d2|                  ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d2        ;              ;
+;       |divide_by_10:d3|                  ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d3        ;              ;
+;       |divide_by_10:d4|                  ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d4        ;              ;
+;       |divide_by_10:d5|                  ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d5        ;              ;
+;       |divide_by_50:d6|                  ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_50:d6        ;              ;
++------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -304,298 +234,21 @@ Encoding Type:  One-Hot
 +----------+----------+----------+----------+-------------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                           ;
-+-----------------------------------------------------+----------------------------------------+
-; Register name                                       ; Reason for Removal                     ;
-+-----------------------------------------------------+----------------------------------------+
-; CoinDetector:coin_detector|coin_value[4..7]         ; Stuck at GND due to stuck port data_in ;
-; Product_codetoprice:comb_11|product_price[4..7]     ; Stuck at GND due to stuck port data_in ;
-; VendingMachineController:controller|coin_temp[4..7] ; Stuck at GND due to stuck port data_in ;
-; VendingMachineController:controller|state~6         ; Lost fanout                            ;
-; VendingMachineController:controller|state~7         ; Lost fanout                            ;
-; DisplayModule:display|seven_segment_map~0           ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~1           ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~2           ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~3           ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~4           ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~5           ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~6           ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~7           ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~8           ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~9           ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~10          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~11          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~12          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~13          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~14          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~15          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~16          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~17          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~18          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~19          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~20          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~21          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~22          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~23          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~24          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~25          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~26          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~27          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~28          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~29          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~30          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~31          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~32          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~33          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~34          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~35          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~36          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~37          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~38          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~39          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~40          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~41          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~42          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~43          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~44          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~45          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~46          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~47          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~48          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~49          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~50          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~51          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~52          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~53          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~54          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~55          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~56          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~57          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~58          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~59          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~60          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~61          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~62          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~63          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~64          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~65          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~66          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~67          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~68          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display|seven_segment_map~69          ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~0         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~1         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~2         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~3         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~4         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~5         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~6         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~7         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~8         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~9         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~10        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~11        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~12        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~13        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~14        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~15        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~16        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~17        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~18        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~19        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~20        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~21        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~22        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~23        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~24        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~25        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~26        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~27        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~28        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~29        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~30        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~31        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~32        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~33        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~34        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~35        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~36        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~37        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~38        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~39        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~40        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~41        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~42        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~43        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~44        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~45        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~46        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~47        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~48        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~49        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~50        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~51        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~52        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~53        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~54        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~55        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~56        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~57        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~58        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~59        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~60        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~61        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~62        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~63        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~64        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~65        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~66        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~67        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~68        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_1|seven_segment_map~69        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~0         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~1         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~2         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~3         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~4         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~5         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~6         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~7         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~8         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~9         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~10        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~11        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~12        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~13        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~14        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~15        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~16        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~17        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~18        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~19        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~20        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~21        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~22        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~23        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~24        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~25        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~26        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~27        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~28        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~29        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~30        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~31        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~32        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~33        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~34        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~35        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~36        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~37        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~38        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~39        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~40        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~41        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~42        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~43        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~44        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~45        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~46        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~47        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~48        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~49        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~50        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~51        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~52        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~53        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~54        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~55        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~56        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~57        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~58        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~59        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~60        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~61        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~62        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~63        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~64        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~65        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~66        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~67        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~68        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_2|seven_segment_map~69        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~0         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~1         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~2         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~3         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~4         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~5         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~6         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~7         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~8         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~9         ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~10        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~11        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~12        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~13        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~14        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~15        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~16        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~17        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~18        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~19        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~20        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~21        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~22        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~23        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~24        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~25        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~26        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~27        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~28        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~29        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~30        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~31        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~32        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~33        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~34        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~35        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~36        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~37        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~38        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~39        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~40        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~41        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~42        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~43        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~44        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~45        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~46        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~47        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~48        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~49        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~50        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~51        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~52        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~53        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~54        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~55        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~56        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~57        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~58        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~59        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~60        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~61        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~62        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~63        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~64        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~65        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~66        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~67        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~68        ; Stuck at GND due to stuck port clock   ;
-; DisplayModule:display_3|seven_segment_map~69        ; Stuck at GND due to stuck port clock   ;
-; Total Number of Removed Registers = 294             ;                                        ;
-+-----------------------------------------------------+----------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++-------------------------------------------------------+----------------------------------------+
+; Register name                                         ; Reason for Removal                     ;
++-------------------------------------------------------+----------------------------------------+
+; CoinDetector:coin_detector|coin_value[4..7]           ; Stuck at GND due to stuck port data_in ;
+; Product_codetoprice:comb_11|product_price[4..7]       ; Stuck at GND due to stuck port data_in ;
+; VendingMachineController:controller|coin_temp[4..7]   ; Stuck at GND due to stuck port data_in ;
+; VendingMachineController:controller|state~6           ; Lost fanout                            ;
+; VendingMachineController:controller|state~7           ; Lost fanout                            ;
+; VendingMachineController:controller|change[0..7]      ; Lost fanout                            ;
+; VendingMachineController:controller|total_sales[0..7] ; Lost fanout                            ;
+; TotalZero:comb_12|sales_total_flag                    ; Lost fanout                            ;
+; Total Number of Removed Registers = 31                ;                                        ;
++-------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -603,305 +256,39 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 80    ;
-; Number of registers using Synchronous Clear  ; 31    ;
+; Total registers                              ; 66    ;
+; Number of registers using Synchronous Clear  ; 14    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 30    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 11    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_13|cnt[1]                     ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_14|cnt[0]                     ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VendingMachine|VendingMachineController:controller|total_sales[1] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|coin_total     ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|change         ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|state          ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|state          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_13|cnt[1]                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_14|cnt[0]                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VendingMachine|VendingMachineController:controller|total_sales[7]    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|coin_total        ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|change            ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 12 LEs               ; 36 LEs                 ; No         ; |VendingMachine|VendingMachineController:controller|product_dispensed ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|state             ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|state             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayModule:display|lpm_divide:Mod1 ;
-+------------------------+----------------+----------------------------------------------+
-; Parameter Name         ; Value          ; Type                                         ;
-+------------------------+----------------+----------------------------------------------+
-; LPM_WIDTHN             ; 8              ; Untyped                                      ;
-; LPM_WIDTHD             ; 7              ; Untyped                                      ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
-; LPM_PIPELINE           ; 0              ; Untyped                                      ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
-; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                      ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
-+------------------------+----------------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayModule:display|lpm_divide:Mod0 ;
-+------------------------+----------------+----------------------------------------------+
-; Parameter Name         ; Value          ; Type                                         ;
-+------------------------+----------------+----------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                      ;
-; LPM_WIDTHD             ; 4              ; Untyped                                      ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
-; LPM_PIPELINE           ; 0              ; Untyped                                      ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
-; CBXI_PARAMETER         ; lpm_divide_35m ; Untyped                                      ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
-+------------------------+----------------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayModule:display|lpm_divide:Div0 ;
-+------------------------+----------------+----------------------------------------------+
-; Parameter Name         ; Value          ; Type                                         ;
-+------------------------+----------------+----------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                      ;
-; LPM_WIDTHD             ; 4              ; Untyped                                      ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                      ;
-; LPM_PIPELINE           ; 0              ; Untyped                                      ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                      ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                      ;
-; CBXI_PARAMETER         ; lpm_divide_0dm ; Untyped                                      ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                      ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                      ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                 ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                               ;
-+------------------------+----------------+----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayModule:display_1|lpm_divide:Mod1 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 8              ; Untyped                                        ;
-; LPM_WIDTHD             ; 7              ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayModule:display_1|lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                        ;
-; LPM_WIDTHD             ; 4              ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_35m ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayModule:display_1|lpm_divide:Div0 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                        ;
-; LPM_WIDTHD             ; 4              ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_0dm ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayModule:display_2|lpm_divide:Mod1 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 8              ; Untyped                                        ;
-; LPM_WIDTHD             ; 7              ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayModule:display_2|lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                        ;
-; LPM_WIDTHD             ; 4              ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_35m ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayModule:display_2|lpm_divide:Div0 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                        ;
-; LPM_WIDTHD             ; 4              ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_0dm ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayModule:display_3|lpm_divide:Mod1 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 8              ; Untyped                                        ;
-; LPM_WIDTHD             ; 7              ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayModule:display_3|lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                        ;
-; LPM_WIDTHD             ; 4              ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_35m ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: DisplayModule:display_3|lpm_divide:Div0 ;
-+------------------------+----------------+------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                           ;
-+------------------------+----------------+------------------------------------------------+
-; LPM_WIDTHN             ; 7              ; Untyped                                        ;
-; LPM_WIDTHD             ; 4              ; Untyped                                        ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
-; LPM_PIPELINE           ; 0              ; Untyped                                        ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
-; CBXI_PARAMETER         ; lpm_divide_0dm ; Untyped                                        ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
-+------------------------+----------------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VendingMachineController:controller"                                                                                                                          ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                                                                                                                               ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; bussines_flag ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "bussines_flag[3..1]" will be connected to GND. ;
++---------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -910,7 +297,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Sep 08 09:24:14 2023
+    Info: Processing started: Fri Sep 08 10:10:51 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VendingMachine -c VendingMachine
 Info: Found 1 design units, including 1 entities, in source file vendingmachine.v
     Info: Found entity 1: VendingMachine
@@ -957,77 +344,68 @@ Info: Elaborating entity "SecondsDetector" for hierarchy "SecondsDetector:comb_1
 Warning (10230): Verilog HDL assignment warning at SecondsDetector.v(19): truncated value with size 32 to match size of target (2)
 Info: Elaborating entity "VendingMachineController" for hierarchy "VendingMachineController:controller"
 Info: Elaborating entity "DisplayModule" for hierarchy "DisplayModule:display"
+Warning (10858): Verilog HDL warning at DisplayModule.v(12): object seven_segment_map used but never assigned
 Warning (10230): Verilog HDL assignment warning at DisplayModule.v(9): truncated value with size 32 to match size of target (4)
 Warning (10230): Verilog HDL assignment warning at DisplayModule.v(10): truncated value with size 32 to match size of target (4)
-Warning (10030): Net "seven_segment_map.data_a" at DisplayModule.v(12) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "seven_segment_map.waddr_a" at DisplayModule.v(12) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "seven_segment_map.we_a" at DisplayModule.v(12) has no driver or initial value, using a default initial value '0'
 Info: Elaborating entity "InitializeModule" for hierarchy "InitializeModule:initializer"
-Info: Found 4 instances of uninferred RAM logic
-    Info: RAM logic "DisplayModule:display|seven_segment_map" is uninferred due to inappropriate RAM size
-    Info: RAM logic "DisplayModule:display_1|seven_segment_map" is uninferred due to inappropriate RAM size
-    Info: RAM logic "DisplayModule:display_2|seven_segment_map" is uninferred due to inappropriate RAM size
-    Info: RAM logic "DisplayModule:display_3|seven_segment_map" is uninferred due to inappropriate RAM size
-Critical Warning: Memory depth (16) in the design file differs from memory depth (10) in the Memory Initialization File "VendingMachine.ram0_DisplayModule_3fc62259.hdl.mif" -- setting initial value for remaining addresses to 0
-Info: Inferred 12 megafunctions from design logic
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display|Mod1"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display|Mod0"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display|Div0"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_1|Mod1"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_1|Mod0"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_1|Div0"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_2|Mod1"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_2|Mod0"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_2|Div0"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_3|Mod1"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_3|Mod0"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_3|Div0"
-Info: Elaborated megafunction instantiation "DisplayModule:display|lpm_divide:Mod1"
-Info: Instantiated megafunction "DisplayModule:display|lpm_divide:Mod1" with the following parameter:
-    Info: Parameter "LPM_WIDTHN" = "8"
-    Info: Parameter "LPM_WIDTHD" = "7"
-    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_75m.tdf
-    Info: Found entity 1: lpm_divide_75m
-Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_ekh.tdf
-    Info: Found entity 1: sign_div_unsign_ekh
-Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_uve.tdf
-    Info: Found entity 1: alt_u_div_uve
-Info: Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
-    Info: Found entity 1: add_sub_lkc
-Info: Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
-    Info: Found entity 1: add_sub_mkc
-Info: Elaborated megafunction instantiation "DisplayModule:display|lpm_divide:Mod0"
-Info: Instantiated megafunction "DisplayModule:display|lpm_divide:Mod0" with the following parameter:
-    Info: Parameter "LPM_WIDTHN" = "7"
-    Info: Parameter "LPM_WIDTHD" = "4"
-    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_35m.tdf
-    Info: Found entity 1: lpm_divide_35m
-Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
-    Info: Found entity 1: sign_div_unsign_akh
-Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_mve.tdf
-    Info: Found entity 1: alt_u_div_mve
-Info: Elaborated megafunction instantiation "DisplayModule:display|lpm_divide:Div0"
-Info: Instantiated megafunction "DisplayModule:display|lpm_divide:Div0" with the following parameter:
-    Info: Parameter "LPM_WIDTHN" = "7"
-    Info: Parameter "LPM_WIDTHD" = "4"
-    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_0dm.tdf
-    Info: Found entity 1: lpm_divide_0dm
-Info: Elaborated megafunction instantiation "DisplayModule:display_1|lpm_divide:Mod1"
-Info: Instantiated megafunction "DisplayModule:display_1|lpm_divide:Mod1" with the following parameter:
-    Info: Parameter "LPM_WIDTHN" = "8"
-    Info: Parameter "LPM_WIDTHD" = "7"
-    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "display_segments[0]" is stuck at GND
+    Warning (13410): Pin "display_segments[1]" is stuck at GND
+    Warning (13410): Pin "display_segments[2]" is stuck at GND
+    Warning (13410): Pin "display_segments[3]" is stuck at GND
+    Warning (13410): Pin "display_segments[4]" is stuck at GND
+    Warning (13410): Pin "display_segments[5]" is stuck at GND
+    Warning (13410): Pin "display_segments[6]" is stuck at GND
+    Warning (13410): Pin "display_segments[7]" is stuck at GND
     Warning (13410): Pin "display_segments[8]" is stuck at GND
     Warning (13410): Pin "display_segments[9]" is stuck at GND
-    Warning (13410): Pin "display_segments[13]" is stuck at VCC
+    Warning (13410): Pin "display_segments[10]" is stuck at GND
+    Warning (13410): Pin "display_segments[11]" is stuck at GND
+    Warning (13410): Pin "display_segments[12]" is stuck at GND
+    Warning (13410): Pin "display_segments[13]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[0]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[1]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[2]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[3]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[4]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[5]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[6]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[7]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[8]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[9]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[10]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[11]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[12]" is stuck at GND
+    Warning (13410): Pin "display_segments_code[13]" is stuck at GND
+    Warning (13410): Pin "display_change[0]" is stuck at GND
+    Warning (13410): Pin "display_change[1]" is stuck at GND
+    Warning (13410): Pin "display_change[2]" is stuck at GND
+    Warning (13410): Pin "display_change[3]" is stuck at GND
+    Warning (13410): Pin "display_change[4]" is stuck at GND
+    Warning (13410): Pin "display_change[5]" is stuck at GND
+    Warning (13410): Pin "display_change[6]" is stuck at GND
+    Warning (13410): Pin "display_change[7]" is stuck at GND
+    Warning (13410): Pin "display_change[8]" is stuck at GND
+    Warning (13410): Pin "display_change[9]" is stuck at GND
+    Warning (13410): Pin "display_change[10]" is stuck at GND
+    Warning (13410): Pin "display_change[11]" is stuck at GND
+    Warning (13410): Pin "display_change[12]" is stuck at GND
+    Warning (13410): Pin "display_change[13]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[0]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[1]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[2]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[3]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[4]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[5]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[6]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[7]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[8]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[9]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[10]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[11]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[12]" is stuck at GND
+    Warning (13410): Pin "display_sellingAmount[13]" is stuck at GND
     Warning (13410): Pin "initialized_value[0]" is stuck at GND
     Warning (13410): Pin "initialized_value[1]" is stuck at GND
     Warning (13410): Pin "initialized_value[2]" is stuck at GND
@@ -1040,19 +418,36 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "dt_zero[5]" is stuck at VCC
     Warning (13410): Pin "dt_zero[6]" is stuck at VCC
     Warning (13410): Pin "dt_zero[7]" is stuck at VCC
-Info: 2 registers lost all their fanouts during netlist optimizations. The first 2 are displayed below.
+Info: 19 registers lost all their fanouts during netlist optimizations. The first 19 are displayed below.
     Info: Register "VendingMachineController:controller|state~6" lost all its fanouts during netlist optimizations.
     Info: Register "VendingMachineController:controller|state~7" lost all its fanouts during netlist optimizations.
-Info: Found the following redundant logic cells in design
-    Info (17048): Logic cell "DisplayModule:display|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[0]~0"
-Info: Implemented 668 device resources after synthesis - the final resource count might be different
+    Info: Register "VendingMachineController:controller|change[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|change[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|change[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|change[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|change[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|change[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|change[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|change[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|total_sales[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|total_sales[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|total_sales[5]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|total_sales[4]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|total_sales[3]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|total_sales[2]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|total_sales[1]" lost all its fanouts during netlist optimizations.
+    Info: Register "VendingMachineController:controller|total_sales[0]" lost all its fanouts during netlist optimizations.
+    Info: Register "TotalZero:comb_12|sales_total_flag" lost all its fanouts during netlist optimizations.
+Warning: Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "reset_button"
+Info: Implemented 195 device resources after synthesis - the final resource count might be different
     Info: Implemented 14 input pins
-    Info: Implemented 70 output pins
-    Info: Implemented 584 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 233 megabytes
-    Info: Processing ended: Fri Sep 08 09:24:16 2023
-    Info: Elapsed time: 00:00:02
+    Info: Implemented 73 output pins
+    Info: Implemented 108 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 82 warnings
+    Info: Peak virtual memory: 229 megabytes
+    Info: Processing ended: Fri Sep 08 10:10:52 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 
 

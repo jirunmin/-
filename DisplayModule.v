@@ -21,7 +21,7 @@ initial begin
     seven_segment_map[6] = ~7'h7D;  // 数码管显示6的编码
     seven_segment_map[7] = ~7'h07;  // 数码管显示7的编码
     seven_segment_map[8] = ~7'h7F;  // 数码管显示8的编码
-    seven_segment_map[9] = ~7'h67;  // 数码管显示9的编码
+    seven_segment_map[9] = ~7'h6F;  // 数码管显示9的编码
 end
 
 assign display_segments = {seven_segment_map[tens], seven_segment_map[ones]}; // 将输入值映射到数码管编码并输出

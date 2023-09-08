@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VendingMachine
-Fri Sep 08 01:57:38 2023
+Fri Sep 08 09:24:16 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -26,8 +26,10 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  18. Parameter Settings for Inferred Entity Instance: DisplayModule:display_2|lpm_divide:Mod1
  19. Parameter Settings for Inferred Entity Instance: DisplayModule:display_2|lpm_divide:Mod0
  20. Parameter Settings for Inferred Entity Instance: DisplayModule:display_2|lpm_divide:Div0
- 21. Port Connectivity Checks: "SalesTotalReset:sales_total_reset"
- 22. Analysis & Synthesis Messages
+ 21. Parameter Settings for Inferred Entity Instance: DisplayModule:display_3|lpm_divide:Mod1
+ 22. Parameter Settings for Inferred Entity Instance: DisplayModule:display_3|lpm_divide:Mod0
+ 23. Parameter Settings for Inferred Entity Instance: DisplayModule:display_3|lpm_divide:Div0
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -53,16 +55,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 08 01:57:38 2023        ;
+; Analysis & Synthesis Status        ; Successful - Fri Sep 08 09:24:16 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; VendingMachine                               ;
 ; Top-level Entity Name              ; VendingMachine                               ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 408                                          ;
-;     Total combinational functions  ; 404                                          ;
-;     Dedicated logic registers      ; 78                                           ;
-; Total registers                    ; 78                                           ;
-; Total pins                         ; 106                                          ;
+; Total logic elements               ; 583                                          ;
+;     Total combinational functions  ; 577                                          ;
+;     Dedicated logic registers      ; 80                                           ;
+; Total registers                    ; 80                                           ;
+; Total pins                         ; 84                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -168,12 +170,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; VendingMachine.v                 ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/VendingMachine.v           ;
 ; InitializeModule.v               ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/InitializeModule.v         ;
 ; DisplayModule.v                  ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/DisplayModule.v            ;
-; SalesTotalReset.v                ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/SalesTotalReset.v          ;
 ; VendingMachineController.v       ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/VendingMachineController.v ;
 ; CoinDetector.v                   ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/CoinDetector.v             ;
 ; clk_1hz.v                        ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/clk_1hz.v                  ;
 ; Product_codetoprice.v            ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/Product_codetoprice.v      ;
 ; SecondsDetector.v                ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/SecondsDetector.v          ;
+; TotalZero.v                      ; yes             ; User Verilog HDL File        ; E:/学习/数字电路/数电课设/VendingMachine_Git/TotalZero.v                ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; f:/qu/quartus/libraries/megafunctions/lpm_divide.tdf                    ;
 ; db/lpm_divide_75m.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/lpm_divide_75m.tdf      ;
 ; db/sign_div_unsign_ekh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/学习/数字电路/数电课设/VendingMachine_Git/db/sign_div_unsign_ekh.tdf ;
@@ -187,33 +189,33 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                  ;
-+---------------------------------------------+--------------------------------+
-; Resource                                    ; Usage                          ;
-+---------------------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 408                            ;
-;                                             ;                                ;
-; Total combinational functions               ; 404                            ;
-; Logic element usage by number of LUT inputs ;                                ;
-;     -- 4 input functions                    ; 125                            ;
-;     -- 3 input functions                    ; 109                            ;
-;     -- <=2 input functions                  ; 170                            ;
-;                                             ;                                ;
-; Logic elements by mode                      ;                                ;
-;     -- normal mode                          ; 289                            ;
-;     -- arithmetic mode                      ; 115                            ;
-;                                             ;                                ;
-; Total registers                             ; 78                             ;
-;     -- Dedicated logic registers            ; 78                             ;
-;     -- I/O registers                        ; 0                              ;
-;                                             ;                                ;
-; I/O pins                                    ; 106                            ;
-; Maximum fan-out node                        ; clk_1hz:clk1|divide_by_10:d0|Q ;
-; Maximum fan-out                             ; 41                             ;
-; Total fan-out                               ; 1396                           ;
-; Average fan-out                             ; 2.37                           ;
-+---------------------------------------------+--------------------------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 583   ;
+;                                             ;       ;
+; Total combinational functions               ; 577   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 189   ;
+;     -- 3 input functions                    ; 151   ;
+;     -- <=2 input functions                  ; 237   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 421   ;
+;     -- arithmetic mode                      ; 156   ;
+;                                             ;       ;
+; Total registers                             ; 80    ;
+;     -- Dedicated logic registers            ; 80    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 84    ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 50    ;
+; Total fan-out                               ; 1905  ;
+; Average fan-out                             ; 2.57  ;
++---------------------------------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -221,7 +223,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |VendingMachine                           ; 404 (0)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 106  ; 0            ; |VendingMachine                                                                                                                         ; work         ;
+; |VendingMachine                           ; 577 (0)           ; 80 (0)       ; 0           ; 0            ; 0       ; 0         ; 84   ; 0            ; |VendingMachine                                                                                                                         ; work         ;
 ;    |CoinDetector:coin_detector|           ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|CoinDetector:coin_detector                                                                                              ;              ;
 ;    |DisplayModule:display_1|              ; 146 (14)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1                                                                                                 ;              ;
 ;       |lpm_divide:Div0|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_1|lpm_divide:Div0                                                                                 ;              ;
@@ -249,6 +251,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |lpm_divide_75m:auto_generated|  ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Mod1|lpm_divide_75m:auto_generated                                                   ;              ;
 ;             |sign_div_unsign_ekh:divider| ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider                       ;              ;
 ;                |alt_u_div_uve:divider|    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_2|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ;              ;
+;    |DisplayModule:display_3|              ; 146 (14)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3                                                                                                 ;              ;
+;       |lpm_divide:Div0|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Div0                                                                                 ;              ;
+;          |lpm_divide_0dm:auto_generated|  ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated                                                   ;              ;
+;             |sign_div_unsign_akh:divider| ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider                       ;              ;
+;                |alt_u_div_mve:divider|    ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Div0|lpm_divide_0dm:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ;              ;
+;       |lpm_divide:Mod0|                   ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod0                                                                                 ;              ;
+;          |lpm_divide_35m:auto_generated|  ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated                                                   ;              ;
+;             |sign_div_unsign_akh:divider| ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider                       ;              ;
+;                |alt_u_div_mve:divider|    ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider ;              ;
+;       |lpm_divide:Mod1|                   ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod1                                                                                 ;              ;
+;          |lpm_divide_75m:auto_generated|  ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod1|lpm_divide_75m:auto_generated                                                   ;              ;
+;             |sign_div_unsign_ekh:divider| ; 40 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider                       ;              ;
+;                |alt_u_div_uve:divider|    ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display_3|lpm_divide:Mod1|lpm_divide_75m:auto_generated|sign_div_unsign_ekh:divider|alt_u_div_uve:divider ;              ;
 ;    |DisplayModule:display|                ; 21 (7)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display                                                                                                   ;              ;
 ;       |lpm_divide:Div0|                   ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Div0                                                                                   ;              ;
 ;          |lpm_divide_0dm:auto_generated|  ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Div0|lpm_divide_0dm:auto_generated                                                     ;              ;
@@ -258,10 +273,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |lpm_divide_35m:auto_generated|  ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Mod0|lpm_divide_35m:auto_generated                                                     ;              ;
 ;             |sign_div_unsign_akh:divider| ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider                         ;              ;
 ;                |alt_u_div_mve:divider|    ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|DisplayModule:display|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider   ;              ;
+;    |InitializeModule:initializer|         ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|InitializeModule:initializer                                                                                            ;              ;
 ;    |Product_codetoprice:comb_11|          ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|Product_codetoprice:comb_11                                                                                             ;              ;
-;    |SecondsDetector:comb_12|              ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|SecondsDetector:comb_12                                                                                                 ;              ;
 ;    |SecondsDetector:comb_13|              ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|SecondsDetector:comb_13                                                                                                 ;              ;
-;    |VendingMachineController:controller|  ; 46 (46)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|VendingMachineController:controller                                                                                     ;              ;
+;    |SecondsDetector:comb_14|              ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|SecondsDetector:comb_14                                                                                                 ;              ;
+;    |TotalZero:comb_12|                    ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|TotalZero:comb_12                                                                                                       ;              ;
+;    |VendingMachineController:controller|  ; 73 (73)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|VendingMachineController:controller                                                                                     ;              ;
 ;    |clk_1hz:clk1|                         ; 31 (0)            ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1                                                                                                            ;              ;
 ;       |divide_by_10:d0|                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d0                                                                                            ;              ;
 ;       |divide_by_10:d1|                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d1                                                                                            ;              ;
@@ -292,7 +309,6 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+----------------------------------------+
 ; Register name                                       ; Reason for Removal                     ;
 +-----------------------------------------------------+----------------------------------------+
-; InitializeModule:initializer|initial_value[0..3]    ; Stuck at GND due to stuck port data_in ;
 ; CoinDetector:coin_detector|coin_value[4..7]         ; Stuck at GND due to stuck port data_in ;
 ; Product_codetoprice:comb_11|product_price[4..7]     ; Stuck at GND due to stuck port data_in ;
 ; VendingMachineController:controller|coin_temp[4..7] ; Stuck at GND due to stuck port data_in ;
@@ -578,7 +594,7 @@ Encoding Type:  One-Hot
 ; DisplayModule:display_3|seven_segment_map~67        ; Stuck at GND due to stuck port clock   ;
 ; DisplayModule:display_3|seven_segment_map~68        ; Stuck at GND due to stuck port clock   ;
 ; DisplayModule:display_3|seven_segment_map~69        ; Stuck at GND due to stuck port clock   ;
-; Total Number of Removed Registers = 298             ;                                        ;
+; Total Number of Removed Registers = 294             ;                                        ;
 +-----------------------------------------------------+----------------------------------------+
 
 
@@ -587,27 +603,29 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 78    ;
-; Number of registers using Synchronous Clear  ; 13    ;
+; Total registers                              ; 80    ;
+; Number of registers using Synchronous Clear  ; 31    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 30    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 30    ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_12|cnt[1]                    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_13|cnt[1]                    ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |VendingMachine|VendingMachineController:controller|coin_total[5] ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|Selector2     ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|Selector3     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_13|cnt[1]                     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_14|cnt[0]                     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VendingMachine|VendingMachineController:controller|total_sales[1] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|coin_total     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|change         ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|state          ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|state          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------+
@@ -817,13 +835,73 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "SalesTotalReset:sales_total_reset"                                                           ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port          ; Type   ; Severity ; Details                                                                             ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
-; cleared_total ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: DisplayModule:display_3|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                        ;
+; LPM_WIDTHD             ; 7              ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_75m ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: DisplayModule:display_3|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_35m ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: DisplayModule:display_3|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                           ;
++------------------------+----------------+------------------------------------------------+
+; LPM_WIDTHN             ; 7              ; Untyped                                        ;
+; LPM_WIDTHD             ; 4              ; Untyped                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                        ;
+; CBXI_PARAMETER         ; lpm_divide_0dm ; Untyped                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                 ;
++------------------------+----------------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -832,7 +910,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Sep 08 01:57:37 2023
+    Info: Processing started: Fri Sep 08 09:24:14 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VendingMachine -c VendingMachine
 Info: Found 1 design units, including 1 entities, in source file vendingmachine.v
     Info: Found entity 1: VendingMachine
@@ -859,28 +937,23 @@ Info: Found 1 design units, including 1 entities, in source file product_codetop
     Info: Found entity 1: Product_codetoprice
 Info: Found 1 design units, including 1 entities, in source file secondsdetector.v
     Info: Found entity 1: SecondsDetector
-Critical Warning (10846): Verilog HDL Instantiation warning at VendingMachine.v(41): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at VendingMachine.v(55): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at VendingMachine.v(57): instance has no name
+Info: Found 1 design units, including 1 entities, in source file totalzero.v
+    Info: Found entity 1: TotalZero
+Critical Warning (10846): Verilog HDL Instantiation warning at VendingMachine.v(44): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at VendingMachine.v(56): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at VendingMachine.v(60): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at VendingMachine.v(62): instance has no name
 Info: Elaborating entity "VendingMachine" for the top level hierarchy
-Warning (10034): Output port "cleared_sales_total" at VendingMachine.v(12) has no driver
-Warning (10034): Output port "seg" at VendingMachine.v(22) has no driver
-Warning (10034): Output port "q" at VendingMachine.v(23) has no driver
+Warning (10034): Output port "initialized_value" at VendingMachine.v(21) has no driver
+Info: Elaborating entity "clk_1hz" for hierarchy "clk_1hz:clk1"
+Info: Elaborating entity "divide_by_50" for hierarchy "clk_1hz:clk1|divide_by_50:d6"
+Info: Elaborating entity "divide_by_10" for hierarchy "clk_1hz:clk1|divide_by_10:d5"
 Info: Elaborating entity "Product_codetoprice" for hierarchy "Product_codetoprice:comb_11"
 Info (10264): Verilog HDL Case Statement information at Product_codetoprice.v(9): all case item expressions in this case statement are onehot
 Info: Elaborating entity "CoinDetector" for hierarchy "CoinDetector:coin_detector"
 Info (10264): Verilog HDL Case Statement information at CoinDetector.v(11): all case item expressions in this case statement are onehot
-Info: Elaborating entity "clk_1hz" for hierarchy "clk_1hz:clk1"
-Info: Elaborating entity "divide_by_50" for hierarchy "clk_1hz:clk1|divide_by_50:d6"
-Info: Elaborating entity "divide_by_10" for hierarchy "clk_1hz:clk1|divide_by_10:d5"
-Info: Elaborating entity "SalesTotalReset" for hierarchy "SalesTotalReset:sales_total_reset"
-Warning (10230): Verilog HDL assignment warning at SalesTotalReset.v(14): truncated value with size 8 to match size of target (4)
-Warning (10240): Verilog HDL Always Construct warning at SalesTotalReset.v(10): inferring latch(es) for variable "total", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "total[0]" at SalesTotalReset.v(10)
-Info (10041): Inferred latch for "total[1]" at SalesTotalReset.v(10)
-Info (10041): Inferred latch for "total[2]" at SalesTotalReset.v(10)
-Info (10041): Inferred latch for "total[3]" at SalesTotalReset.v(10)
-Info: Elaborating entity "SecondsDetector" for hierarchy "SecondsDetector:comb_12"
+Info: Elaborating entity "TotalZero" for hierarchy "TotalZero:comb_12"
+Info: Elaborating entity "SecondsDetector" for hierarchy "SecondsDetector:comb_13"
 Warning (10230): Verilog HDL assignment warning at SecondsDetector.v(19): truncated value with size 32 to match size of target (2)
 Info: Elaborating entity "VendingMachineController" for hierarchy "VendingMachineController:controller"
 Info: Elaborating entity "DisplayModule" for hierarchy "DisplayModule:display"
@@ -890,49 +963,13 @@ Warning (10030): Net "seven_segment_map.data_a" at DisplayModule.v(12) has no dr
 Warning (10030): Net "seven_segment_map.waddr_a" at DisplayModule.v(12) has no driver or initial value, using a default initial value '0'
 Warning (10030): Net "seven_segment_map.we_a" at DisplayModule.v(12) has no driver or initial value, using a default initial value '0'
 Info: Elaborating entity "InitializeModule" for hierarchy "InitializeModule:initializer"
-Warning: Net is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[7]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[6]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[5]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[4]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[3]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[2]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[1]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[0]" is missing source, defaulting to GND
-Warning: Net is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[7]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[6]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[5]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[4]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[3]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[2]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[1]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[0]" is missing source, defaulting to GND
-Warning: Net is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[7]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[6]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[5]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[4]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[3]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[2]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[1]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[0]" is missing source, defaulting to GND
-Warning: Net is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[7]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[6]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[5]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[4]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[3]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[2]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[1]" is missing source, defaulting to GND
-    Warning (12110): Net "sales_total[0]" is missing source, defaulting to GND
 Info: Found 4 instances of uninferred RAM logic
     Info: RAM logic "DisplayModule:display|seven_segment_map" is uninferred due to inappropriate RAM size
     Info: RAM logic "DisplayModule:display_1|seven_segment_map" is uninferred due to inappropriate RAM size
     Info: RAM logic "DisplayModule:display_2|seven_segment_map" is uninferred due to inappropriate RAM size
     Info: RAM logic "DisplayModule:display_3|seven_segment_map" is uninferred due to inappropriate RAM size
 Critical Warning: Memory depth (16) in the design file differs from memory depth (10) in the Memory Initialization File "VendingMachine.ram0_DisplayModule_3fc62259.hdl.mif" -- setting initial value for remaining addresses to 0
-Info: Inferred 9 megafunctions from design logic
+Info: Inferred 12 megafunctions from design logic
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display|Mod1"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display|Mod0"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display|Div0"
@@ -942,6 +979,9 @@ Info: Inferred 9 megafunctions from design logic
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_2|Mod1"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_2|Mod0"
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_2|Div0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_3|Mod1"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_3|Mod0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayModule:display_3|Div0"
 Info: Elaborated megafunction instantiation "DisplayModule:display|lpm_divide:Mod1"
 Info: Instantiated megafunction "DisplayModule:display|lpm_divide:Mod1" with the following parameter:
     Info: Parameter "LPM_WIDTHN" = "8"
@@ -985,27 +1025,9 @@ Info: Instantiated megafunction "DisplayModule:display_1|lpm_divide:Mod1" with t
     Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "cleared_sales_total[0]" is stuck at GND
-    Warning (13410): Pin "cleared_sales_total[1]" is stuck at GND
-    Warning (13410): Pin "cleared_sales_total[2]" is stuck at GND
-    Warning (13410): Pin "cleared_sales_total[3]" is stuck at GND
     Warning (13410): Pin "display_segments[8]" is stuck at GND
     Warning (13410): Pin "display_segments[9]" is stuck at GND
     Warning (13410): Pin "display_segments[13]" is stuck at VCC
-    Warning (13410): Pin "display_sellingAmount[0]" is stuck at GND
-    Warning (13410): Pin "display_sellingAmount[1]" is stuck at GND
-    Warning (13410): Pin "display_sellingAmount[2]" is stuck at GND
-    Warning (13410): Pin "display_sellingAmount[3]" is stuck at GND
-    Warning (13410): Pin "display_sellingAmount[4]" is stuck at GND
-    Warning (13410): Pin "display_sellingAmount[5]" is stuck at GND
-    Warning (13410): Pin "display_sellingAmount[6]" is stuck at VCC
-    Warning (13410): Pin "display_sellingAmount[7]" is stuck at GND
-    Warning (13410): Pin "display_sellingAmount[8]" is stuck at GND
-    Warning (13410): Pin "display_sellingAmount[9]" is stuck at GND
-    Warning (13410): Pin "display_sellingAmount[10]" is stuck at GND
-    Warning (13410): Pin "display_sellingAmount[11]" is stuck at GND
-    Warning (13410): Pin "display_sellingAmount[12]" is stuck at GND
-    Warning (13410): Pin "display_sellingAmount[13]" is stuck at VCC
     Warning (13410): Pin "initialized_value[0]" is stuck at GND
     Warning (13410): Pin "initialized_value[1]" is stuck at GND
     Warning (13410): Pin "initialized_value[2]" is stuck at GND
@@ -1018,32 +1040,19 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "dt_zero[5]" is stuck at VCC
     Warning (13410): Pin "dt_zero[6]" is stuck at VCC
     Warning (13410): Pin "dt_zero[7]" is stuck at VCC
-    Warning (13410): Pin "seg[0]" is stuck at GND
-    Warning (13410): Pin "seg[1]" is stuck at GND
-    Warning (13410): Pin "seg[2]" is stuck at GND
-    Warning (13410): Pin "seg[3]" is stuck at GND
-    Warning (13410): Pin "seg[4]" is stuck at GND
-    Warning (13410): Pin "seg[5]" is stuck at GND
-    Warning (13410): Pin "seg[6]" is stuck at GND
-    Warning (13410): Pin "q[0]" is stuck at GND
-    Warning (13410): Pin "q[1]" is stuck at GND
-    Warning (13410): Pin "q[2]" is stuck at GND
-    Warning (13410): Pin "q[3]" is stuck at GND
 Info: 2 registers lost all their fanouts during netlist optimizations. The first 2 are displayed below.
     Info: Register "VendingMachineController:controller|state~6" lost all its fanouts during netlist optimizations.
     Info: Register "VendingMachineController:controller|state~7" lost all its fanouts during netlist optimizations.
 Info: Found the following redundant logic cells in design
     Info (17048): Logic cell "DisplayModule:display|lpm_divide:Mod0|lpm_divide_35m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_mve:divider|add_sub_6_result_int[0]~0"
-Warning: Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset_button"
-Info: Implemented 517 device resources after synthesis - the final resource count might be different
-    Info: Implemented 13 input pins
-    Info: Implemented 93 output pins
-    Info: Implemented 411 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 99 warnings
-    Info: Peak virtual memory: 235 megabytes
-    Info: Processing ended: Fri Sep 08 01:57:38 2023
-    Info: Elapsed time: 00:00:01
+Info: Implemented 668 device resources after synthesis - the final resource count might be different
+    Info: Implemented 14 input pins
+    Info: Implemented 70 output pins
+    Info: Implemented 584 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 233 megabytes
+    Info: Processing ended: Fri Sep 08 09:24:16 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:00
 
 

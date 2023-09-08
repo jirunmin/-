@@ -1,8 +1,8 @@
 |VendingMachine
-clk => clk.IN3
-reset_button => reset_button.IN2
+clk => clk.IN6
+reset_button => reset_button.IN1
 coin_insert_button => coin_insert_button.IN1
-confirm_button => confirm_button.IN3
+confirm_button => confirm_button.IN2
 coin_code[0] => coin_code[0].IN1
 coin_code[1] => coin_code[1].IN1
 coin_code[2] => coin_code[2].IN1
@@ -12,12 +12,9 @@ product_code[1] => product_code[1].IN1
 product_code[2] => product_code[2].IN1
 product_code[3] => product_code[3].IN1
 rst_n => rst_n.IN1
+business => business.IN1
 alarm <= alarm.DB_MAX_OUTPUT_PORT_TYPE
 product_dispensed <= VendingMachineController:controller.product_dispensed
-cleared_sales_total[0] <= <GND>
-cleared_sales_total[1] <= <GND>
-cleared_sales_total[2] <= <GND>
-cleared_sales_total[3] <= <GND>
 display_segments[0] <= DisplayModule:display.display_segments
 display_segments[1] <= DisplayModule:display.display_segments
 display_segments[2] <= DisplayModule:display.display_segments
@@ -74,10 +71,10 @@ display_sellingAmount[10] <= DisplayModule:display_3.display_segments
 display_sellingAmount[11] <= DisplayModule:display_3.display_segments
 display_sellingAmount[12] <= DisplayModule:display_3.display_segments
 display_sellingAmount[13] <= DisplayModule:display_3.display_segments
-initialized_value[0] <= InitializeModule:initializer.initialized_value
-initialized_value[1] <= InitializeModule:initializer.initialized_value
-initialized_value[2] <= InitializeModule:initializer.initialized_value
-initialized_value[3] <= InitializeModule:initializer.initialized_value
+initialized_value[0] <= <GND>
+initialized_value[1] <= <GND>
+initialized_value[2] <= <GND>
+initialized_value[3] <= <GND>
 dt_zero[0] <= <VCC>
 dt_zero[1] <= <VCC>
 dt_zero[2] <= <VCC>
@@ -86,71 +83,6 @@ dt_zero[4] <= <VCC>
 dt_zero[5] <= <VCC>
 dt_zero[6] <= <VCC>
 dt_zero[7] <= <VCC>
-seg[0] <= <GND>
-seg[1] <= <GND>
-seg[2] <= <GND>
-seg[3] <= <GND>
-seg[4] <= <GND>
-seg[5] <= <GND>
-seg[6] <= <GND>
-q[0] <= <GND>
-q[1] <= <GND>
-q[2] <= <GND>
-q[3] <= <GND>
-total_sales[0] <= VendingMachineController:controller.total_sales
-total_sales[1] <= VendingMachineController:controller.total_sales
-total_sales[2] <= VendingMachineController:controller.total_sales
-total_sales[3] <= VendingMachineController:controller.total_sales
-total_sales[4] <= VendingMachineController:controller.total_sales
-total_sales[5] <= VendingMachineController:controller.total_sales
-total_sales[6] <= VendingMachineController:controller.total_sales
-total_sales[7] <= VendingMachineController:controller.total_sales
-
-
-|VendingMachine|Product_codetoprice:comb_11
-clk => product_price[0]~reg0.CLK
-clk => product_price[1]~reg0.CLK
-clk => product_price[2]~reg0.CLK
-clk => product_price[3]~reg0.CLK
-clk => product_price[4]~reg0.CLK
-clk => product_price[5]~reg0.CLK
-clk => product_price[6]~reg0.CLK
-clk => product_price[7]~reg0.CLK
-product_code[0] => Decoder0.IN3
-product_code[1] => Decoder0.IN2
-product_code[2] => Decoder0.IN1
-product_code[3] => Decoder0.IN0
-product_price[0] <= product_price[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-product_price[1] <= product_price[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-product_price[2] <= product_price[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-product_price[3] <= product_price[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-product_price[4] <= product_price[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-product_price[5] <= product_price[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-product_price[6] <= product_price[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-product_price[7] <= product_price[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|VendingMachine|CoinDetector:coin_detector
-clk => coin_value[0]~reg0.CLK
-clk => coin_value[1]~reg0.CLK
-clk => coin_value[2]~reg0.CLK
-clk => coin_value[3]~reg0.CLK
-clk => coin_value[4]~reg0.CLK
-clk => coin_value[5]~reg0.CLK
-clk => coin_value[6]~reg0.CLK
-clk => coin_value[7]~reg0.CLK
-coin_code[0] => Decoder0.IN3
-coin_code[1] => Decoder0.IN2
-coin_code[2] => Decoder0.IN1
-coin_code[3] => Decoder0.IN0
-coin_value[0] <= coin_value[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-coin_value[1] <= coin_value[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-coin_value[2] <= coin_value[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-coin_value[3] <= coin_value[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-coin_value[4] <= coin_value[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-coin_value[5] <= coin_value[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-coin_value[6] <= coin_value[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-coin_value[7] <= coin_value[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |VendingMachine|clk_1hz:clk1
@@ -247,35 +179,56 @@ RST => count[2].ACLR
 RST => Q~reg0.ACLR
 
 
-|VendingMachine|SalesTotalReset:sales_total_reset
-reset_button => total[3].IN0
-clear_sales => total[0].OUTPUTSELECT
-clear_sales => total[1].OUTPUTSELECT
-clear_sales => total[2].OUTPUTSELECT
-clear_sales => total[3].OUTPUTSELECT
-clear_sales => total[3].IN1
-sales_total[0] => total[0].DATAB
-sales_total[1] => total[1].DATAB
-sales_total[2] => total[2].DATAB
-sales_total[3] => total[3].DATAB
-sales_total[4] => ~NO_FANOUT~
-sales_total[5] => ~NO_FANOUT~
-sales_total[6] => ~NO_FANOUT~
-sales_total[7] => ~NO_FANOUT~
-cleared_total[0] <= total[0].DB_MAX_OUTPUT_PORT_TYPE
-cleared_total[1] <= total[1].DB_MAX_OUTPUT_PORT_TYPE
-cleared_total[2] <= total[2].DB_MAX_OUTPUT_PORT_TYPE
-cleared_total[3] <= total[3].DB_MAX_OUTPUT_PORT_TYPE
+|VendingMachine|Product_codetoprice:comb_11
+clk => product_price[0]~reg0.CLK
+clk => product_price[1]~reg0.CLK
+clk => product_price[2]~reg0.CLK
+clk => product_price[3]~reg0.CLK
+clk => product_price[4]~reg0.CLK
+clk => product_price[5]~reg0.CLK
+clk => product_price[6]~reg0.CLK
+clk => product_price[7]~reg0.CLK
+product_code[0] => Decoder0.IN3
+product_code[1] => Decoder0.IN2
+product_code[2] => Decoder0.IN1
+product_code[3] => Decoder0.IN0
+product_price[0] <= product_price[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+product_price[1] <= product_price[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+product_price[2] <= product_price[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+product_price[3] <= product_price[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+product_price[4] <= product_price[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+product_price[5] <= product_price[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+product_price[6] <= product_price[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+product_price[7] <= product_price[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|VendingMachine|SecondsDetector:comb_12
-clk => secondsflag~reg0.CLK
-clk => cnt[0].CLK
-clk => cnt[1].CLK
-startflag => cnt.OUTPUTSELECT
-startflag => cnt.OUTPUTSELECT
-startflag => secondsflag.OUTPUTSELECT
-secondsflag <= secondsflag~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|VendingMachine|CoinDetector:coin_detector
+clk => coin_value[0]~reg0.CLK
+clk => coin_value[1]~reg0.CLK
+clk => coin_value[2]~reg0.CLK
+clk => coin_value[3]~reg0.CLK
+clk => coin_value[4]~reg0.CLK
+clk => coin_value[5]~reg0.CLK
+clk => coin_value[6]~reg0.CLK
+clk => coin_value[7]~reg0.CLK
+coin_code[0] => Decoder0.IN3
+coin_code[1] => Decoder0.IN2
+coin_code[2] => Decoder0.IN1
+coin_code[3] => Decoder0.IN0
+coin_value[0] <= coin_value[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_value[1] <= coin_value[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_value[2] <= coin_value[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_value[3] <= coin_value[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_value[4] <= coin_value[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_value[5] <= coin_value[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_value[6] <= coin_value[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+coin_value[7] <= coin_value[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|VendingMachine|TotalZero:comb_12
+clk => sales_total_flag~reg0.CLK
+zero_button => sales_total_flag~reg0.DATAIN
+sales_total_flag <= sales_total_flag~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |VendingMachine|SecondsDetector:comb_13
@@ -288,24 +241,18 @@ startflag => secondsflag.OUTPUTSELECT
 secondsflag <= secondsflag~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|VendingMachine|SecondsDetector:comb_14
+clk => secondsflag~reg0.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+startflag => cnt.OUTPUTSELECT
+startflag => cnt.OUTPUTSELECT
+startflag => secondsflag.OUTPUTSELECT
+secondsflag <= secondsflag~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |VendingMachine|VendingMachineController:controller
 clk => alarm~reg0.CLK
-clk => change[0]~reg0.CLK
-clk => change[1]~reg0.CLK
-clk => change[2]~reg0.CLK
-clk => change[3]~reg0.CLK
-clk => change[4]~reg0.CLK
-clk => change[5]~reg0.CLK
-clk => change[6]~reg0.CLK
-clk => change[7]~reg0.CLK
-clk => total_sales[0]~reg0.CLK
-clk => total_sales[1]~reg0.CLK
-clk => total_sales[2]~reg0.CLK
-clk => total_sales[3]~reg0.CLK
-clk => total_sales[4]~reg0.CLK
-clk => total_sales[5]~reg0.CLK
-clk => total_sales[6]~reg0.CLK
-clk => total_sales[7]~reg0.CLK
 clk => coin_total[0]~reg0.CLK
 clk => coin_total[1]~reg0.CLK
 clk => coin_total[2]~reg0.CLK
@@ -322,9 +269,24 @@ clk => coin_temp[4].CLK
 clk => coin_temp[5].CLK
 clk => coin_temp[6].CLK
 clk => coin_temp[7].CLK
+clk => change[0]~reg0.CLK
+clk => change[1]~reg0.CLK
+clk => change[2]~reg0.CLK
+clk => change[3]~reg0.CLK
+clk => change[4]~reg0.CLK
+clk => change[5]~reg0.CLK
+clk => change[6]~reg0.CLK
+clk => change[7]~reg0.CLK
 clk => product_dispensed~reg0.CLK
+clk => total_sales[0]~reg0.CLK
+clk => total_sales[1]~reg0.CLK
+clk => total_sales[2]~reg0.CLK
+clk => total_sales[3]~reg0.CLK
+clk => total_sales[4]~reg0.CLK
+clk => total_sales[5]~reg0.CLK
+clk => total_sales[6]~reg0.CLK
+clk => total_sales[7]~reg0.CLK
 clk => state~5.DATAIN
-coin_insert_button => product_dispensed.OUTPUTSELECT
 coin_insert_button => state.OUTPUTSELECT
 coin_insert_button => state.OUTPUTSELECT
 coin_insert_button => state.OUTPUTSELECT
@@ -367,6 +329,7 @@ confirm_button => state.OUTPUTSELECT
 confirm_button => state.OUTPUTSELECT
 confirm_button => state.OUTPUTSELECT
 confirm_button => alarm.OUTPUTSELECT
+confirm_button => always0.IN0
 confirm_button => always0.IN0
 coin_value[0] => Equal0.IN7
 coin_value[0] => Add0.IN8
@@ -424,19 +387,54 @@ product_price[6] => Add2.IN2
 product_price[7] => LessThan0.IN9
 product_price[7] => Add1.IN1
 product_price[7] => Add2.IN1
-confirm_flag => coin_total.OUTPUTSELECT
-confirm_flag => coin_total.OUTPUTSELECT
-confirm_flag => coin_total.OUTPUTSELECT
-confirm_flag => coin_total.OUTPUTSELECT
-confirm_flag => coin_total.OUTPUTSELECT
-confirm_flag => coin_total.OUTPUTSELECT
-confirm_flag => coin_total.OUTPUTSELECT
-confirm_flag => coin_total.OUTPUTSELECT
-confirm_flag => state.OUTPUTSELECT
-confirm_flag => state.OUTPUTSELECT
-confirm_flag => state.OUTPUTSELECT
-confirm_flag => state.OUTPUTSELECT
+confirm_flag => always0.IN1
 alarm_flag => always0.IN1
+sales_flag => total_sales.OUTPUTSELECT
+sales_flag => total_sales.OUTPUTSELECT
+sales_flag => total_sales.OUTPUTSELECT
+sales_flag => total_sales.OUTPUTSELECT
+sales_flag => total_sales.OUTPUTSELECT
+sales_flag => total_sales.OUTPUTSELECT
+sales_flag => total_sales.OUTPUTSELECT
+sales_flag => total_sales.OUTPUTSELECT
+bussines_flag => change.OUTPUTSELECT
+bussines_flag => change.OUTPUTSELECT
+bussines_flag => change.OUTPUTSELECT
+bussines_flag => change.OUTPUTSELECT
+bussines_flag => change.OUTPUTSELECT
+bussines_flag => change.OUTPUTSELECT
+bussines_flag => change.OUTPUTSELECT
+bussines_flag => change.OUTPUTSELECT
+bussines_flag => state.OUTPUTSELECT
+bussines_flag => state.OUTPUTSELECT
+bussines_flag => state.OUTPUTSELECT
+bussines_flag => state.OUTPUTSELECT
+bussines_flag => coin_total.OUTPUTSELECT
+bussines_flag => coin_total.OUTPUTSELECT
+bussines_flag => coin_total.OUTPUTSELECT
+bussines_flag => coin_total.OUTPUTSELECT
+bussines_flag => coin_total.OUTPUTSELECT
+bussines_flag => coin_total.OUTPUTSELECT
+bussines_flag => coin_total.OUTPUTSELECT
+bussines_flag => coin_total.OUTPUTSELECT
+bussines_flag => total_sales.OUTPUTSELECT
+bussines_flag => total_sales.OUTPUTSELECT
+bussines_flag => total_sales.OUTPUTSELECT
+bussines_flag => total_sales.OUTPUTSELECT
+bussines_flag => total_sales.OUTPUTSELECT
+bussines_flag => total_sales.OUTPUTSELECT
+bussines_flag => total_sales.OUTPUTSELECT
+bussines_flag => total_sales.OUTPUTSELECT
+bussines_flag => alarm~reg0.ENA
+bussines_flag => coin_temp[0].ENA
+bussines_flag => coin_temp[1].ENA
+bussines_flag => coin_temp[2].ENA
+bussines_flag => coin_temp[3].ENA
+bussines_flag => coin_temp[4].ENA
+bussines_flag => coin_temp[5].ENA
+bussines_flag => coin_temp[6].ENA
+bussines_flag => coin_temp[7].ENA
+bussines_flag => product_dispensed~reg0.ENA
 alarm <= alarm~reg0.DB_MAX_OUTPUT_PORT_TYPE
 change[0] <= change[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 change[1] <= change[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -558,13 +556,8 @@ display_segments[13] <= seven_segment_map.DATAOUT6
 
 
 |VendingMachine|InitializeModule:initializer
-initialize_button => initial_value[0].CLK
-initialize_button => initial_value[1].CLK
-initialize_button => initial_value[2].CLK
-initialize_button => initial_value[3].CLK
-initialized_value[0] <= initial_value[0].DB_MAX_OUTPUT_PORT_TYPE
-initialized_value[1] <= initial_value[1].DB_MAX_OUTPUT_PORT_TYPE
-initialized_value[2] <= initial_value[2].DB_MAX_OUTPUT_PORT_TYPE
-initialized_value[3] <= initial_value[3].DB_MAX_OUTPUT_PORT_TYPE
+clk => bussines_flag~reg0.CLK
+initialize_button => bussines_flag~reg0.DATAIN
+bussines_flag <= bussines_flag~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

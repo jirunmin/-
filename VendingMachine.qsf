@@ -75,10 +75,6 @@ set_location_assignment PIN_AA24 -to product_dispensed
 set_location_assignment PIN_AB26 -to product_code[1]
 set_location_assignment PIN_AB25 -to product_code[2]
 set_location_assignment PIN_AC27 -to product_code[3]
-set_location_assignment PIN_AJ6 -to cleared_sales_total[0]
-set_location_assignment PIN_AK5 -to cleared_sales_total[1]
-set_location_assignment PIN_AJ5 -to cleared_sales_total[2]
-set_location_assignment PIN_AJ4 -to cleared_sales_total[3]
 set_location_assignment PIN_AD14 -to alarm
 set_location_assignment PIN_L8 -to reset_button
 set_location_assignment PIN_L7 -to confirm_button
@@ -147,7 +143,6 @@ set_location_assignment PIN_AG4 -to display_segments_code[3]
 set_location_assignment PIN_AB18 -to display_segments_code[4]
 set_location_assignment PIN_AB19 -to display_segments_code[5]
 set_location_assignment PIN_AE19 -to display_segments_code[6]
-set_global_assignment -name MISC_FILE "E:/学习/   值 路/       /VendingMachine_Git/VendingMachine.dpf"
 set_location_assignment PIN_P1 -to display_change[0]
 set_location_assignment PIN_L3 -to display_change[10]
 set_location_assignment PIN_K1 -to display_change[11]
@@ -162,7 +157,7 @@ set_location_assignment PIN_M2 -to display_change[6]
 set_location_assignment PIN_M3 -to display_change[7]
 set_location_assignment PIN_L1 -to display_change[8]
 set_location_assignment PIN_L2 -to display_change[9]
-set_global_assignment -name MISC_FILE "E:/学习/数字电路/数电课设/VendingMachine_Git/VendingMachine.dpf"
+set_global_assignment -name MISC_FILE "E:/学习/   值 路/       /VendingMachine_Git/VendingMachine.dpf"
 set_location_assignment PIN_H6 -to display_sellingAmount[0]
 set_location_assignment PIN_H4 -to display_sellingAmount[1]
 set_location_assignment PIN_H7 -to display_sellingAmount[2]
@@ -178,4 +173,7 @@ set_location_assignment PIN_H2 -to display_sellingAmount[11]
 set_location_assignment PIN_H3 -to display_sellingAmount[12]
 set_location_assignment PIN_G1 -to display_sellingAmount[13]
 set_global_assignment -name VERILOG_FILE SecondsDetector.v
+set_global_assignment -name VERILOG_FILE TotalZero.v
+set_global_assignment -name MISC_FILE "E:/学习/数字电路/数电课设/VendingMachine_Git/VendingMachine.dpf"
+set_location_assignment PIN_L5 -to business
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

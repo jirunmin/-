@@ -1,0 +1,15 @@
+module TotalZero (
+    input wire zero_button,       
+    output reg sales_total_flag 
+);
+
+
+always @(posedge zero_button) begin
+    sales_total_flag <= 1'd1;         
+end
+
+always @(negedge zero_button) begin
+    sales_total_flag <= 1'd0;         
+end
+
+endmodule

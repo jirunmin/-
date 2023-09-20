@@ -39,7 +39,7 @@ wire sales_flag;
 wire bussines_flag;
 
 
-clk_1hz clk1(clk,rst_n,clk_1Hz);
+// clk_1hz clk1(clk,rst_n,clk_1Hz);
 
 Product_codetoprice(.clk(clk),.product_code(product_code), .product_price(product_price));
 
@@ -57,9 +57,9 @@ TotalZero(
 
 
 
-SecondsDetector(.clk(clk_1Hz), .startflag(confirm_button), .secondsflag(confirm_flag));
+SecondsDetector(.clk(clk), .startflag(confirm_button), .secondsflag(confirm_flag));
 
-SecondsDetector(.clk(clk_1Hz), .startflag(alarm), .secondsflag(alarm_flag));
+SecondsDetector(.clk(clk), .startflag(alarm), .secondsflag(alarm_flag));
 
 VendingMachineController controller (          // 自动售货机控制器模块
     .clk(clk),

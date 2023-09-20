@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VendingMachine
-Fri Sep 08 10:10:52 2023
+Wed Sep 20 21:13:01 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -44,15 +44,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Sep 08 10:10:52 2023        ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 20 21:13:01 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; VendingMachine                               ;
 ; Top-level Entity Name              ; VendingMachine                               ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 108                                          ;
-;     Total combinational functions  ; 103                                          ;
-;     Dedicated logic registers      ; 66                                           ;
-; Total registers                    ; 66                                           ;
+; Total logic elements               ; 76                                           ;
+;     Total combinational functions  ; 71                                           ;
+;     Dedicated logic registers      ; 36                                           ;
+; Total registers                    ; 36                                           ;
 ; Total pins                         ; 87                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
@@ -161,7 +161,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; DisplayModule.v                  ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/DisplayModule.v            ;
 ; VendingMachineController.v       ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/VendingMachineController.v ;
 ; CoinDetector.v                   ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/CoinDetector.v             ;
-; clk_1hz.v                        ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/clk_1hz.v                  ;
 ; Product_codetoprice.v            ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/Product_codetoprice.v      ;
 ; SecondsDetector.v                ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/SecondsDetector.v          ;
 ; TotalZero.v                      ; yes             ; User Verilog HDL File  ; E:/学习/数字电路/数电课设/VendingMachine_Git/TotalZero.v                ;
@@ -173,27 +172,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 108   ;
+; Estimated Total logic elements              ; 76    ;
 ;                                             ;       ;
-; Total combinational functions               ; 103   ;
+; Total combinational functions               ; 71    ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 40    ;
-;     -- 3 input functions                    ; 33    ;
-;     -- <=2 input functions                  ; 30    ;
+;     -- 3 input functions                    ; 19    ;
+;     -- <=2 input functions                  ; 12    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 92    ;
-;     -- arithmetic mode                      ; 11    ;
+;     -- normal mode                          ; 64    ;
+;     -- arithmetic mode                      ; 7     ;
 ;                                             ;       ;
-; Total registers                             ; 66    ;
-;     -- Dedicated logic registers            ; 66    ;
+; Total registers                             ; 36    ;
+;     -- Dedicated logic registers            ; 36    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 87    ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 36    ;
-; Total fan-out                               ; 508   ;
-; Average fan-out                             ; 1.98  ;
+; Total fan-out                               ; 336   ;
+; Average fan-out                             ; 1.73  ;
 +---------------------------------------------+-------+
 
 
@@ -202,21 +201,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
 ; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Library Name ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
-; |VendingMachine                          ; 103 (0)           ; 66 (0)       ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |VendingMachine                                     ; work         ;
+; |VendingMachine                          ; 71 (0)            ; 36 (0)       ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |VendingMachine                                     ; work         ;
 ;    |CoinDetector:coin_detector|          ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|CoinDetector:coin_detector          ;              ;
 ;    |InitializeModule:initializer|        ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|InitializeModule:initializer        ;              ;
 ;    |Product_codetoprice:comb_11|         ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|Product_codetoprice:comb_11         ;              ;
 ;    |SecondsDetector:comb_13|             ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|SecondsDetector:comb_13             ;              ;
 ;    |SecondsDetector:comb_14|             ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|SecondsDetector:comb_14             ;              ;
-;    |VendingMachineController:controller| ; 58 (58)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|VendingMachineController:controller ;              ;
-;    |clk_1hz:clk1|                        ; 31 (0)            ; 30 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1                        ;              ;
-;       |divide_by_10:d0|                  ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d0        ;              ;
-;       |divide_by_10:d1|                  ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d1        ;              ;
-;       |divide_by_10:d2|                  ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d2        ;              ;
-;       |divide_by_10:d3|                  ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d3        ;              ;
-;       |divide_by_10:d4|                  ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d4        ;              ;
-;       |divide_by_10:d5|                  ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_10:d5        ;              ;
-;       |divide_by_50:d6|                  ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|clk_1hz:clk1|divide_by_50:d6        ;              ;
+;    |VendingMachineController:controller| ; 57 (57)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VendingMachine|VendingMachineController:controller ;              ;
 +------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -256,10 +247,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 66    ;
-; Number of registers using Synchronous Clear  ; 14    ;
+; Total registers                              ; 36    ;
+; Number of registers using Synchronous Clear  ; 9     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 30    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 11    ;
 ; Number of registers using Preset             ; 0     ;
@@ -271,9 +262,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_13|cnt[1]                        ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_14|cnt[0]                        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VendingMachine|VendingMachineController:controller|total_sales[7]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_13|cnt[0]                        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |VendingMachine|SecondsDetector:comb_14|cnt[1]                        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |VendingMachine|VendingMachineController:controller|total_sales[5]    ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|coin_total        ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |VendingMachine|VendingMachineController:controller|change            ;
 ; 18:1               ; 4 bits    ; 48 LEs        ; 12 LEs               ; 36 LEs                 ; No         ; |VendingMachine|VendingMachineController:controller|product_dispensed ;
@@ -297,7 +288,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Sep 08 10:10:51 2023
+    Info: Processing started: Wed Sep 20 21:13:00 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VendingMachine -c VendingMachine
 Info: Found 1 design units, including 1 entities, in source file vendingmachine.v
     Info: Found entity 1: VendingMachine
@@ -332,9 +323,6 @@ Critical Warning (10846): Verilog HDL Instantiation warning at VendingMachine.v(
 Critical Warning (10846): Verilog HDL Instantiation warning at VendingMachine.v(62): instance has no name
 Info: Elaborating entity "VendingMachine" for the top level hierarchy
 Warning (10034): Output port "initialized_value" at VendingMachine.v(21) has no driver
-Info: Elaborating entity "clk_1hz" for hierarchy "clk_1hz:clk1"
-Info: Elaborating entity "divide_by_50" for hierarchy "clk_1hz:clk1|divide_by_50:d6"
-Info: Elaborating entity "divide_by_10" for hierarchy "clk_1hz:clk1|divide_by_10:d5"
 Info: Elaborating entity "Product_codetoprice" for hierarchy "Product_codetoprice:comb_11"
 Info (10264): Verilog HDL Case Statement information at Product_codetoprice.v(9): all case item expressions in this case statement are onehot
 Info: Elaborating entity "CoinDetector" for hierarchy "CoinDetector:coin_detector"
@@ -438,15 +426,16 @@ Info: 19 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "VendingMachineController:controller|total_sales[1]" lost all its fanouts during netlist optimizations.
     Info: Register "VendingMachineController:controller|total_sales[0]" lost all its fanouts during netlist optimizations.
     Info: Register "TotalZero:comb_12|sales_total_flag" lost all its fanouts during netlist optimizations.
-Warning: Design contains 1 input pin(s) that do not drive logic
+Warning: Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "rst_n"
     Warning (15610): No output dependent on input pin "reset_button"
-Info: Implemented 195 device resources after synthesis - the final resource count might be different
+Info: Implemented 164 device resources after synthesis - the final resource count might be different
     Info: Implemented 14 input pins
     Info: Implemented 73 output pins
-    Info: Implemented 108 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 82 warnings
+    Info: Implemented 77 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 83 warnings
     Info: Peak virtual memory: 229 megabytes
-    Info: Processing ended: Fri Sep 08 10:10:52 2023
+    Info: Processing ended: Wed Sep 20 21:13:01 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

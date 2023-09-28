@@ -1,73 +1,73 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="VendingMachine">
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_31" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_21" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_11" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_2" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_32" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_41" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_22" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_12" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_3" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_50" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_33" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_14" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_23" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_13" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_4" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_42" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_51" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_34" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_15" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_24" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_5" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_43" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_52" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_35" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_16" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_25" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_6" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_44" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_53" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_36" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_17" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_26" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_7" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_45" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_54" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_28" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_37" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_18" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_27" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_8" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_46" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_55" CBX_FILE_NAME="mux_t4d.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_31" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_21" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_11" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_2" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_32" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_41" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_22" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_12" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_3" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_50" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_33" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_14" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_23" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_13" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_4" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_42" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_51" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_34" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_15" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_24" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_5" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_43" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_52" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_35" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_16" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_25" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_6" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_44" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_53" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_36" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_17" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_26" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_7" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_45" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_54" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_28" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_37" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_18" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_27" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_8" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_46" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_55" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_35m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_29" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_38" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_19" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_9" CBX_FILE_NAME="mux_t4d.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_29" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_38" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_19" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_9" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_35m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_47" CBX_FILE_NAME="mux_t4d.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_47" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_75m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_39" CBX_FILE_NAME="mux_t4d.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_39" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_35m.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_75m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_48" CBX_FILE_NAME="mux_t4d.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_48" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_75m.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_35m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_49" CBX_FILE_NAME="mux_t4d.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_mux:seven_segment_map_rtl_49" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_75m.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_0dm.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_0" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_30" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_20" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_1" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_10" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_40" CBX_FILE_NAME="mux_t4d.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_0" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_30" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_2|lpm_mux:seven_segment_map_rtl_20" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_1" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_3|lpm_mux:seven_segment_map_rtl_10" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|VendingMachine|DisplayModule:display_1|lpm_mux:seven_segment_map_rtl_40" CBX_FILE_NAME="mux_joc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

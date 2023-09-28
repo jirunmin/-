@@ -2478,45 +2478,6 @@ VendingMachineController:controller
 
 # end
 # entity
-DisplayModule
-# storage
-db|VendingMachine.(5).cnf
-db|VendingMachine.(5).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-displaymodule.v
-bf4e45bf5591472ccb9a15a79de6c4
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-DisplayModule:display
-DisplayModule:display_1
-DisplayModule:display_2
-DisplayModule:display_3
-}
-# macro_sequence
-
-# end
-# entity
 VendingMachine
 # storage
 db|VendingMachine.(0).cnf
@@ -2548,6 +2509,45 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+DisplayModule
+# storage
+db|VendingMachine.(5).cnf
+db|VendingMachine.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+displaymodule.v
+61a77d4e7ddddde733c5f5941d2170c8
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+DisplayModule:display
+DisplayModule:display_1
+DisplayModule:display_2
+DisplayModule:display_3
 }
 # macro_sequence
 

@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.926 ns
-From           : coin_insert_button
-To             : VendingMachineController:controller|coin_temp[1]
+Actual Time    : 7.546 ns
+From           : confirm_button
+To             : VendingMachineController:controller|total_sales[1]
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 9.476 ns
-From           : VendingMachineController:controller|alarm
-To             : alarm
+Actual Time    : 31.438 ns
+From           : VendingMachineController:controller|coin_total[5]
+To             : display_segments_code[11]
 From Clock     : clk
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -3.095 ns
-From           : product_code[3]
-To             : Product_codetoprice:comb_11|product_price[2]
+Actual Time    : -4.587 ns
+From           : business
+To             : InitializeModule:initializer|bussines_flag
 From Clock     : --
 To Clock       : clk
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 272.11 MHz ( period = 3.675 ns )
-From           : CoinDetector:coin_detector|coin_value[0]
-To             : VendingMachineController:controller|coin_temp[1]
+Actual Time    : 246.00 MHz ( period = 4.065 ns )
+From           : Product_codetoprice:comb_11|product_price[1]
+To             : VendingMachineController:controller|product_dispensed[1]
 From Clock     : clk
 To Clock       : clk
 Failed Paths   : 0

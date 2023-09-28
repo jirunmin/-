@@ -25,7 +25,6 @@ initial begin
     seven_segment_map[9] = ~7'h6F;  // 数码管显示9的编码
 end
 */
-
 assign display_segments = {seven_segment_map[tens], seven_segment_map[ones]}; // 将输入值映射到数码管编码并输出
 
 endmodule
